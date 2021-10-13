@@ -115,12 +115,1882 @@
           }
         ]
       }
+    },
+    "/api/resource": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update resource",
+        "description": "Add or update resource",
+        "operationId": "crud-resource",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resourceNo": {
+                  "type": "string",
+                  "description": "resourceNo"
+                },
+                "resourceName": {
+                  "type": "string",
+                  "description": "resourceName"
+                },
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "email"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/actionUri": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update an action link",
+        "description": "Add or update an action link",
+        "operationId": "crud-actionuri",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "uriType": {
+                  "type": "integer",
+                  "description": "sourceType"
+                },
+                "uri": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "default": {
+                  "type": "boolean",
+                  "description": "sourceType"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointment": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update appointment",
+        "description": "Add or update appointment",
+        "operationId": "crud-appointment",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "appointmentId": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "resourceNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "subject": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "body": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "start": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "end": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "timeMarker": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "importance": {
+                  "type": "boolean",
+                  "description": "sourceType"
+                },
+                "locked": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "replaceResource": {
+                  "type": "boolean",
+                  "description": "sourceType"
+                },
+                "backOfficeId": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "backOfficeParentId": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "unitOfMeasure": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "unitOfMeasureConversion": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "planningQuantity": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "useFixedPlanningQuantity": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "roundToUnitOfMeasure": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sourceType"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentCategory": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the category of an appointment",
+        "description": "Add or update the category of an appointment",
+        "operationId": "crud-appointmentcategory",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "category"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentContainer": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update appointment container",
+        "description": "Add or update appointment container",
+        "operationId": "crud-appointmentcontainer",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentContent": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the content of the appointment",
+        "description": "Add or update the content of the appointment",
+        "operationId": "crud-appointmentcontent",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "subject": {
+                  "type": "string",
+                  "description": "category"
+                },
+                "body": {
+                  "type": "string",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentImportance": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the priority of an appointment",
+        "description": "Add or update the priority of an appointment",
+        "operationId": "crud-appointmentimportance",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "importance": {
+                  "type": "string",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentLocked": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the appointment's locked status",
+        "description": "Add or update the appointment's locked status",
+        "operationId": "crud-appointmentlocked",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "locked": {
+                  "type": "boolean",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentPlanningQuantity": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the appointment's planning quantity",
+        "description": "Add or update the appointment's planning quantity",
+        "operationId": "crud-appointmentplanningquantity",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentTimeMarker": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the appointment's time marker",
+        "description": "Add or update the appointment's time marker",
+        "operationId": "crud-appointmenttimemarker",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "timeMarker": {
+                  "type": "string",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/appointmentUri": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update an appointment link",
+        "description": "Add or update an appointment link",
+        "operationId": "crud-appointmenturi",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "uri": {
+                  "type": "string",
+                  "description": "category"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/assignment": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update an assignment",
+        "description": "Add or update an assignment",
+        "operationId": "crud-assignment",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "string",
+                  "description": "appointmentId"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "sentFromBackOffice"
+                },
+                "resourceNo": {
+                  "type": "string",
+                  "description": "category"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/caption": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a caption",
+        "description": "Add or update a caption",
+        "operationId": "crud-caption",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "context": {
+                  "type": "integer",
+                  "description": "name"
+                },
+                "sourceTable": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "fieldName": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "language": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/container": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a container",
+        "description": "Add or update a container",
+        "operationId": "crud-container",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "handleDate": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "handleLocked": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/filterGroup": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a filter group",
+        "description": "Add or update a flter group",
+        "operationId": "crud-filtergroup",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "columnNo": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "dataFilter": {
+                  "type": "boolean",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/filterValue": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a filter value",
+        "description": "Add or update a filter value",
+        "operationId": "crud-filtervalue",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "group": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/job": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a job",
+        "description": "Add or update a job",
+        "operationId": "crud-job",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "shortDescription": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "timeMarker": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "pin": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "customerNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "customerName": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "customerAddress": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "customerPhone": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "customerEmail": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "contactNo": {
+                  "type": "string",
+                  "description": "contactNo"
+                },
+                "contactName": {
+                  "type": "string",
+                  "description": "contactName"
+                },
+                "contactAddress": {
+                  "type": "string",
+                  "description": "contactAddress"
+                },
+                "contactPhone": {
+                  "type": "string",
+                  "description": "contactPhone"
+                },
+                "contactEmail": {
+                  "type": "string",
+                  "description": "contactEmail"
+                },
+                "siteNo": {
+                  "type": "string",
+                  "description": "siteNo"
+                },
+                "siteName": {
+                  "type": "string",
+                  "description": "siteName"
+                },
+                "siteAddress": {
+                  "type": "string",
+                  "description": "siteAddress"
+                },
+                "sitePhone": {
+                  "type": "string",
+                  "description": "sitePhone"
+                },
+                "siteEmail": {
+                  "type": "string",
+                  "description": "siteEmail"
+                },
+                "siteRegion": {
+                  "type": "string",
+                  "description": "siteRegion"
+                },
+                "siteStreet": {
+                  "type": "string",
+                  "description": "siteStreet"
+                },
+                "siteStreetNo": {
+                  "type": "string",
+                  "description": "siteStreetNo"
+                },
+                "sitePostcode": {
+                  "type": "string",
+                  "description": "sitePostcode"
+                },
+                "siteCity": {
+                  "type": "string",
+                  "description": "siteCity"
+                },
+                "siteCounty": {
+                  "type": "string",
+                  "description": "siteCounty"
+                },
+                "siteState": {
+                  "type": "string",
+                  "description": "siteState"
+                },
+                "siteCountry": {
+                  "type": "string",
+                  "description": "siteCountry"
+                },
+                "siteAddressGeoLong": {
+                  "type": "string",
+                  "description": "siteAddressGeoLong"
+                },
+                "siteAddressGeoLat": {
+                  "type": "string",
+                  "description": "siteAddressGeoLat"
+                },
+                "siteFromNo": {
+                  "type": "string",
+                  "description": "siteFromNo"
+                },
+                "siteFromName": {
+                  "type": "string",
+                  "description": "siteFromName"
+                },
+                "siteFromAddress": {
+                  "type": "string",
+                  "description": "siteFromAddress"
+                },
+                "siteFromAddressGeoLong": {
+                  "type": "string",
+                  "description": "siteFromAddressGeoLong"
+                },
+                "siteFromAddressGeoLat": {
+                  "type": "string",
+                  "description": "siteFromAddressGeoLat"
+                },
+                "siteFromPhone": {
+                  "type": "string",
+                  "description": "siteFromPhone"
+                },
+                "siteFromEmail": {
+                  "type": "string",
+                  "description": "siteFromEmail"
+                },
+                "siteFromRegion": {
+                  "type": "string",
+                  "description": "siteFromRegion"
+                },
+                "siteFromStreet": {
+                  "type": "string",
+                  "description": "siteFromStreet"
+                },
+                "siteFromPostcode": {
+                  "type": "string",
+                  "description": "siteFromPostcode"
+                },
+                "siteFromCity": {
+                  "type": "string",
+                  "description": "siteFromCity"
+                },
+                "siteFromCounty": {
+                  "type": "string",
+                  "description": "siteFromCounty"
+                },
+                "siteFromState": {
+                  "type": "string",
+                  "description": "siteFromState"
+                },
+                "siteFromCountry": {
+                  "type": "string",
+                  "description": "siteFromCountry"
+                },
+                "billNo": {
+                  "type": "string",
+                  "description": "billNo"
+                },
+                "billName": {
+                  "type": "string",
+                  "description": "billName"
+                },
+                "billAddress": {
+                  "type": "string",
+                  "description": "billAddress"
+                },
+                "billPhone": {
+                  "type": "string",
+                  "description": "billPhone"
+                },
+                "billEmail": {
+                  "type": "string",
+                  "description": "billEmail"
+                },
+                "billRegion": {
+                  "type": "string",
+                  "description": "billRegion"
+                },
+                "importance": {
+                  "type": "string",
+                  "description": "importance"
+                },
+                "creationDateTime": {
+                  "type": "string",
+                  "description": "creationDateTime"
+                },
+                "customerReference": {
+                  "type": "string",
+                  "description": "customerReference"
+                },
+                "language": {
+                  "type": "string",
+                  "description": "language"
+                },
+                "responsible": {
+                  "type": "string",
+                  "description": "responsible"
+                },
+                "creator": {
+                  "type": "string",
+                  "description": "creator"
+                },
+                "freeText1": {
+                  "type": "string",
+                  "description": "freeText1"
+                },
+                "freeText2": {
+                  "type": "string",
+                  "description": "freeText2"
+                },
+                "freeText3": {
+                  "type": "string",
+                  "description": "freeText3"
+                },
+                "freeText4": {
+                  "type": "string",
+                  "description": "freeText4"
+                },
+                "freeText5": {
+                  "type": "string",
+                  "description": "freeText5"
+                },
+                "freeText6": {
+                  "type": "string",
+                  "description": "freeText6"
+                },
+                "freeText7": {
+                  "type": "string",
+                  "description": "freeText7"
+                },
+                "freeText8": {
+                  "type": "string",
+                  "description": "freeText8"
+                },
+                "freeText9": {
+                  "type": "string",
+                  "description": "freeText9"
+                },
+                "freeText10": {
+                  "type": "string",
+                  "description": "freeText10"
+                },
+                "freeText11": {
+                  "type": "string",
+                  "description": "freeText11"
+                },
+                "freeText12": {
+                  "type": "string",
+                  "description": "freeText12"
+                },
+                "freeText13": {
+                  "type": "string",
+                  "description": "freeText13"
+                },
+                "freeText14": {
+                  "type": "string",
+                  "description": "freeText14"
+                },
+                "freeText15": {
+                  "type": "string",
+                  "description": "freeText15"
+                },
+                "freeText16": {
+                  "type": "string",
+                  "description": "freeText16"
+                },
+                "freeText17": {
+                  "type": "string",
+                  "description": "freeText17"
+                },
+                "freeText18": {
+                  "type": "string",
+                  "description": "freeText18"
+                },
+                "freeText19": {
+                  "type": "string",
+                  "description": "freeText19"
+                },
+                "freeText20": {
+                  "type": "string",
+                  "description": "freeText20"
+                },
+                "freeDecimal1": {
+                  "type": "string",
+                  "description": "freeDecimal1"
+                },
+                "freeDecimal2": {
+                  "type": "string",
+                  "description": "freeDecimal2"
+                },
+                "freeDecimal3": {
+                  "type": "string",
+                  "description": "freeDecimal3"
+                },
+                "freeDecimal4": {
+                  "type": "string",
+                  "description": "freeDecimal4"
+                },
+                "freeDecimal5": {
+                  "type": "string",
+                  "description": "freeDecimal5"
+                },
+                "freeBit1": {
+                  "type": "string",
+                  "description": "freeBit1"
+                },
+                "freeBit2": {
+                  "type": "string",
+                  "description": "freeBit2"
+                },
+                "freeBit3": {
+                  "type": "string",
+                  "description": "freeBit3"
+                },
+                "freeBit4": {
+                  "type": "string",
+                  "description": "freeBit4"
+                },
+                "freeBit5": {
+                  "type": "string",
+                  "description": "freeBit5"
+                },
+                "enableManualSelection": {
+                  "type": "string",
+                  "description": "enableManualSelection"
+                },
+                "availableInGantt": {
+                  "type": "string",
+                  "description": "availableInGantt"
+                },
+                "startDate": {
+                  "type": "string",
+                  "description": "startDate"
+                },
+                "endDate": {
+                  "type": "string",
+                  "description": "endDate"
+                },
+                "allowDependencies": {
+                  "type": "string",
+                  "description": "allowDependencies"
+                },
+                "note": {
+                  "type": "string",
+                  "description": "note"
+                },
+                "overRuleGanttPlanning": {
+                  "type": "string",
+                  "description": "overRuleGanttPlanning"
+                },
+                "checkAppointments": {
+                  "type": "string",
+                  "description": "checkAppointments"
+                },
+                "sentFromBackOffice": {
+                  "type": "string",
+                  "description": "sentFromBackOffice"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/notification": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update notification",
+        "description": "Add or update notification",
+        "operationId": "crud-notification",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "appointmentId": {
+                  "type": "integer",
+                  "description": "appointmentId"
+                },
+                "connectorId": {
+                  "type": "string",
+                  "description": "connectorId"
+                },
+                "type": {
+                  "type": "integer",
+                  "description": "type"
+                },
+                "code": {
+                  "type": "string",
+                  "description": "code"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "text"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "date"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "jobNo"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "taskNo"
+                },
+                "appointmentGuid": {
+                  "type": "string",
+                  "description": "appointmentGuid"
+                },
+                "sentFromBackoffice": {
+                  "type": "boolean",
+                  "description": "connectorId"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceCalendar": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a calendar for a resource",
+        "description": "Add or update a calendar for a resource",
+        "operationId": "crud-resourcecalendar",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceCapacity": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the capacity of a resource",
+        "description": "Add or update the capacity of a resource",
+        "operationId": "crud-resourcecapacity",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceCertificate": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the certificate of a resource",
+        "description": "Add or update the certificate of a resource",
+        "operationId": "crud-resourcecertificate",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceFilterValue": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the filter value of a resource",
+        "description": "Add or update the filter value of a resource",
+        "operationId": "crud-resourcefiltervalue",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceGpsTracking": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the live location of a resource",
+        "description": "Add or update the live location of a resource",
+        "operationId": "crud-resourcegpstracking",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resourceNo": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "gpsTrackingResourceNo": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "latitude": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "longitude": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "speed": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "rowId": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "power": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/resourceUri": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the uri of a resource",
+        "description": "Add or update the uri of a resource",
+        "operationId": "crud-resourceuri",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resourceNo": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "uri": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/task": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a task",
+        "description": "Add or update a task",
+        "operationId": "crud-task",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "taskType": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "shortDescription": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "timeMarker": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "pin": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "serviceNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "serviceGroup": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "serviceClass": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "serviceSerialNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "serviceName": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "freeText1": {
+                  "type": "string",
+                  "description": "freeText1"
+                },
+                "freeText2": {
+                  "type": "string",
+                  "description": "freeText2"
+                },
+                "freeText3": {
+                  "type": "string",
+                  "description": "freeText3"
+                },
+                "freeText4": {
+                  "type": "string",
+                  "description": "freeText4"
+                },
+                "freeText5": {
+                  "type": "string",
+                  "description": "freeText5"
+                },
+                "freeText6": {
+                  "type": "string",
+                  "description": "freeText6"
+                },
+                "freeText7": {
+                  "type": "string",
+                  "description": "freeText7"
+                },
+                "freeText8": {
+                  "type": "string",
+                  "description": "freeText8"
+                },
+                "freeText9": {
+                  "type": "string",
+                  "description": "freeText9"
+                },
+                "freeText10": {
+                  "type": "string",
+                  "description": "freeText10"
+                },
+                "freeText11": {
+                  "type": "string",
+                  "description": "freeText11"
+                },
+                "freeText12": {
+                  "type": "string",
+                  "description": "freeText12"
+                },
+                "freeText13": {
+                  "type": "string",
+                  "description": "freeText13"
+                },
+                "freeText14": {
+                  "type": "string",
+                  "description": "freeText14"
+                },
+                "freeText15": {
+                  "type": "string",
+                  "description": "freeText15"
+                },
+                "freeText16": {
+                  "type": "string",
+                  "description": "freeText16"
+                },
+                "freeText17": {
+                  "type": "string",
+                  "description": "freeText17"
+                },
+                "freeText18": {
+                  "type": "string",
+                  "description": "freeText18"
+                },
+                "freeText19": {
+                  "type": "string",
+                  "description": "freeText19"
+                },
+                "freeText20": {
+                  "type": "string",
+                  "description": "freeText20"
+                },
+                "freeDecimal1": {
+                  "type": "string",
+                  "description": "freeDecimal1"
+                },
+                "freeDecimal2": {
+                  "type": "string",
+                  "description": "freeDecimal2"
+                },
+                "freeDecimal3": {
+                  "type": "string",
+                  "description": "freeDecimal3"
+                },
+                "freeDecimal4": {
+                  "type": "string",
+                  "description": "freeDecimal4"
+                },
+                "freeDecimal5": {
+                  "type": "string",
+                  "description": "freeDecimal5"
+                },
+                "freeBit1": {
+                  "type": "string",
+                  "description": "freeBit1"
+                },
+                "freeBit2": {
+                  "type": "string",
+                  "description": "freeBit2"
+                },
+                "freeBit3": {
+                  "type": "string",
+                  "description": "freeBit3"
+                },
+                "freeBit4": {
+                  "type": "string",
+                  "description": "freeBit4"
+                },
+                "freeBit5": {
+                  "type": "string",
+                  "description": "freeBit5"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/taskContainer": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a task container",
+        "description": "Add or update a task container",
+        "operationId": "crud-taskcontainer",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "index": {
+                  "type": "integer",
+                  "description": "sourceType"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/taskFilterValue": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update a task filter value",
+        "description": "Add or update a task filter value",
+        "operationId": "crud-taskfiltervalue",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "filterGroup": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "filterValue": {
+                  "type": "string",
+                  "description": "sourceType"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/taskLocked": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add or update the task's locked status",
+        "description": "Add or update the task's locked status",
+        "operationId": "crud-tasklocked",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "sourceType": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "jobNo": {
+                  "type": "string",
+                  "description": "sourceApp"
+                },
+                "taskNo": {
+                  "type": "string",
+                  "description": "sourceType"
+                },
+                "locked": {
+                  "type": "boolean",
+                  "description": "Locked"
+                },
+                "sentFromBackOffice": {
+                  "type": "boolean",
+                  "description": "Sent from back office"
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "definitions": {},
   "parameters": {},
   "responses": {},
-  "securityDefinitions": {},
+  "securityDefinitions": {
+    "apikeyHeader": {
+      "type": "apiKey",
+      "name": "x-functions-key",
+      "in": "header"
+    }
+  },
   "security": [],
   "tags": []
 }
