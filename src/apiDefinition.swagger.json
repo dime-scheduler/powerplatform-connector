@@ -1,15 +1,25 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "DimeSchedulerImport",
+    "title": "Dime.Scheduler Import",
     "description": "Imports data to Dime.Scheduler",
-    "version": "0.1"
+    "version": "0.1",
+    "contact": {
+      "name": "Dime.Scheduler",
+      "url": "https://www.dimescheduler.com",
+      "email": "hello@dimescheduler.com"
+    }
   },
+  "x-ms-connector-metadata": [
+    { "propertyName": "Website", "propertyValue": "https://www.dimescheduler.com" },
+    { "propertyName": "Privacy Policy", "propertyValue": "https://www.dime-software.com/privacy" },
+    { "propertyName": "Categories", "propertyValue": "Planning" }
+  ],
   "host": "dimeschedulerazurefunctions.azurewebsites.net",
   "basePath": "/",
   "schemes": ["https"],
-  "consumes": [],
-  "produces": [],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/api/category": {
       "post": {
@@ -34,15 +44,15 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The category's name"
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "displayName"
+                  "description": "The category's display name"
                 },
                 "color": {
                   "type": "string",
-                  "description": "color"
+                  "description": "The category's hex color"
                 }
               }
             }
@@ -1985,7 +1995,7 @@
   "parameters": {},
   "responses": {},
   "securityDefinitions": {
-    "apikeyHeader": {
+    "API Key": {
       "type": "apiKey",
       "name": "x-functions-key",
       "in": "header"

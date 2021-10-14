@@ -55,6 +55,20 @@ For starters, copy, paste and modify the following metadata:
 Next is the endpoint of the Azure function that you'll need to specify. The naming convention is `api/entity`.
 Finally, you'll need to specify the entity type in the body.
 
+## Creating a custom connector
+
+In the src directory, run the following [paconn](https://docs.microsoft.com/en-us/connectors/custom-connectors/paconn-cli) command:
+
+```cmd
+paconn create --api-prop apiProperties.json --api-def apiDefinition.swagger.json --icon icon.png
+```
+
+If the app already exists, you may want to run this command:
+
+```cmd
+paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
+```
+
 ## Contributing
 
 We welcome contributions. Please check out the contribution and code of conduct guidelines first.

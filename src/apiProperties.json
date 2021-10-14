@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "connectionParameters": {
+      "endpointUrl": {
+        "type": "string",
+        "uiDefinition": {
+          "displayName": "Dime.Scheduler URI",
+          "description": "The base URI of Dime.Scheduler",
+          "tooltip": "Provide the base URI of Dime.Scheduler",
+          "constraints": {
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
+          }
+        }
+      },
+      "userName": {
+        "type": "string",
+        "uiDefinition": {
+          "displayName": "E-mail address",
+          "description": "The user",
+          "tooltip": "Provide the e-mail address of the user",
+          "constraints": {
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
+          }
+        }
+      },
+      "password": {
+        "type": "securestring",
+        "uiDefinition": {
+          "displayName": "Password",
+          "description": "The user",
+          "tooltip": "Provide the password of the e-mail address of the user",
+          "constraints": {
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
+          }
+        }
+      }
+    },
+    "policyTemplateInstances": [
+      {
+        "templateId": "dynamichosturl",
+        "title": "HttpEndPointUrl",
+        "parameters": {
+          "x-ms-apimTemplateParameter.urlTemplate": "https://@connectionParameters('endpointUrl')"
+        }
+      },
+      {
+        "title": "User Header",
+        "templateId": "setheader",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "ds-user",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('userName')",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request"
+        }
+      },
+      {
+        "title": "Password Header",
+        "templateId": "setheader",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "ds-password",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('password')",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request"
+        }
+      }
+    ],
+    "iconBrandColor": "#FFFFFF",
+    "capabilities": [],
+    "publisher": "Dime Software",
+    "stackOwner": "Dime Software"
+  }
+}

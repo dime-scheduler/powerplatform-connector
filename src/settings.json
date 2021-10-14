@@ -1,0 +1,9 @@
+{
+  "connectorId": "shared_dime-2escheduler-20import-5f6edf7972a10fbb3b-5ffc65ed5301df6bbf",
+  "environment": "Default-0c41285b-f3b2-4e9f-9284-fead676badb6",
+  "apiProperties": "apiProperties.json",
+  "apiDefinition": "apiDefinition.swagger.json",
+  "icon": "icon.png",
+  "powerAppsUrl": "https://api.powerapps.com",
+  "powerAppsApiVersion": "2016-11-01"
+}
