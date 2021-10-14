@@ -4,9 +4,22 @@
       "endpointUrl": {
         "type": "string",
         "uiDefinition": {
+          "displayName": "Dime.Scheduler Azure Function URI",
+          "description": "The base URI (without scheme) of the Dime.Scheduler Azure Function",
+          "tooltip": "Provide the base URI (without scheme) of Dime.Scheduler Azure Function",
+          "constraints": {
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
+          }
+        }
+      },
+      "uri": {
+        "type": "string",
+        "uiDefinition": {
           "displayName": "Dime.Scheduler URI",
-          "description": "The base URI of Dime.Scheduler",
-          "tooltip": "Provide the base URI of Dime.Scheduler",
+          "description": "The base URI (with scheme) of Dime.Scheduler",
+          "tooltip": "Provide the base URI (with scheme) of Dime.Scheduler",
           "constraints": {
             "tabIndex": 2,
             "clearText": false,
@@ -31,8 +44,21 @@
         "type": "securestring",
         "uiDefinition": {
           "displayName": "Password",
-          "description": "The user",
+          "description": "The Dime.Scheduler User's password",
           "tooltip": "Provide the password of the e-mail address of the user",
+          "constraints": {
+            "tabIndex": 2,
+            "clearText": false,
+            "required": "true"
+          }
+        }
+      },
+      "azureFunctionsKey": {
+        "type": "string",
+        "uiDefinition": {
+          "displayName": "API Key",
+          "description": "The API key to use the service",
+          "tooltip": "Provide the API key",
           "constraints": {
             "tabIndex": 2,
             "clearText": false,
@@ -47,6 +73,16 @@
         "title": "HttpEndPointUrl",
         "parameters": {
           "x-ms-apimTemplateParameter.urlTemplate": "https://@connectionParameters('endpointUrl')"
+        }
+      },
+      {
+        "title": "Dime.Scheduler URI",
+        "templateId": "setheader",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "ds-uri",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('uri')",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request"
         }
       },
       {
@@ -65,6 +101,16 @@
         "parameters": {
           "x-ms-apimTemplateParameter.name": "ds-password",
           "x-ms-apimTemplateParameter.value": "@connectionParameters('password')",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request"
+        }
+      },
+      {
+        "title": "API Key",
+        "templateId": "setheader",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "x-functions-key",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('azureFunctionsKey')",
           "x-ms-apimTemplateParameter.existsAction": "override",
           "x-ms-apimTemplate-policySection": "Request"
         }

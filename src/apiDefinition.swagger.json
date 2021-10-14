@@ -11,9 +11,18 @@
     }
   },
   "x-ms-connector-metadata": [
-    { "propertyName": "Website", "propertyValue": "https://www.dimescheduler.com" },
-    { "propertyName": "Privacy Policy", "propertyValue": "https://www.dime-software.com/privacy" },
-    { "propertyName": "Categories", "propertyValue": "Planning" }
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://www.dimescheduler.com"
+    },
+    {
+      "propertyName": "Privacy Policy",
+      "propertyValue": "https://www.dime-software.com/privacy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Planning;Scheduling;Dynamics;ERP"
+    }
   ],
   "host": "dimeschedulerazurefunctions.azurewebsites.net",
   "basePath": "/",
@@ -1995,7 +2004,7 @@
   "parameters": {},
   "responses": {},
   "securityDefinitions": {
-    "API Key": {
+    "AzureFunctionsKey": {
       "type": "apiKey",
       "name": "x-functions-key",
       "in": "header"
