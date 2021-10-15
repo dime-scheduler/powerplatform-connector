@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Dime.Scheduler Import",
-    "description": "Imports data to Dime.Scheduler",
+    "description": "The Dime.Scheduler Import Connector allows you to feed the system with scheduling related entities such as resources, tasks, skills, etc.",
     "version": "0.1",
     "contact": {
       "name": "Dime.Scheduler",
