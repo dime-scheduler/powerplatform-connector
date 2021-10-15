@@ -6,7 +6,10 @@ Dime.Scheduler, a Dime Software product, is a resource and project planning solu
 
 ## Prerequisites
 
-In order to use the connector, you'll need a running instance of Dime.Scheduler on-premise or in the cloud; and it must be accessible by the app that uses this connector.
+In order to use the connector, you'll need:
+
+- A Microsoft Power Apps or Power Automate plan with custom connector feature
+- A running instance of Dime.Scheduler on-premise or in the cloud, and must be accessible by the app that uses this connector.
 
 ## Supported operations
 

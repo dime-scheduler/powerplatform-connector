@@ -35,12 +35,10 @@
         "responses": {
           "default": {
             "description": "default",
-            "schema": {
-              "type": "string"
-            }
+            "schema": {}
           }
         },
-        "summary": "Add or update a category.",
+        "summary": "Add or update a category",
         "description": "Add or update a category.",
         "operationId": "upsertCategory",
         "parameters": [
@@ -77,7 +75,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a time marker.",
+        "summary": "Add or update a time marker",
         "description": "Add or update a time marker.",
         "operationId": "upsertTimemarker",
         "parameters": [
@@ -110,7 +108,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a pin.",
+        "summary": "Add or update a pin",
         "description": "Add or update a pin.",
         "operationId": "upsertPin",
         "parameters": [
@@ -143,7 +141,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a resource.",
+        "summary": "Add or update a resource",
         "description": "Add or update a resource.",
         "operationId": "upsertResource",
         "parameters": [
@@ -184,7 +182,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an action link.",
+        "summary": "Add or update an action link",
         "description": "Add or update an action link.",
         "operationId": "upsertActionuri",
         "parameters": [
@@ -233,7 +231,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an appointment.",
+        "summary": "Add or update an appointment",
         "description": "Add or update an appointment.",
         "operationId": "upsertAppointment",
         "parameters": [
@@ -354,7 +352,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the category of an appointment.",
+        "summary": "Add or update the category of an appointment",
         "description": "Add or update the category of an appointment.",
         "operationId": "upsertAppointmentCategory",
         "parameters": [
@@ -403,7 +401,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an appointment container.",
+        "summary": "Add or update an appointment container",
         "description": "Add or update an appointment container.",
         "operationId": "upsertAppointmentContainer",
         "parameters": [
@@ -436,7 +434,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the content of the appointment.",
+        "summary": "Add or update the content of the appointment",
         "description": "Add or update the content of the appointment.",
         "operationId": "upsertAppointmentContent",
         "parameters": [
@@ -489,7 +487,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the priority of an appointment.",
+        "summary": "Add or update the priority of an appointment",
         "description": "Add or update the priority of an appointment.",
         "operationId": "upsertAppointmentImportance",
         "parameters": [
@@ -538,7 +536,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's locked status.",
+        "summary": "Add or update the appointment's locked status",
         "description": "Add or update the appointment's locked status.",
         "operationId": "upsertAppointmentLocked",
         "parameters": [
@@ -587,7 +585,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's planning quantity.",
+        "summary": "Add or update the appointment's planning quantity",
         "description": "Add or update the appointment's planning quantity.",
         "operationId": "upsertAppointmentPlanningQuantity",
         "parameters": [
@@ -636,7 +634,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's time marker.",
+        "summary": "Add or update the appointment's time marker",
         "description": "Add or update the appointment's time marker.",
         "operationId": "upsertAppointmentTimemarker",
         "parameters": [
@@ -685,7 +683,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an appointment link.",
+        "summary": "Add or update an appointment link",
         "description": "Add or update an appointment link.",
         "operationId": "upsertAppointmentUri",
         "parameters": [
@@ -738,7 +736,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an assignment.",
+        "summary": "Add or update an assignment",
         "description": "Add or update an assignment.",
         "operationId": "upsertAssignment",
         "parameters": [
@@ -787,7 +785,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a caption.",
+        "summary": "Add or update a caption",
         "description": "Add or update a caption.",
         "operationId": "upsertCaption",
         "parameters": [
@@ -832,7 +830,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a container.",
+        "summary": "Add or update a container",
         "description": "Add or update a container.",
         "operationId": "upsertContainer",
         "parameters": [
@@ -869,7 +867,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a filter group.",
+        "summary": "Add or update a filter group",
         "description": "Add or update a flter group.",
         "operationId": "upsertFilterGroup",
         "parameters": [
@@ -906,7 +904,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a filter value.",
+        "summary": "Add or update a filter value",
         "description": "Add or update a filter value.",
         "operationId": "upsertFilterValue",
         "parameters": [
@@ -939,7 +937,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a job.",
+        "summary": "Add or update a job",
         "description": "Add or update a job.",
         "operationId": "upsertJob",
         "parameters": [
@@ -1364,7 +1362,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update notification.",
+        "summary": "Add or update notification",
         "description": "Add or update notification.",
         "operationId": "upsertNotification",
         "parameters": [
@@ -1437,7 +1435,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a calendar for a resource.",
+        "summary": "Add or update a calendar for a resource",
         "description": "Add or update a calendar for a resource.",
         "operationId": "upsertResourceCalendar",
         "parameters": [
@@ -1466,7 +1464,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the capacity of a resource.",
+        "summary": "Add or update the capacity of a resource",
         "description": "Add or update the capacity of a resource.",
         "operationId": "upsertResourceCapacity",
         "parameters": [
@@ -1495,7 +1493,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the certificate of a resource.",
+        "summary": "Add or update the certificate of a resource",
         "description": "Add or update the certificate of a resource.",
         "operationId": "upsertResourceCertificate",
         "parameters": [
@@ -1524,7 +1522,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the filter value of a resource.",
+        "summary": "Add or update the filter value of a resource",
         "description": "Add or update the filter value of a resource.",
         "operationId": "upsertResourceFilterValue",
         "parameters": [
@@ -1553,7 +1551,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the live location of a resource.",
+        "summary": "Add or update the live location of a resource",
         "description": "Add or update the live location of a resource.",
         "operationId": "upsertResourceGpstracking",
         "parameters": [
@@ -1610,7 +1608,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the uri of a resource.",
+        "summary": "Add or update the uri of a resource",
         "description": "Add or update the uri of a resource.",
         "operationId": "upsertResourceUri",
         "parameters": [
@@ -1647,7 +1645,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task.",
+        "summary": "Add or update a task",
         "description": "Add or update a task.",
         "operationId": "upsertTask",
         "parameters": [
@@ -1860,7 +1858,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task container.",
+        "summary": "Add or update a task container",
         "description": "Add or update a task container.",
         "operationId": "upsertTaskContainer",
         "parameters": [
@@ -1909,7 +1907,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task filter value.",
+        "summary": "Add or update a task filter value",
         "description": "Add or update a task filter value.",
         "operationId": "upsertTaskFiltervalue",
         "parameters": [
@@ -1958,7 +1956,7 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the task's locked status.",
+        "summary": "Add or update the task's locked status",
         "description": "Add or update the task's locked status.",
         "operationId": "upsertTaskLocked",
         "parameters": [

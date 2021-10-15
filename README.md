@@ -69,6 +69,12 @@ If the app already exists, you may want to run this command:
 paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
 ```
 
+To validate the OpenAPI definition, run the following command in the src directory:
+
+```cmd
+paconn validate --api-def apiDefinition.swagger.json
+```
+
 ## Contributing
 
 We welcome contributions. Please check out the contribution and code of conduct guidelines first.
