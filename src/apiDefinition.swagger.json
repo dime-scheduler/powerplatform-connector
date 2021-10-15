@@ -21,7 +21,7 @@
     },
     {
       "propertyName": "Categories",
-      "propertyValue": "Planning;Scheduling;Dynamics;ERP"
+      "propertyValue": "Business Management;Data"
     }
   ],
   "host": "import.dimescheduler.com",
@@ -40,8 +40,8 @@
             }
           }
         },
-        "summary": "Add or update category",
-        "description": "Add or update category",
+        "summary": "Add or update a category.",
+        "description": "Add or update a category.",
         "operationId": "upsertCategory",
         "parameters": [
           {
@@ -53,15 +53,15 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The category's name"
+                  "description": "The category's name."
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "The category's display name"
+                  "description": "The category's display name."
                 },
                 "color": {
                   "type": "string",
-                  "description": "The category's hex color"
+                  "description": "The category's hex color."
                 }
               }
             }
@@ -77,8 +77,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update time marker",
-        "description": "Add or update time marker",
+        "summary": "Add or update a time marker.",
+        "description": "Add or update a time marker.",
         "operationId": "upsertTimemarker",
         "parameters": [
           {
@@ -90,11 +90,11 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The time marker's name"
+                  "description": "The time marker's name."
                 },
                 "color": {
                   "type": "string",
-                  "description": "The time marker's color"
+                  "description": "The time marker's color."
                 }
               }
             }
@@ -110,8 +110,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update pin",
-        "description": "Add or update pin",
+        "summary": "Add or update a pin.",
+        "description": "Add or update a pin.",
         "operationId": "upsertPin",
         "parameters": [
           {
@@ -123,11 +123,11 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The pin's name"
+                  "description": "The pin's name."
                 },
                 "color": {
                   "type": "string",
-                  "description": "The pin's color"
+                  "description": "The pin's color."
                 }
               }
             }
@@ -143,8 +143,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update resource",
-        "description": "Add or update resource",
+        "summary": "Add or update a resource.",
+        "description": "Add or update a resource.",
         "operationId": "upsertResource",
         "parameters": [
           {
@@ -156,15 +156,15 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique identifier"
+                  "description": "The resource's unique identifier."
                 },
                 "resourceName": {
                   "type": "string",
-                  "description": "The resource's name"
+                  "description": "The resource's name."
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "The resource's display name"
+                  "description": "The resource's display name."
                 },
                 "email": {
                   "type": "string",
@@ -184,8 +184,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an action link",
-        "description": "Add or update an action link",
+        "summary": "Add or update an action link.",
+        "description": "Add or update an action link.",
         "operationId": "upsertActionuri",
         "parameters": [
           {
@@ -197,23 +197,23 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The action URI's source application"
+                  "description": "The action URI's source application."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The action URI's source type"
+                  "description": "The action URI's source type."
                 },
                 "uriType": {
                   "type": "integer",
-                  "description": "The action URI's URI type"
+                  "description": "The action URI's URI type."
                 },
                 "uri": {
                   "type": "string",
-                  "description": "The action URI's link"
+                  "description": "The action URI's link."
                 },
                 "description": {
                   "type": "string",
-                  "description": "The action URI's description"
+                  "description": "The action URI's description."
                 },
                 "default": {
                   "type": "boolean",
@@ -233,8 +233,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update appointment",
-        "description": "Add or update appointment",
+        "summary": "Add or update an appointment.",
+        "description": "Add or update an appointment.",
         "operationId": "upsertAppointment",
         "parameters": [
           {
@@ -246,99 +246,99 @@
               "properties": {
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique number"
+                  "description": "The job's unique number."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique number"
+                  "description": "The task's unique number."
                 },
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique number"
+                  "description": "The resource's unique number."
                 },
                 "subject": {
                   "type": "string",
-                  "description": "The appointment's subject"
+                  "description": "The appointment's subject."
                 },
                 "body": {
                   "type": "string",
-                  "description": "The appointment's body"
+                  "description": "The appointment's body."
                 },
                 "start": {
                   "type": "string",
-                  "description": "The appointment's start date"
+                  "description": "The appointment's start date."
                 },
                 "end": {
                   "type": "string",
-                  "description": "The appointment's end date"
+                  "description": "The appointment's end date."
                 },
                 "timeMarker": {
                   "type": "string",
-                  "description": "The appointment's time marker"
+                  "description": "The appointment's time marker."
                 },
                 "category": {
                   "type": "string",
-                  "description": "The appointment's category"
+                  "description": "The appointment's category."
                 },
                 "importance": {
                   "type": "integer",
-                  "description": "The appointment's priority"
+                  "description": "The appointment's priority."
                 },
                 "locked": {
                   "type": "boolean",
-                  "description": "The appointment's locked status"
+                  "description": "The appointment's locked status."
                 },
                 "replaceResource": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether to replace the resource"
+                  "description": "Flag to indicate whether to replace the resource."
                 },
                 "backOfficeId": {
                   "type": "string",
-                  "description": "The appointment's back office identifier"
+                  "description": "The appointment's back office identifier."
                 },
                 "backOfficeParentId": {
                   "type": "string",
-                  "description": "The appointment's back office parent identifier"
+                  "description": "The appointment's back office parent identifier."
                 },
                 "unitOfMeasure": {
                   "type": "string",
-                  "description": "The appointment's unit of measure"
+                  "description": "The appointment's unit of measure."
                 },
                 "unitOfMeasureConversion": {
                   "type": "string",
-                  "description": "The appointment's unit of measure conversion"
+                  "description": "The appointment's unit of measure conversion."
                 },
                 "planningQuantity": {
                   "type": "string",
-                  "description": "The appointment's planning quantity"
+                  "description": "The appointment's planning quantity."
                 },
                 "useFixedPlanningQuantity": {
                   "type": "string",
-                  "description": "Flag to indicate whether to use a fixed planning quantity"
+                  "description": "Flag to indicate whether to use a fixed planning quantity."
                 },
                 "roundToUnitOfMeasure": {
                   "type": "string",
-                  "description": "Flag to indicate whether to round up the unit of measure"
+                  "description": "Flag to indicate whether to round up the unit of measure."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -354,8 +354,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the category of an appointment",
-        "description": "Add or update the category of an appointment",
+        "summary": "Add or update the category of an appointment.",
+        "description": "Add or update the category of an appointment.",
         "operationId": "upsertAppointmentCategory",
         "parameters": [
           {
@@ -367,27 +367,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "category": {
                   "type": "string",
-                  "description": "The appointment's new category"
+                  "description": "The appointment's new category."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -403,8 +403,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update appointment container",
-        "description": "Add or update appointment container",
+        "summary": "Add or update an appointment container.",
+        "description": "Add or update an appointment container.",
         "operationId": "upsertAppointmentContainer",
         "parameters": [
           {
@@ -416,11 +416,11 @@
               "properties": {
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 }
               }
             }
@@ -436,8 +436,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the content of the appointment",
-        "description": "Add or update the content of the appointment",
+        "summary": "Add or update the content of the appointment.",
+        "description": "Add or update the content of the appointment.",
         "operationId": "upsertAppointmentContent",
         "parameters": [
           {
@@ -449,31 +449,31 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "subject": {
                   "type": "string",
-                  "description": "The appointment's new subject"
+                  "description": "The appointment's new subject."
                 },
                 "body": {
                   "type": "string",
-                  "description": "The appointment's new body"
+                  "description": "The appointment's new body."
                 }
               }
             }
@@ -489,8 +489,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the priority of an appointment",
-        "description": "Add or update the priority of an appointment",
+        "summary": "Add or update the priority of an appointment.",
+        "description": "Add or update the priority of an appointment.",
         "operationId": "upsertAppointmentImportance",
         "parameters": [
           {
@@ -502,27 +502,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "importance": {
                   "type": "integer",
-                  "description": "The appointment's new priority"
+                  "description": "The appointment's new priority."
                 }
               }
             }
@@ -538,8 +538,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's locked status",
-        "description": "Add or update the appointment's locked status",
+        "summary": "Add or update the appointment's locked status.",
+        "description": "Add or update the appointment's locked status.",
         "operationId": "upsertAppointmentLocked",
         "parameters": [
           {
@@ -551,27 +551,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "locked": {
                   "type": "boolean",
-                  "description": "The appointment's new locked status"
+                  "description": "The appointment's new locked status."
                 }
               }
             }
@@ -587,8 +587,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's planning quantity",
-        "description": "Add or update the appointment's planning quantity",
+        "summary": "Add or update the appointment's planning quantity.",
+        "description": "Add or update the appointment's planning quantity.",
         "operationId": "upsertAppointmentPlanningQuantity",
         "parameters": [
           {
@@ -600,27 +600,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "quantity": {
                   "type": "integer",
-                  "description": "The appointment's new planning quantity"
+                  "description": "The appointment's new planning quantity."
                 }
               }
             }
@@ -636,8 +636,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the appointment's time marker",
-        "description": "Add or update the appointment's time marker",
+        "summary": "Add or update the appointment's time marker.",
+        "description": "Add or update the appointment's time marker.",
         "operationId": "upsertAppointmentTimemarker",
         "parameters": [
           {
@@ -649,27 +649,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "timeMarker": {
                   "type": "string",
-                  "description": "The appointment's new time marker"
+                  "description": "The appointment's new time marker."
                 }
               }
             }
@@ -685,8 +685,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an appointment link",
-        "description": "Add or update an appointment link",
+        "summary": "Add or update an appointment link.",
+        "description": "Add or update an appointment link.",
         "operationId": "upsertAppointmentUri",
         "parameters": [
           {
@@ -698,31 +698,31 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The appointment's source app"
+                  "description": "The appointment's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The appointment's source type"
+                  "description": "The appointment's source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "uri": {
                   "type": "string",
-                  "description": "The new URI's link"
+                  "description": "The new URI's link."
                 },
                 "description": {
                   "type": "string",
-                  "description": "The new URI's text"
+                  "description": "The new URI's text."
                 }
               }
             }
@@ -738,8 +738,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update an assignment",
-        "description": "Add or update an assignment",
+        "summary": "Add or update an assignment.",
+        "description": "Add or update an assignment.",
         "operationId": "upsertAssignment",
         "parameters": [
           {
@@ -751,27 +751,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier"
+                  "description": "The appointment's identifier."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The appointment's GUID"
+                  "description": "The appointment's GUID."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
+                  "description": "Flag to indicate whether the record was sent from the back office.."
                 },
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique number to assign to the appointment"
+                  "description": "The resource's unique number to assign to the appointment."
                 }
               }
             }
@@ -787,8 +787,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a caption",
-        "description": "Add or update a caption",
+        "summary": "Add or update a caption.",
+        "description": "Add or update a caption.",
         "operationId": "upsertCaption",
         "parameters": [
           {
@@ -800,23 +800,23 @@
               "properties": {
                 "context": {
                   "type": "integer",
-                  "description": "name"
+                  "description": "The caption's context."
                 },
                 "sourceTable": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The caption's source table."
                 },
                 "fieldName": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The caption's field name."
                 },
                 "language": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The caption's language."
                 },
                 "text": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The caption's text"
                 }
               }
             }
@@ -832,8 +832,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a container",
-        "description": "Add or update a container",
+        "summary": "Add or update a container.",
+        "description": "Add or update a container.",
         "operationId": "upsertContainer",
         "parameters": [
           {
@@ -845,15 +845,15 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The container's name."
                 },
                 "handleDate": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The container's handle date."
                 },
                 "handleLocked": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The container's locked status."
                 }
               }
             }
@@ -869,8 +869,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a filter group",
-        "description": "Add or update a flter group",
+        "summary": "Add or update a filter group.",
+        "description": "Add or update a flter group.",
         "operationId": "upsertFilterGroup",
         "parameters": [
           {
@@ -882,15 +882,15 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The filter group's name."
                 },
                 "columnNo": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The filter group's column number."
                 },
                 "dataFilter": {
                   "type": "boolean",
-                  "description": "name"
+                  "description": "The filter group's data filter."
                 }
               }
             }
@@ -906,8 +906,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a filter value",
-        "description": "Add or update a filter value",
+        "summary": "Add or update a filter value.",
+        "description": "Add or update a filter value.",
         "operationId": "upsertFilterValue",
         "parameters": [
           {
@@ -919,7 +919,7 @@
               "properties": {
                 "group": {
                   "type": "string",
-                  "description": "name"
+                  "description": "name."
                 },
                 "value": {
                   "type": "string",
@@ -939,8 +939,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a job",
-        "description": "Add or update a job",
+        "summary": "Add or update a job.",
+        "description": "Add or update a job.",
         "operationId": "upsertJob",
         "parameters": [
           {
@@ -952,403 +952,403 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The job's source app"
+                  "description": "The job's source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The job's source type"
+                  "description": "The job's source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier"
+                  "description": "The job's unique identifier."
                 },
                 "shortDescription": {
                   "type": "string",
-                  "description": "The job's short description"
+                  "description": "The job's short description."
                 },
                 "description": {
                   "type": "string",
-                  "description": "The job's description"
+                  "description": "The job's description."
                 },
                 "type": {
                   "type": "string",
-                  "description": "The job's type"
+                  "description": "The job's type."
                 },
                 "name": {
                   "type": "string",
-                  "description": "The job's name"
+                  "description": "The job's name."
                 },
                 "category": {
                   "type": "string",
-                  "description": "The job's category"
+                  "description": "The job's category."
                 },
                 "timeMarker": {
                   "type": "string",
-                  "description": "The job's time marker"
+                  "description": "The job's time marker."
                 },
                 "pin": {
                   "type": "string",
-                  "description": "The job's pin"
+                  "description": "The job's pin."
                 },
                 "customerNo": {
                   "type": "string",
-                  "description": "The job's customer number"
+                  "description": "The job's customer number."
                 },
                 "customerName": {
                   "type": "string",
-                  "description": "The job's customer name"
+                  "description": "The job's customer name."
                 },
                 "customerAddress": {
                   "type": "string",
-                  "description": "The job's customer address"
+                  "description": "The job's customer address."
                 },
                 "customerPhone": {
                   "type": "string",
-                  "description": "The job's customer phone"
+                  "description": "The job's customer phone."
                 },
                 "customerEmail": {
                   "type": "string",
-                  "description": "The job's customer e-mail"
+                  "description": "The job's customer e-mail."
                 },
                 "contactNo": {
                   "type": "string",
-                  "description": "The job's contact number"
+                  "description": "The job's contact number."
                 },
                 "contactName": {
                   "type": "string",
-                  "description": "The job's contact name"
+                  "description": "The job's contact name."
                 },
                 "contactAddress": {
                   "type": "string",
-                  "description": "The job's contact address"
+                  "description": "The job's contact address."
                 },
                 "contactPhone": {
                   "type": "string",
-                  "description": "The job's contact phone"
+                  "description": "The job's contact phone."
                 },
                 "contactEmail": {
                   "type": "string",
-                  "description": "The job's contact e-mail"
+                  "description": "The job's contact e-mail."
                 },
                 "siteNo": {
                   "type": "string",
-                  "description": "The job's site number"
+                  "description": "The job's site number."
                 },
                 "siteName": {
                   "type": "string",
-                  "description": "The job's site name"
+                  "description": "The job's site name."
                 },
                 "siteAddress": {
                   "type": "string",
-                  "description": "The job's site address"
+                  "description": "The job's site address."
                 },
                 "sitePhone": {
                   "type": "string",
-                  "description": "The job's site phone"
+                  "description": "The job's site phone."
                 },
                 "siteEmail": {
                   "type": "string",
-                  "description": "The job's site e-mail"
+                  "description": "The job's site e-mail."
                 },
                 "siteRegion": {
                   "type": "string",
-                  "description": "The job's site region"
+                  "description": "The job's site region."
                 },
                 "siteStreet": {
                   "type": "string",
-                  "description": "The job's site street"
+                  "description": "The job's site street."
                 },
                 "siteStreetNo": {
                   "type": "string",
-                  "description": "The job's site street number"
+                  "description": "The job's site street number."
                 },
                 "sitePostcode": {
                   "type": "string",
-                  "description": "The job's site post code"
+                  "description": "The job's site post code."
                 },
                 "siteCity": {
                   "type": "string",
-                  "description": "The job's site city"
+                  "description": "The job's site city."
                 },
                 "siteCounty": {
                   "type": "string",
-                  "description": "The job's site county"
+                  "description": "The job's site county."
                 },
                 "siteState": {
                   "type": "string",
-                  "description": "The job's site state"
+                  "description": "The job's site state."
                 },
                 "siteCountry": {
                   "type": "string",
-                  "description": "The job's site country"
+                  "description": "The job's site country."
                 },
                 "siteAddressGeoLong": {
                   "type": "string",
-                  "description": "The job's site address lat"
+                  "description": "The job's site address lat."
                 },
                 "siteAddressGeoLat": {
                   "type": "string",
-                  "description": "The job's site address long"
+                  "description": "The job's site address long."
                 },
                 "siteFromNo": {
                   "type": "string",
-                  "description": "The job's site from number"
+                  "description": "The job's site from number."
                 },
                 "siteFromName": {
                   "type": "string",
-                  "description": "The job's site from name"
+                  "description": "The job's site from name."
                 },
                 "siteFromAddress": {
                   "type": "string",
-                  "description": "The job's site from address"
+                  "description": "The job's site from address."
                 },
                 "siteFromAddressGeoLong": {
                   "type": "string",
-                  "description": "The job's site from long"
+                  "description": "The job's site from long."
                 },
                 "siteFromAddressGeoLat": {
                   "type": "string",
-                  "description": "The job's site from lat"
+                  "description": "The job's site from lat."
                 },
                 "siteFromPhone": {
                   "type": "string",
-                  "description": "The job's site from phone"
+                  "description": "The job's site from phone."
                 },
                 "siteFromEmail": {
                   "type": "string",
-                  "description": "The job's site from e-mail"
+                  "description": "The job's site from e-mail."
                 },
                 "siteFromRegion": {
                   "type": "string",
-                  "description": "The job's site from region"
+                  "description": "The job's site from region."
                 },
                 "siteFromStreet": {
                   "type": "string",
-                  "description": "The job's site from street"
+                  "description": "The job's site from street."
                 },
                 "siteFromPostcode": {
                   "type": "string",
-                  "description": "The job's site from post code"
+                  "description": "The job's site from post code."
                 },
                 "siteFromCity": {
                   "type": "string",
-                  "description": "The job's site from city"
+                  "description": "The job's site from city."
                 },
                 "siteFromCounty": {
                   "type": "string",
-                  "description": "The job's site from county"
+                  "description": "The job's site from county."
                 },
                 "siteFromState": {
                   "type": "string",
-                  "description": "The job's site from state"
+                  "description": "The job's site from state."
                 },
                 "siteFromCountry": {
                   "type": "string",
-                  "description": "The job's site from country"
+                  "description": "The job's site from country."
                 },
                 "billNo": {
                   "type": "string",
-                  "description": "The job's bill number"
+                  "description": "The job's bill number."
                 },
                 "billName": {
                   "type": "string",
-                  "description": "The job's bill name"
+                  "description": "The job's bill name."
                 },
                 "billAddress": {
                   "type": "string",
-                  "description": "The job's bill address"
+                  "description": "The job's bill address."
                 },
                 "billPhone": {
                   "type": "string",
-                  "description": "The job's bill phone"
+                  "description": "The job's bill phone."
                 },
                 "billEmail": {
                   "type": "string",
-                  "description": "The job's bill e-mail"
+                  "description": "The job's bill e-mail."
                 },
                 "billRegion": {
                   "type": "string",
-                  "description": "The job's bill region"
+                  "description": "The job's bill region."
                 },
                 "importance": {
                   "type": "string",
-                  "description": "The job's priority"
+                  "description": "The job's priority."
                 },
                 "creationDateTime": {
                   "type": "string",
-                  "description": "The job's creation date"
+                  "description": "The job's creation date."
                 },
                 "customerReference": {
                   "type": "string",
-                  "description": "The job's customer reference"
+                  "description": "The job's customer reference."
                 },
                 "language": {
                   "type": "string",
-                  "description": "The job's language"
+                  "description": "The job's language."
                 },
                 "responsible": {
                   "type": "string",
-                  "description": "The job's responsible"
+                  "description": "The job's responsible."
                 },
                 "creator": {
                   "type": "string",
-                  "description": "The job's creator"
+                  "description": "The job's creator."
                 },
                 "freeText1": {
                   "type": "string",
-                  "description": "The job's free text #1"
+                  "description": "The job's free text #1."
                 },
                 "freeText2": {
                   "type": "string",
-                  "description": "The job's free text #2"
+                  "description": "The job's free text #2."
                 },
                 "freeText3": {
                   "type": "string",
-                  "description": "The job's free text #3"
+                  "description": "The job's free text #3."
                 },
                 "freeText4": {
                   "type": "string",
-                  "description": "The job's free text #4"
+                  "description": "The job's free text #4."
                 },
                 "freeText5": {
                   "type": "string",
-                  "description": "The job's free text #5"
+                  "description": "The job's free text #5."
                 },
                 "freeText6": {
                   "type": "string",
-                  "description": "The job's free text #6"
+                  "description": "The job's free text #6."
                 },
                 "freeText7": {
                   "type": "string",
-                  "description": "The job's free text #7"
+                  "description": "The job's free text #7."
                 },
                 "freeText8": {
                   "type": "string",
-                  "description": "The job's free text #8"
+                  "description": "The job's free text #8."
                 },
                 "freeText9": {
                   "type": "string",
-                  "description": "The job's free text #9"
+                  "description": "The job's free text #9."
                 },
                 "freeText10": {
                   "type": "string",
-                  "description": "The job's free text #10"
+                  "description": "The job's free text #10."
                 },
                 "freeText11": {
                   "type": "string",
-                  "description": "The job's free text #11"
+                  "description": "The job's free text #11."
                 },
                 "freeText12": {
                   "type": "string",
-                  "description": "The job's free text #12"
+                  "description": "The job's free text #12."
                 },
                 "freeText13": {
                   "type": "string",
-                  "description": "The job's free text #13"
+                  "description": "The job's free text #13."
                 },
                 "freeText14": {
                   "type": "string",
-                  "description": "The job's free text #14"
+                  "description": "The job's free text #14."
                 },
                 "freeText15": {
                   "type": "string",
-                  "description": "The job's free text #15"
+                  "description": "The job's free text #15."
                 },
                 "freeText16": {
                   "type": "string",
-                  "description": "The job's free text #16"
+                  "description": "The job's free text #16."
                 },
                 "freeText17": {
                   "type": "string",
-                  "description": "The job's free text #17"
+                  "description": "The job's free text #17."
                 },
                 "freeText18": {
                   "type": "string",
-                  "description": "The job's free text #18"
+                  "description": "The job's free text #18."
                 },
                 "freeText19": {
                   "type": "string",
-                  "description": "The job's free text #19"
+                  "description": "The job's free text #19."
                 },
                 "freeText20": {
                   "type": "string",
-                  "description": "The job's free text #20"
+                  "description": "The job's free text #20."
                 },
                 "freeDecimal1": {
                   "type": "string",
-                  "description": "The job's free decimal #1"
+                  "description": "The job's free decimal #1."
                 },
                 "freeDecimal2": {
                   "type": "string",
-                  "description": "The job's free decimal #2"
+                  "description": "The job's free decimal #2."
                 },
                 "freeDecimal3": {
                   "type": "string",
-                  "description": "The job's free decimal #3"
+                  "description": "The job's free decimal #3."
                 },
                 "freeDecimal4": {
                   "type": "string",
-                  "description": "The job's free decimal #4"
+                  "description": "The job's free decimal #4."
                 },
                 "freeDecimal5": {
                   "type": "string",
-                  "description": "The job's free decimal #5"
+                  "description": "The job's free decimal #5."
                 },
                 "freeBit1": {
                   "type": "string",
-                  "description": "The job's free boolean #1"
+                  "description": "The job's free boolean #1."
                 },
                 "freeBit2": {
                   "type": "string",
-                  "description": "The job's free boolean #2"
+                  "description": "The job's free boolean #2."
                 },
                 "freeBit3": {
                   "type": "string",
-                  "description": "The job's free boolean #3"
+                  "description": "The job's free boolean #3."
                 },
                 "freeBit4": {
                   "type": "string",
-                  "description": "The job's free boolean #4"
+                  "description": "The job's free boolean #4."
                 },
                 "freeBit5": {
                   "type": "string",
-                  "description": "The job's free boolean #5"
+                  "description": "The job's free boolean #5."
                 },
                 "enableManualSelection": {
                   "type": "string",
-                  "description": "The job's flag to enable manual selection"
+                  "description": "The job's flag to enable manual selection."
                 },
                 "availableInGantt": {
                   "type": "string",
-                  "description": "The job's flag to enable project planning"
+                  "description": "The job's flag to enable project planning."
                 },
                 "startDate": {
                   "type": "string",
-                  "description": "The job's start date"
+                  "description": "The job's start date."
                 },
                 "endDate": {
                   "type": "string",
-                  "description": "The job's end date"
+                  "description": "The job's end date."
                 },
                 "allowDependencies": {
                   "type": "string",
-                  "description": "The job's flag to allow dependencies"
+                  "description": "The job's flag to allow dependencies."
                 },
                 "note": {
                   "type": "string",
-                  "description": "The job's note"
+                  "description": "The job's note."
                 },
                 "overRuleGanttPlanning": {
                   "type": "string",
-                  "description": "The job's flag to allow the Gantt chart to override the planning"
+                  "description": "The job's flag to allow the Gantt chart to override the planning."
                 },
                 "checkAppointments": {
                   "type": "string",
-                  "description": "The job's flag to check appointments"
+                  "description": "The job's flag to check appointments."
                 },
                 "sentFromBackOffice": {
                   "type": "string",
-                  "description": "The flag to indicate whether the record was sent from the back office"
+                  "description": "The flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -1364,8 +1364,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update notification",
-        "description": "Add or update notification",
+        "summary": "Add or update notification.",
+        "description": "Add or update notification.",
         "operationId": "upsertNotification",
         "parameters": [
           {
@@ -1377,51 +1377,51 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "appointmentId": {
                   "type": "integer",
-                  "description": "The appointment's identifier (optional)"
+                  "description": "The appointment's identifier (optional)."
                 },
                 "connectorId": {
                   "type": "string",
-                  "description": "The connector's identifier"
+                  "description": "The connector's identifier."
                 },
                 "type": {
                   "type": "integer",
-                  "description": "The notification type. 0 for debug, 1 for information, 2 for warning, 3 for error, 4 for fatal."
+                  "description": "The notification type. 0 for debug, 1 for information, 2 for warning, 3 for error, 4 for fatal.."
                 },
                 "code": {
                   "type": "string",
-                  "description": "The notification's code"
+                  "description": "The notification's code."
                 },
                 "text": {
                   "type": "string",
-                  "description": "The notification's message"
+                  "description": "The notification's message."
                 },
                 "date": {
                   "type": "string",
-                  "description": "The notification's date"
+                  "description": "The notification's date."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The notification's unique job number (optional)"
+                  "description": "The notification's unique job number (optional)."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The notification's unique task number (optional)"
+                  "description": "The notification's unique task number (optional)."
                 },
                 "appointmentGuid": {
                   "type": "string",
-                  "description": "The notification's appointment GUID"
+                  "description": "The notification's appointment GUID."
                 },
                 "sentFromBackoffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -1437,8 +1437,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a calendar for a resource",
-        "description": "Add or update a calendar for a resource",
+        "summary": "Add or update a calendar for a resource.",
+        "description": "Add or update a calendar for a resource.",
         "operationId": "upsertResourceCalendar",
         "parameters": [
           {
@@ -1466,8 +1466,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the capacity of a resource",
-        "description": "Add or update the capacity of a resource",
+        "summary": "Add or update the capacity of a resource.",
+        "description": "Add or update the capacity of a resource.",
         "operationId": "upsertResourceCapacity",
         "parameters": [
           {
@@ -1479,7 +1479,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The name."
                 }
               }
             }
@@ -1495,8 +1495,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the certificate of a resource",
-        "description": "Add or update the certificate of a resource",
+        "summary": "Add or update the certificate of a resource.",
+        "description": "Add or update the certificate of a resource.",
         "operationId": "upsertResourceCertificate",
         "parameters": [
           {
@@ -1508,7 +1508,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The name."
                 }
               }
             }
@@ -1524,8 +1524,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the filter value of a resource",
-        "description": "Add or update the filter value of a resource",
+        "summary": "Add or update the filter value of a resource.",
+        "description": "Add or update the filter value of a resource.",
         "operationId": "upsertResourceFilterValue",
         "parameters": [
           {
@@ -1537,7 +1537,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The name."
                 }
               }
             }
@@ -1553,8 +1553,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the live location of a resource",
-        "description": "Add or update the live location of a resource",
+        "summary": "Add or update the live location of a resource.",
+        "description": "Add or update the live location of a resource.",
         "operationId": "upsertResourceGpstracking",
         "parameters": [
           {
@@ -1566,35 +1566,35 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique identifier"
+                  "description": "The resource's unique identifier."
                 },
                 "gpsTrackingResourceNo": {
                   "type": "string",
-                  "description": "The resource tracking number"
+                  "description": "The resource tracking number."
                 },
                 "latitude": {
                   "type": "string",
-                  "description": "The position's latitude"
+                  "description": "The position's latitude."
                 },
                 "longitude": {
                   "type": "string",
-                  "description": "The position's longitude"
+                  "description": "The position's longitude."
                 },
                 "speed": {
                   "type": "string",
-                  "description": "The speed"
+                  "description": "The speed."
                 },
                 "date": {
                   "type": "string",
-                  "description": "The date"
+                  "description": "The date."
                 },
                 "rowId": {
                   "type": "string",
-                  "description": "The row id"
+                  "description": "The row id."
                 },
                 "power": {
                   "type": "string",
-                  "description": "The power"
+                  "description": "The power."
                 }
               }
             }
@@ -1610,8 +1610,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the uri of a resource",
-        "description": "Add or update the uri of a resource",
+        "summary": "Add or update the uri of a resource.",
+        "description": "Add or update the uri of a resource.",
         "operationId": "upsertResourceUri",
         "parameters": [
           {
@@ -1623,15 +1623,15 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource number"
+                  "description": "The resource number."
                 },
                 "uri": {
                   "type": "string",
-                  "description": "The resource URI link"
+                  "description": "The resource URI link."
                 },
                 "description": {
                   "type": "string",
-                  "description": "The resource URI text"
+                  "description": "The resource URI text."
                 }
               }
             }
@@ -1647,8 +1647,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task",
-        "description": "Add or update a task",
+        "summary": "Add or update a task.",
+        "description": "Add or update a task.",
         "operationId": "upsertTask",
         "parameters": [
           {
@@ -1660,191 +1660,191 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier"
+                  "description": "The job's unique identifier."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier"
+                  "description": "The task's unique identifier."
                 },
                 "taskType": {
                   "type": "string",
-                  "description": "The task type. Enter 0 for planning task, 1 for a project task."
+                  "description": "The task type. Enter 0 for planning task, 1 for a project task.."
                 },
                 "shortDescription": {
                   "type": "string",
-                  "description": "A short description of the task"
+                  "description": "A short description of the task."
                 },
                 "description": {
                   "type": "string",
-                  "description": "A longer description of the task"
+                  "description": "A longer description of the task."
                 },
                 "name": {
                   "type": "string",
-                  "description": "The task's name"
+                  "description": "The task's name."
                 },
                 "type": {
                   "type": "string",
-                  "description": "The task's type"
+                  "description": "The task's type."
                 },
                 "category": {
                   "type": "string",
-                  "description": "The task's category"
+                  "description": "The task's category."
                 },
                 "timeMarker": {
                   "type": "string",
-                  "description": "The task's time marker"
+                  "description": "The task's time marker."
                 },
                 "pin": {
                   "type": "string",
-                  "description": "The task's pin"
+                  "description": "The task's pin."
                 },
                 "serviceNo": {
                   "type": "string",
-                  "description": "The task's service number"
+                  "description": "The task's service number."
                 },
                 "serviceGroup": {
                   "type": "string",
-                  "description": "The task's service group"
+                  "description": "The task's service group."
                 },
                 "serviceClass": {
                   "type": "string",
-                  "description": "The task's service class"
+                  "description": "The task's service class."
                 },
                 "serviceSerialNo": {
                   "type": "string",
-                  "description": "The task's service serial number"
+                  "description": "The task's service serial number."
                 },
                 "serviceName": {
                   "type": "string",
-                  "description": "The task's service name"
+                  "description": "The task's service name."
                 },
                 "freeText1": {
                   "type": "string",
-                  "description": "The task's free text #1"
+                  "description": "The task's free text #1."
                 },
                 "freeText2": {
                   "type": "string",
-                  "description": "The task's free text #2"
+                  "description": "The task's free text #2."
                 },
                 "freeText3": {
                   "type": "string",
-                  "description": "The task's free text #3"
+                  "description": "The task's free text #3."
                 },
                 "freeText4": {
                   "type": "string",
-                  "description": "The task's free text #4"
+                  "description": "The task's free text #4."
                 },
                 "freeText5": {
                   "type": "string",
-                  "description": "The task's free text #5"
+                  "description": "The task's free text #5."
                 },
                 "freeText6": {
                   "type": "string",
-                  "description": "The task's free text #6"
+                  "description": "The task's free text #6."
                 },
                 "freeText7": {
                   "type": "string",
-                  "description": "The task's free text #7"
+                  "description": "The task's free text #7."
                 },
                 "freeText8": {
                   "type": "string",
-                  "description": "The task's free text #8"
+                  "description": "The task's free text #8."
                 },
                 "freeText9": {
                   "type": "string",
-                  "description": "The task's free text #9"
+                  "description": "The task's free text #9."
                 },
                 "freeText10": {
                   "type": "string",
-                  "description": "The task's free text #10"
+                  "description": "The task's free text #10."
                 },
                 "freeText11": {
                   "type": "string",
-                  "description": "The task's free text #11"
+                  "description": "The task's free text #11."
                 },
                 "freeText12": {
                   "type": "string",
-                  "description": "The task's free text #12"
+                  "description": "The task's free text #12."
                 },
                 "freeText13": {
                   "type": "string",
-                  "description": "The task's free text #13"
+                  "description": "The task's free text #13."
                 },
                 "freeText14": {
                   "type": "string",
-                  "description": "The task's free text #14"
+                  "description": "The task's free text #14."
                 },
                 "freeText15": {
                   "type": "string",
-                  "description": "The task's free text #15"
+                  "description": "The task's free text #15."
                 },
                 "freeText16": {
                   "type": "string",
-                  "description": "The task's free text #16"
+                  "description": "The task's free text #16."
                 },
                 "freeText17": {
                   "type": "string",
-                  "description": "The task's free text #17"
+                  "description": "The task's free text #17."
                 },
                 "freeText18": {
                   "type": "string",
-                  "description": "The task's free text #18"
+                  "description": "The task's free text #18."
                 },
                 "freeText19": {
                   "type": "string",
-                  "description": "The task's free text #19"
+                  "description": "The task's free text #19."
                 },
                 "freeText20": {
                   "type": "string",
-                  "description": "The task's free text #20"
+                  "description": "The task's free text #20."
                 },
                 "freeDecimal1": {
                   "type": "string",
-                  "description": "The task's free decimal #1"
+                  "description": "The task's free decimal #1."
                 },
                 "freeDecimal2": {
                   "type": "string",
-                  "description": "The task's free decimal #2"
+                  "description": "The task's free decimal #2."
                 },
                 "freeDecimal3": {
                   "type": "string",
-                  "description": "The task's free decimal #3"
+                  "description": "The task's free decimal #3."
                 },
                 "freeDecimal4": {
                   "type": "string",
-                  "description": "The task's free decimal #4"
+                  "description": "The task's free decimal #4."
                 },
                 "freeDecimal5": {
                   "type": "string",
-                  "description": "The task's free decimal #5"
+                  "description": "The task's free decimal #5."
                 },
                 "freeBit1": {
                   "type": "string",
-                  "description": "The task's free boolean #1"
+                  "description": "The task's free boolean #1."
                 },
                 "freeBit2": {
                   "type": "string",
-                  "description": "The task's free boolean #2"
+                  "description": "The task's free boolean #2."
                 },
                 "freeBit3": {
                   "type": "string",
-                  "description": "The task's free boolean #3"
+                  "description": "The task's free boolean #3."
                 },
                 "freeBit4": {
                   "type": "string",
-                  "description": "The task's free boolean #4"
+                  "description": "The task's free boolean #4."
                 },
                 "freeBit5": {
                   "type": "string",
-                  "description": "The task's free boolean #5"
+                  "description": "The task's free boolean #5."
                 }
               }
             }
@@ -1860,8 +1860,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task container",
-        "description": "Add or update a task container",
+        "summary": "Add or update a task container.",
+        "description": "Add or update a task container.",
         "operationId": "upsertTaskContainer",
         "parameters": [
           {
@@ -1873,27 +1873,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier"
+                  "description": "The job's unique identifier."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier"
+                  "description": "The task's unique identifier."
                 },
                 "name": {
                   "type": "string",
-                  "description": "The container's name"
+                  "description": "The container's name."
                 },
                 "index": {
                   "type": "integer",
-                  "description": "The index of the container member"
+                  "description": "The index of the container member."
                 }
               }
             }
@@ -1909,8 +1909,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update a task filter value",
-        "description": "Add or update a task filter value",
+        "summary": "Add or update a task filter value.",
+        "description": "Add or update a task filter value.",
         "operationId": "upsertTaskFiltervalue",
         "parameters": [
           {
@@ -1922,27 +1922,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app"
+                  "description": "The source app."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier"
+                  "description": "The job's unique identifier."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier"
+                  "description": "The task's unique identifier."
                 },
                 "filterGroup": {
                   "type": "string",
-                  "description": "The group"
+                  "description": "The group."
                 },
                 "filterValue": {
                   "type": "string",
-                  "description": "The value"
+                  "description": "The value."
                 }
               }
             }
@@ -1958,8 +1958,8 @@
             "schema": {}
           }
         },
-        "summary": "Add or update the task's locked status",
-        "description": "Add or update the task's locked status",
+        "summary": "Add or update the task's locked status.",
+        "description": "Add or update the task's locked status.",
         "operationId": "upsertTaskLocked",
         "parameters": [
           {
@@ -1971,27 +1971,27 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source application"
+                  "description": "The source application."
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type"
+                  "description": "The source type."
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier"
+                  "description": "The job's unique identifier."
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifer"
+                  "description": "The task's unique identifer."
                 },
                 "locked": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether to lock the task"
+                  "description": "Flag to indicate whether to lock the task."
                 },
                 "sentFromBackOffice": {
                   "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office"
+                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
