@@ -4,9 +4,9 @@
       "endpointUrl": {
         "type": "string",
         "uiDefinition": {
-          "displayName": "Dime.Scheduler Azure Function URI",
-          "description": "The base URI (without scheme) of the Dime.Scheduler Azure Function",
-          "tooltip": "Provide the base URI (without scheme) of Dime.Scheduler Azure Function",
+          "displayName": "Dime.Scheduler Integration Hub URI",
+          "description": "The base URI (without scheme) of the Dime.Scheduler Integration Hub",
+          "tooltip": "Provide the base URI (without scheme) of Dime.Scheduler Integration Hub",
           "constraints": {
             "tabIndex": 2,
             "clearText": false,
@@ -31,7 +31,7 @@
         "type": "string",
         "uiDefinition": {
           "displayName": "E-mail address",
-          "description": "The user",
+          "description": "The Dime.Scheduler user's e-mail address",
           "tooltip": "Provide the e-mail address of the user",
           "constraints": {
             "tabIndex": 2,
@@ -44,7 +44,7 @@
         "type": "securestring",
         "uiDefinition": {
           "displayName": "Password",
-          "description": "The Dime.Scheduler User's password",
+          "description": "The Dime.Scheduler user's password",
           "tooltip": "Provide the password of the e-mail address of the user",
           "constraints": {
             "tabIndex": 2,
