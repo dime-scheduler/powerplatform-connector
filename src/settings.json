@@ -1,6 +1,6 @@
 {
-  "connectorId": "shared_dime-2escheduler-20import-5f4f52e559a8b905ba-5ffc65ed5301df6bbf",
-  "environment": "2dcb77ca-5faa-43d2-92ba-3acd3c49c9ac",
+  "connectorId": "shared_dime-2escheduler-20import-5fa42ba8c1798e4bb5-5ffc65ed5301df6bbf",
+  "environment": "a6dfadf5-f26d-eef8-baf9-17b684ad5a56",
   "apiProperties": "apiProperties.json",
   "apiDefinition": "apiDefinition.swagger.json",
   "icon": "icon.png",

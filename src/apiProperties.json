@@ -4,9 +4,9 @@
       "endpointUrl": {
         "type": "string",
         "uiDefinition": {
-          "displayName": "Dime.Scheduler Integration Hub URI",
-          "description": "The base URI (without scheme) of the Dime.Scheduler Integration Hub",
-          "tooltip": "Provide the base URI (without scheme) of Dime.Scheduler Integration Hub",
+          "displayName": "Dime.Scheduler Connect Hub URI",
+          "description": "The base URI (without scheme and with path to API) of the Dime.Scheduler Connect Hub",
+          "tooltip": "Provide the base URI (without scheme with path to API) of Dime.Scheduler Connect Hub",
           "constraints": {
             "tabIndex": 2,
             "clearText": false,
@@ -110,6 +110,16 @@
         "templateId": "setheader",
         "parameters": {
           "x-ms-apimTemplateParameter.name": "x-functions-key",
+          "x-ms-apimTemplateParameter.value": "@connectionParameters('azureFunctionsKey')",
+          "x-ms-apimTemplateParameter.existsAction": "override",
+          "x-ms-apimTemplate-policySection": "Request"
+        }
+      },
+      {
+        "title": "Subscription API Key",
+        "templateId": "setheader",
+        "parameters": {
+          "x-ms-apimTemplateParameter.name": "Ocp-Apim-Subscription-Key",
           "x-ms-apimTemplateParameter.value": "@connectionParameters('azureFunctionsKey')",
           "x-ms-apimTemplateParameter.existsAction": "override",
           "x-ms-apimTemplate-policySection": "Request"

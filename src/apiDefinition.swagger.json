@@ -30,7 +30,7 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
-    "/api/category": {
+    "/category": {
       "post": {
         "responses": {
           "default": {
@@ -67,7 +67,7 @@
         ]
       }
     },
-    "/api/timemarker": {
+    "/timemarker": {
       "post": {
         "responses": {
           "default": {
@@ -100,7 +100,7 @@
         ]
       }
     },
-    "/api/pin": {
+    "/pin": {
       "post": {
         "responses": {
           "default": {
@@ -133,7 +133,7 @@
         ]
       }
     },
-    "/api/resource": {
+    "/resource": {
       "post": {
         "responses": {
           "default": {
@@ -174,7 +174,7 @@
         ]
       }
     },
-    "/api/actionUri": {
+    "/actionUri": {
       "post": {
         "responses": {
           "default": {
@@ -223,7 +223,7 @@
         ]
       }
     },
-    "/api/appointment": {
+    "/appointment": {
       "post": {
         "responses": {
           "default": {
@@ -344,7 +344,7 @@
         ]
       }
     },
-    "/api/appointmentCategory": {
+    "/appointmentCategory": {
       "post": {
         "responses": {
           "default": {
@@ -393,7 +393,7 @@
         ]
       }
     },
-    "/api/appointmentContainer": {
+    "/appointmentContainer": {
       "post": {
         "responses": {
           "default": {
@@ -426,7 +426,7 @@
         ]
       }
     },
-    "/api/appointmentContent": {
+    "/appointmentContent": {
       "post": {
         "responses": {
           "default": {
@@ -479,7 +479,7 @@
         ]
       }
     },
-    "/api/appointmentImportance": {
+    "/appointmentImportance": {
       "post": {
         "responses": {
           "default": {
@@ -528,7 +528,7 @@
         ]
       }
     },
-    "/api/appointmentLocked": {
+    "/appointmentLocked": {
       "post": {
         "responses": {
           "default": {
@@ -577,7 +577,7 @@
         ]
       }
     },
-    "/api/appointmentPlanningQuantity": {
+    "/appointmentPlanningQuantity": {
       "post": {
         "responses": {
           "default": {
@@ -626,7 +626,7 @@
         ]
       }
     },
-    "/api/appointmentTimeMarker": {
+    "/appointmentTimeMarker": {
       "post": {
         "responses": {
           "default": {
@@ -675,7 +675,7 @@
         ]
       }
     },
-    "/api/appointmentUri": {
+    "/appointmentUri": {
       "post": {
         "responses": {
           "default": {
@@ -728,7 +728,7 @@
         ]
       }
     },
-    "/api/assignment": {
+    "/assignment": {
       "post": {
         "responses": {
           "default": {
@@ -777,7 +777,7 @@
         ]
       }
     },
-    "/api/caption": {
+    "/caption": {
       "post": {
         "responses": {
           "default": {
@@ -822,7 +822,7 @@
         ]
       }
     },
-    "/api/container": {
+    "/container": {
       "post": {
         "responses": {
           "default": {
@@ -859,7 +859,7 @@
         ]
       }
     },
-    "/api/filterGroup": {
+    "/filterGroup": {
       "post": {
         "responses": {
           "default": {
@@ -896,7 +896,7 @@
         ]
       }
     },
-    "/api/filterValue": {
+    "/filterValue": {
       "post": {
         "responses": {
           "default": {
@@ -929,7 +929,7 @@
         ]
       }
     },
-    "/api/job": {
+    "/job": {
       "post": {
         "responses": {
           "default": {
@@ -1354,7 +1354,7 @@
         ]
       }
     },
-    "/api/notification": {
+    "/notification": {
       "post": {
         "responses": {
           "default": {
@@ -1427,7 +1427,7 @@
         ]
       }
     },
-    "/api/resourceCalendar": {
+    "/resourceCalendar": {
       "post": {
         "responses": {
           "default": {
@@ -1456,7 +1456,7 @@
         ]
       }
     },
-    "/api/resourceCapacity": {
+    "/resourceCapacity": {
       "post": {
         "responses": {
           "default": {
@@ -1485,7 +1485,7 @@
         ]
       }
     },
-    "/api/resourceCertificate": {
+    "/resourceCertificate": {
       "post": {
         "responses": {
           "default": {
@@ -1514,7 +1514,7 @@
         ]
       }
     },
-    "/api/resourceFilterValue": {
+    "/resourceFilterValue": {
       "post": {
         "responses": {
           "default": {
@@ -1543,7 +1543,7 @@
         ]
       }
     },
-    "/api/resourceGpsTracking": {
+    "/resourceGpsTracking": {
       "post": {
         "responses": {
           "default": {
@@ -1600,7 +1600,7 @@
         ]
       }
     },
-    "/api/resourceUri": {
+    "/resourceUri": {
       "post": {
         "responses": {
           "default": {
@@ -1637,7 +1637,7 @@
         ]
       }
     },
-    "/api/task": {
+    "/task": {
       "post": {
         "responses": {
           "default": {
@@ -1850,7 +1850,7 @@
         ]
       }
     },
-    "/api/taskContainer": {
+    "/taskContainer": {
       "post": {
         "responses": {
           "default": {
@@ -1899,7 +1899,7 @@
         ]
       }
     },
-    "/api/taskFilterValue": {
+    "/taskFilterValue": {
       "post": {
         "responses": {
           "default": {
@@ -1948,7 +1948,7 @@
         ]
       }
     },
-    "/api/taskLocked": {
+    "/taskLocked": {
       "post": {
         "responses": {
           "default": {

@@ -18,26 +18,26 @@ The following entities can be managed through the custom connector:
 
 | Entity                | Create/Update | Delete |
 | --------------------- | ------------- | ------ |
-| Action URI            | ✅            | ❌     |
-| Appointment           | ✅            | ❌     |
-| Assignment            | ✅            | ❌     |
-| Caption               | ✅            | ❌     |
-| Category              | ✅            | ❌     |
-| Exchange Appointment  | ✅            | ❌     |
-| Time marker           | ✅            | ❌     |
-| Pin                   | ✅            | ❌     |
-| Filter Group          | ✅            | ❌     |
-| Filter Value          | ✅            | ❌     |
-| Job                   | ✅            | ❌     |
-| Notification          | ✅            | ❌     |
-| Resource              | ✅            | ❌     |
-| Resource Calendar     | ✅            | ❌     |
-| Resource Capacity     | ✅            | ❌     |
-| Resource Certificate  | ✅            | ❌     |
-| Resource Filter Value | ✅            | ❌     |
-| Resource GPS Tracking | ✅            | ❌     |
-| Resource URL          | ✅            | ❌     |
-| Task                  | ✅            | ❌     |
+| Action URI            | ✅            | ✅     |
+| Appointment           | ✅            | ✅     |
+| Assignment            | ✅            | ✅     |
+| Caption               | ✅            | ✅     |
+| Category              | ✅            | ✅     |
+| Exchange Appointment  | ✅            | ✅     |
+| Time marker           | ✅            | ✅     |
+| Pin                   | ✅            | ✅     |
+| Filter Group          | ✅            | ✅     |
+| Filter Value          | ✅            | ✅     |
+| Job                   | ✅            | ✅     |
+| Notification          | ✅            | ✅     |
+| Resource              | ✅            | ✅     |
+| Resource Calendar     | ✅            | ✅     |
+| Resource Capacity     | ✅            | ✅     |
+| Resource Certificate  | ✅            | ✅     |
+| Resource Filter Value | ✅            | ✅     |
+| Resource GPS Tracking | ✅            | ✅     |
+| Resource URL          | ✅            | ✅     |
+| Task                  | ✅            | ✅     |
 
 The following operations are supported to manipulate certain properties of the entities:
 

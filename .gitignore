@@ -5,3 +5,4 @@ TestResults
 **/**.DotSettings.user
 src/packages
 **/*.nupkg
+src/settings.json
