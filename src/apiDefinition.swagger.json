@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Dime.Scheduler Import",
-    "description": "The Dime.Scheduler Import Connector allows you to feed the system with scheduling related entities such as resources, tasks, skills, etc.",
+    "title": "Dime.Scheduler",    
+    "description": "The Dime.Scheduler connector for the Power Platform allows you to feed the system with scheduling related entities such as resources, tasks, skills, etc.",
     "version": "0.1",
     "contact": {
       "name": "Dime.Scheduler",
