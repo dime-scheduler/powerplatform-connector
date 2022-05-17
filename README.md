@@ -12,9 +12,18 @@
   <a href="https://docs.dimescheduler.com/roadmap">Roadmap</a>
 </p>
 
-<h1 align="center">Dime.Scheduler <br /> PowerApps Custom Connector</h1>
+<div align="center">
+<img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square" />
+</div>
+<h1 align="center">⚡Power Platform Connector ⚡</h1>
 
 Connect to your Dime.Scheduler instance through a PowerApps custom connector.
+
+## Prerequisites
+
+- A Microsoft Power Apps or Power Automate plan with custom connector feature
+- A running Dime.Scheduler instance that is publicly accessible.
+- An API key of the [Dime.Scheduler connect hub](https://apim-dimescheduler.developer.azure-api.net/).
 
 ## Getting started
 
@@ -35,7 +44,13 @@ paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
 Follow the instructions in the terminal. You'll need to select an environment, and when updating a connector, select the connector to overwrite the changes.
 
 > You may have to login, which you can do by running `paconn login` and follow the instructions in the terminal.
-> 
+
+To validate the OpenAPI definition, run the following command in the src directory:
+
+```cmd
+paconn validate --api-def apiDefinition.swagger.json
+```
+
 ### Creating a connection
 
 When the connector has been added to your environment, you should create a connection. These variables are essential to the succesful integration between the Power Platform and Dime.Scheduler:
@@ -50,7 +65,7 @@ When the connector has been added to your environment, you should create a conne
 
 ### Using the connector
 
-The connector can be used in any PowerApp or Flow. The connector will be available under the "Custom" section. 
+The connector can be used in any PowerApp or Flow. The connector will be available under the "Custom" section.
 
 <img src="assets/flow.png?raw=true" height="250px">
 
@@ -95,40 +110,13 @@ Adding an action is done by simple OpenAPI management through the apiDefinition.
 ```
 
 For starters, copy, paste and modify the following metadata:
+
 - Summary
 - Description
 - Operation ID
 
 Next is the endpoint of the Azure function that you'll need to specify. The naming convention is `entity`. Finally, you'll need to specify the entity type in the body.
 
-## Creating a custom connector
-
-In the src directory, run the following [paconn](https://docs.microsoft.com/en-us/connectors/custom-connectors/paconn-cli) command:
-
-```cmd
-paconn create --api-prop apiProperties.json --api-def apiDefinition.swagger.json --icon icon.png
-```
-
-If the app already exists, you may want to run this command:
-
-```cmd
-paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
-```
-
-To validate the OpenAPI definition, run the following command in the src directory:
-
-```cmd
-paconn validate --api-def apiDefinition.swagger.json
-```
-
 ## Contributing
 
 We welcome contributions. Please check out the contribution and code of conduct guidelines first.
-
-To contribute:
-
-1. Fork the project
-2. Create a feature branch (`git checkout -b feature/mynewfeature`)
-3. Commit your changes (`git commit -m 'Add mynewfeature'`)
-4. Push to the branch (`git push origin feature/mynewfeature`)
-5. Open a pull request

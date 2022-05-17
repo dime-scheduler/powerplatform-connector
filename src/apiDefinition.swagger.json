@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Dime.Scheduler",    
+    "title": "Dime.Scheduler",
     "description": "The Dime.Scheduler connector for the Power Platform allows you to feed the system with scheduling related entities such as resources, tasks, skills, etc.",
     "version": "0.1",
     "contact": {
@@ -40,7 +40,7 @@
         },
         "summary": "Add or update a category",
         "description": "Add or update a category.",
-        "operationId": "upsertCategory",
+        "operationId": "UpsertCategory",
         "parameters": [
           {
             "name": "body",
@@ -51,15 +51,18 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The category's name."
+                  "description": "The category's name.",
+                  "required": true
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "The category's display name."
+                  "description": "The category's display name.",
+                  "required": true
                 },
                 "color": {
                   "type": "string",
-                  "description": "The category's hex color."
+                  "description": "The category's hex color.",
+                  "required": true
                 }
               }
             }
@@ -77,7 +80,7 @@
         },
         "summary": "Add or update a time marker",
         "description": "Add or update a time marker.",
-        "operationId": "upsertTimemarker",
+        "operationId": "UpsertTimemarker",
         "parameters": [
           {
             "name": "body",
@@ -88,11 +91,13 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The time marker's name."
+                  "description": "The time marker's name.",
+                  "required": true
                 },
                 "color": {
                   "type": "string",
-                  "description": "The time marker's color."
+                  "description": "The time marker's color.",
+                  "required": true
                 }
               }
             }
@@ -110,7 +115,7 @@
         },
         "summary": "Add or update a pin",
         "description": "Add or update a pin.",
-        "operationId": "upsertPin",
+        "operationId": "UpsertPin",
         "parameters": [
           {
             "name": "body",
@@ -121,11 +126,13 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The pin's name."
+                  "description": "The pin's name.",
+                  "required": true
                 },
                 "color": {
                   "type": "string",
-                  "description": "The pin's color."
+                  "description": "The pin's color.",
+                  "required": true
                 }
               }
             }
@@ -143,7 +150,7 @@
         },
         "summary": "Add or update a resource",
         "description": "Add or update a resource.",
-        "operationId": "upsertResource",
+        "operationId": "UpsertResource",
         "parameters": [
           {
             "name": "body",
@@ -154,7 +161,8 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique identifier."
+                  "description": "The resource's unique identifier.",
+                  "required": true
                 },
                 "resourceName": {
                   "type": "string",
@@ -162,11 +170,320 @@
                 },
                 "displayName": {
                   "type": "string",
-                  "description": "The resource's display name."
+                  "description": "The resource's display name.",
+                  "required": true
                 },
                 "email": {
                   "type": "string",
                   "description": "The resource's e-mail"
+                },
+                "SourceApp": {
+                  "type": "string",
+                  "description": "The source app"
+                },
+                "SourceType": {
+                  "type": "string",
+                  "description": "The source type"
+                },
+                "ResourceType": {
+                  "type": "string",
+                  "description": "The resource type"
+                },
+                "Department": {
+                  "type": "string",
+                  "description": ""
+                },
+                "Email": {
+                  "type": "string",
+                  "description": ""
+                },
+                "Phone": {
+                  "type": "string",
+                  "description": ""
+                },
+                "MobilePhone": {
+                  "type": "string",
+                  "description": ""
+                },
+                "ReplacementResource": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "FieldServiceEmail": {
+                  "type": "string",
+                  "description": ""
+                },
+                "PersonalEmail": {
+                  "type": "string",
+                  "description": ""
+                },
+                "GpsTrackingResourceNo": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeAddress": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomePhone": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeEmail": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeStreet": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeStreetNo": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomePostcode": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeCity": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeCounty": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeState": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeCountry": {
+                  "type": "string",
+                  "description": ""
+                },
+                "HomeRegion": {
+                  "type": "string",
+                  "description": ""
+                },
+                "TeamCode": {
+                  "type": "string",
+                  "description": ""
+                },
+                "TeamName": {
+                  "type": "string",
+                  "description": ""
+                },
+                "TeamType": {
+                  "type": "string",
+                  "description": ""
+                },
+                "TeamSort": {
+                  "type": "int32",
+                  "description": ""
+                },
+                "TeamMemberType": {
+                  "type": "",
+                  "description": "$2"
+                },
+                "TeamMemberSort": {
+                  "type": "int32",
+                  "description": ""
+                },
+                "DoNotShow": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "InServiceFrom": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "InServiceTill": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "ExchangeIntegrationEnabled": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "Url1": {
+                  "type": "string",
+                  "description": ""
+                },
+                "UrlDescription1": {
+                  "type": "string",
+                  "description": ""
+                },
+                "Url2": {
+                  "type": "string",
+                  "description": ""
+                },
+                "UrlDescription2": {
+                  "type": "string",
+                  "description": ""
+                },
+                "Url3": {
+                  "type": "string",
+                  "description": ""
+                },
+                "UrlDescription3": {
+                  "type": "string",
+                  "description": ""
+                },
+                "BulkPlanning": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "BulkCapacity": {
+                  "type": "double",
+                  "description": ""
+                },
+                "ResourceGpsTrackingEnabled": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "Pin": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText1": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText2": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText3": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText4": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText5": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText6": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText7": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText8": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText9": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText10": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText11": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText12": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText13": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText14": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText15": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText16": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText17": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText18": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText19": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeText20": {
+                  "type": "string",
+                  "description": ""
+                },
+                "FreeDate1": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "FreeDate2": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "FreeDate3": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "FreeDate4": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "FreeDate5": {
+                  "type": "date-time",
+                  "description": ""
+                },
+                "FreeDecimal1": {
+                  "type": "double",
+                  "description": ""
+                },
+                "FreeDecimal2": {
+                  "type": "double",
+                  "description": ""
+                },
+                "FreeDecimal3": {
+                  "type": "double",
+                  "description": ""
+                },
+                "FreeDecimal4": {
+                  "type": "double",
+                  "description": ""
+                },
+                "FreeDecimal5": {
+                  "type": "double",
+                  "description": ""
+                },
+                "FreeBit1": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "FreeBit2": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "FreeBit3": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "FreeBit4": {
+                  "type": "boolean",
+                  "description": ""
+                },
+                "FreeBit5": {
+                  "type": "boolean",
+                  "description": ""
                 }
               }
             }
@@ -184,7 +501,7 @@
         },
         "summary": "Add or update an action link",
         "description": "Add or update an action link.",
-        "operationId": "upsertActionuri",
+        "operationId": "UpsertActionuri",
         "parameters": [
           {
             "name": "body",
@@ -195,23 +512,28 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The action URI's source application."
+                  "description": "The action URI's source application.",
+                  "required": "true"
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The action URI's source type."
+                  "description": "The action URI's source type.",
+                  "required": "true"
                 },
                 "uriType": {
                   "type": "integer",
-                  "description": "The action URI's URI type."
+                  "description": "The action URI's URI type.",
+                  "required": "true"
                 },
                 "uri": {
                   "type": "string",
-                  "description": "The action URI's link."
+                  "description": "The action URI's link.",
+                  "required": "true"
                 },
                 "description": {
                   "type": "string",
-                  "description": "The action URI's description."
+                  "description": "The action URI's description.",
+                  "required": "true"
                 },
                 "default": {
                   "type": "boolean",
@@ -233,7 +555,7 @@
         },
         "summary": "Add or update an appointment",
         "description": "Add or update an appointment.",
-        "operationId": "upsertAppointment",
+        "operationId": "UpsertAppointment",
         "parameters": [
           {
             "name": "body",
@@ -268,23 +590,27 @@
                 },
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique number."
+                  "description": "The resource's unique number.",
+                  "required": true
                 },
                 "subject": {
                   "type": "string",
-                  "description": "The appointment's subject."
+                  "description": "The appointment's subject.",
+                  "required": true
                 },
                 "body": {
                   "type": "string",
                   "description": "The appointment's body."
                 },
                 "start": {
-                  "type": "string",
-                  "description": "The appointment's start date."
+                  "type": "date-time",
+                  "description": "The appointment's start date.",
+                  "required": true
                 },
                 "end": {
-                  "type": "string",
-                  "description": "The appointment's end date."
+                  "type": "date-time",
+                  "description": "The appointment's end date.",
+                  "required": true
                 },
                 "timeMarker": {
                   "type": "string",
@@ -333,10 +659,6 @@
                 "roundToUnitOfMeasure": {
                   "type": "string",
                   "description": "Flag to indicate whether to round up the unit of measure."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -354,7 +676,7 @@
         },
         "summary": "Add or update the category of an appointment",
         "description": "Add or update the category of an appointment.",
-        "operationId": "upsertAppointmentCategory",
+        "operationId": "UpsertAppointmentCategory",
         "parameters": [
           {
             "name": "body",
@@ -373,19 +695,17 @@
                 },
                 "appointmentId": {
                   "type": "string",
-                  "description": "The appointment's identifier."
+                  "description": "The appointment's identifier.",
+                  "required": "true"
                 },
                 "category": {
                   "type": "string",
-                  "description": "The appointment's new category."
+                  "description": "The appointment's new category.",
+                  "required": "true"
                 },
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The appointment's GUID."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -403,7 +723,7 @@
         },
         "summary": "Add or update an appointment container",
         "description": "Add or update an appointment container.",
-        "operationId": "upsertAppointmentContainer",
+        "operationId": "UpsertAppointmentContainer",
         "parameters": [
           {
             "name": "body",
@@ -412,13 +732,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "sourceType": {
+                "container": {
                   "type": "string",
-                  "description": "The appointment's source type."
+                  "description": "The container's identifier.",
+                  "required": "true"
                 },
-                "appointmentId": {
+                "appointment": {
                   "type": "string",
-                  "description": "The appointment's identifier."
+                  "description": "The appointment's identifier.",
+                  "required": "true"
                 }
               }
             }
@@ -436,7 +758,7 @@
         },
         "summary": "Add or update the content of the appointment",
         "description": "Add or update the content of the appointment.",
-        "operationId": "upsertAppointmentContent",
+        "operationId": "UpsertAppointmentContent",
         "parameters": [
           {
             "name": "body",
@@ -460,10 +782,6 @@
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The appointment's GUID."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "subject": {
                   "type": "string",
@@ -489,7 +807,7 @@
         },
         "summary": "Add or update the priority of an appointment",
         "description": "Add or update the priority of an appointment.",
-        "operationId": "upsertAppointmentImportance",
+        "operationId": "UpsertAppointmentImportance",
         "parameters": [
           {
             "name": "body",
@@ -513,10 +831,6 @@
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The appointment's GUID."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "importance": {
                   "type": "integer",
@@ -538,7 +852,7 @@
         },
         "summary": "Add or update the appointment's locked status",
         "description": "Add or update the appointment's locked status.",
-        "operationId": "upsertAppointmentLocked",
+        "operationId": "UpsertAppointmentLocked",
         "parameters": [
           {
             "name": "body",
@@ -562,10 +876,6 @@
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The appointment's GUID."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "locked": {
                   "type": "boolean",
@@ -587,7 +897,7 @@
         },
         "summary": "Add or update the appointment's planning quantity",
         "description": "Add or update the appointment's planning quantity.",
-        "operationId": "upsertAppointmentPlanningQuantity",
+        "operationId": "UpsertAppointmentPlanningQuantity",
         "parameters": [
           {
             "name": "body",
@@ -611,10 +921,6 @@
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The appointment's GUID."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 },
                 "quantity": {
                   "type": "integer",
@@ -636,7 +942,7 @@
         },
         "summary": "Add or update the appointment's time marker",
         "description": "Add or update the appointment's time marker.",
-        "operationId": "upsertAppointmentTimemarker",
+        "operationId": "UpsertAppointmentTimemarker",
         "parameters": [
           {
             "name": "body",
@@ -661,13 +967,10 @@
                   "type": "string",
                   "description": "The appointment's GUID."
                 },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
-                },
                 "timeMarker": {
                   "type": "string",
-                  "description": "The appointment's new time marker."
+                  "description": "The appointment's new time marker.",
+                  "required": "true"
                 }
               }
             }
@@ -685,7 +988,7 @@
         },
         "summary": "Add or update an appointment link",
         "description": "Add or update an appointment link.",
-        "operationId": "upsertAppointmentUri",
+        "operationId": "UpsertAppointmentUri",
         "parameters": [
           {
             "name": "body",
@@ -710,17 +1013,15 @@
                   "type": "string",
                   "description": "The appointment's GUID."
                 },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
-                },
                 "uri": {
                   "type": "string",
-                  "description": "The new URI's link."
+                  "description": "The new URI's link.",
+                  "required": "true"
                 },
                 "description": {
                   "type": "string",
-                  "description": "The new URI's text."
+                  "description": "The new URI's text.",
+                  "required": "true"
                 }
               }
             }
@@ -738,7 +1039,7 @@
         },
         "summary": "Add or update an assignment",
         "description": "Add or update an assignment.",
-        "operationId": "upsertAssignment",
+        "operationId": "UpsertAssignment",
         "parameters": [
           {
             "name": "body",
@@ -763,13 +1064,10 @@
                   "type": "string",
                   "description": "The appointment's GUID."
                 },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office.."
-                },
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique number to assign to the appointment."
+                  "description": "The resource's unique number to assign to the appointment.",
+                  "required": "true"
                 }
               }
             }
@@ -787,7 +1085,7 @@
         },
         "summary": "Add or update a caption",
         "description": "Add or update a caption.",
-        "operationId": "upsertCaption",
+        "operationId": "UpsertCaption",
         "parameters": [
           {
             "name": "body",
@@ -798,23 +1096,28 @@
               "properties": {
                 "context": {
                   "type": "integer",
-                  "description": "The caption's context."
+                  "description": "The caption's context.",
+                  "required": "true"
                 },
                 "sourceTable": {
                   "type": "string",
-                  "description": "The caption's source table."
+                  "description": "The caption's source table.",
+                  "required": "true"
                 },
                 "fieldName": {
                   "type": "string",
-                  "description": "The caption's field name."
+                  "description": "The caption's field name.",
+                  "required": "true"
                 },
                 "language": {
                   "type": "string",
-                  "description": "The caption's language."
+                  "description": "The caption's language.",
+                  "required": "true"
                 },
                 "text": {
                   "type": "string",
-                  "description": "The caption's text"
+                  "description": "The caption's text",
+                  "required": "true"
                 }
               }
             }
@@ -832,7 +1135,7 @@
         },
         "summary": "Add or update a container",
         "description": "Add or update a container.",
-        "operationId": "upsertContainer",
+        "operationId": "UpsertContainer",
         "parameters": [
           {
             "name": "body",
@@ -843,7 +1146,8 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The container's name."
+                  "description": "The container's name.",
+                  "required": "true"
                 },
                 "handleDate": {
                   "type": "string",
@@ -869,7 +1173,7 @@
         },
         "summary": "Add or update a filter group",
         "description": "Add or update a flter group.",
-        "operationId": "upsertFilterGroup",
+        "operationId": "UpsertFilterGroup",
         "parameters": [
           {
             "name": "body",
@@ -880,15 +1184,8 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The filter group's name."
-                },
-                "columnNo": {
-                  "type": "string",
-                  "description": "The filter group's column number."
-                },
-                "dataFilter": {
-                  "type": "boolean",
-                  "description": "The filter group's data filter."
+                  "description": "The filter group's name.",
+                  "required": "true"
                 }
               }
             }
@@ -906,7 +1203,7 @@
         },
         "summary": "Add or update a filter value",
         "description": "Add or update a filter value.",
-        "operationId": "upsertFilterValue",
+        "operationId": "UpsertFilterValue",
         "parameters": [
           {
             "name": "body",
@@ -917,11 +1214,13 @@
               "properties": {
                 "group": {
                   "type": "string",
-                  "description": "name."
+                  "description": "The filter group.",
+                  "required": "true"
                 },
                 "value": {
                   "type": "string",
-                  "description": "name"
+                  "description": "The filter value name.",
+                  "required": "true"
                 }
               }
             }
@@ -939,7 +1238,7 @@
         },
         "summary": "Add or update a job",
         "description": "Add or update a job.",
-        "operationId": "upsertJob",
+        "operationId": "UpsertJob",
         "parameters": [
           {
             "name": "body",
@@ -950,19 +1249,23 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The job's source app."
+                  "description": "The job's source app.",
+                  "required": "true"
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The job's source type."
+                  "description": "The job's source type.",
+                  "required": "true"
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier."
+                  "description": "The job's unique identifier.",
+                  "required": "true"
                 },
                 "shortDescription": {
                   "type": "string",
-                  "description": "The job's short description."
+                  "description": "The job's short description.",
+                  "required": "true"
                 },
                 "description": {
                   "type": "string",
@@ -1343,10 +1646,6 @@
                 "checkAppointments": {
                   "type": "string",
                   "description": "The job's flag to check appointments."
-                },
-                "sentFromBackOffice": {
-                  "type": "string",
-                  "description": "The flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -1364,7 +1663,7 @@
         },
         "summary": "Add or update notification",
         "description": "Add or update notification.",
-        "operationId": "upsertNotification",
+        "operationId": "UpsertNotification",
         "parameters": [
           {
             "name": "body",
@@ -1391,15 +1690,18 @@
                 },
                 "type": {
                   "type": "integer",
-                  "description": "The notification type. 0 for debug, 1 for information, 2 for warning, 3 for error, 4 for fatal.."
+                  "description": "The notification type. 0 for debug, 1 for information, 2 for warning, 3 for error, 4 for fatal.",
+                  "required": "true"
                 },
                 "code": {
                   "type": "string",
-                  "description": "The notification's code."
+                  "description": "The notification's code.",
+                  "required": "true"
                 },
                 "text": {
                   "type": "string",
-                  "description": "The notification's message."
+                  "description": "The notification's message.",
+                  "required": "true"
                 },
                 "date": {
                   "type": "string",
@@ -1416,10 +1718,6 @@
                 "appointmentGuid": {
                   "type": "string",
                   "description": "The notification's appointment GUID."
-                },
-                "sentFromBackoffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }
@@ -1437,7 +1735,7 @@
         },
         "summary": "Add or update a calendar for a resource",
         "description": "Add or update a calendar for a resource.",
-        "operationId": "upsertResourceCalendar",
+        "operationId": "UpsertResourceCalendar",
         "parameters": [
           {
             "name": "body",
@@ -1466,36 +1764,7 @@
         },
         "summary": "Add or update the capacity of a resource",
         "description": "Add or update the capacity of a resource.",
-        "operationId": "upsertResourceCapacity",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "description": "The name."
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "/resourceCertificate": {
-      "post": {
-        "responses": {
-          "default": {
-            "description": "default",
-            "schema": {}
-          }
-        },
-        "summary": "Add or update the certificate of a resource",
-        "description": "Add or update the certificate of a resource.",
-        "operationId": "upsertResourceCertificate",
+        "operationId": "UpsertResourceCapacity",
         "parameters": [
           {
             "name": "body",
@@ -1524,7 +1793,7 @@
         },
         "summary": "Add or update the filter value of a resource",
         "description": "Add or update the filter value of a resource.",
-        "operationId": "upsertResourceFilterValue",
+        "operationId": "UpsertResourceFilterValue",
         "parameters": [
           {
             "name": "body",
@@ -1553,7 +1822,7 @@
         },
         "summary": "Add or update the live location of a resource",
         "description": "Add or update the live location of a resource.",
-        "operationId": "upsertResourceGpstracking",
+        "operationId": "UpsertResourceGpstracking",
         "parameters": [
           {
             "name": "body",
@@ -1564,7 +1833,8 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource's unique identifier."
+                  "description": "The resource's unique identifier.",
+                  "required": "true"
                 },
                 "gpsTrackingResourceNo": {
                   "type": "string",
@@ -1572,27 +1842,13 @@
                 },
                 "latitude": {
                   "type": "string",
-                  "description": "The position's latitude."
+                  "description": "The position's latitude.",
+                  "required": "true"
                 },
                 "longitude": {
                   "type": "string",
-                  "description": "The position's longitude."
-                },
-                "speed": {
-                  "type": "string",
-                  "description": "The speed."
-                },
-                "date": {
-                  "type": "string",
-                  "description": "The date."
-                },
-                "rowId": {
-                  "type": "string",
-                  "description": "The row id."
-                },
-                "power": {
-                  "type": "string",
-                  "description": "The power."
+                  "description": "The position's longitude.",
+                  "required": "true"
                 }
               }
             }
@@ -1610,7 +1866,7 @@
         },
         "summary": "Add or update the uri of a resource",
         "description": "Add or update the uri of a resource.",
-        "operationId": "upsertResourceUri",
+        "operationId": "UpsertResourceUri",
         "parameters": [
           {
             "name": "body",
@@ -1621,15 +1877,18 @@
               "properties": {
                 "resourceNo": {
                   "type": "string",
-                  "description": "The resource number."
+                  "description": "The resource number.",
+                  "required": true
                 },
                 "uri": {
                   "type": "string",
-                  "description": "The resource URI link."
+                  "description": "The resource URI link.",
+                  "required": true
                 },
                 "description": {
                   "type": "string",
-                  "description": "The resource URI text."
+                  "description": "The resource URI text.",
+                  "required": true
                 }
               }
             }
@@ -1647,7 +1906,7 @@
         },
         "summary": "Add or update a task",
         "description": "Add or update a task.",
-        "operationId": "upsertTask",
+        "operationId": "UpsertTask",
         "parameters": [
           {
             "name": "body",
@@ -1658,27 +1917,32 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app."
+                  "description": "The source app.",
+                  "required": true
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type."
+                  "description": "The source type.",
+                  "required": true
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier."
+                  "description": "The job's unique identifier.",
+                  "required": true
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier."
+                  "description": "The task's unique identifier.",
+                  "required": true
                 },
                 "taskType": {
                   "type": "string",
-                  "description": "The task type. Enter 0 for planning task, 1 for a project task.."
+                  "description": "The task type. Enter 0 for planning task, 1 for a project task."
                 },
                 "shortDescription": {
                   "type": "string",
-                  "description": "A short description of the task."
+                  "description": "A short description of the task.",
+                  "required": true
                 },
                 "description": {
                   "type": "string",
@@ -1860,7 +2124,7 @@
         },
         "summary": "Add or update a task container",
         "description": "Add or update a task container.",
-        "operationId": "upsertTaskContainer",
+        "operationId": "UpsertTaskContainer",
         "parameters": [
           {
             "name": "body",
@@ -1909,7 +2173,7 @@
         },
         "summary": "Add or update a task filter value",
         "description": "Add or update a task filter value.",
-        "operationId": "upsertTaskFiltervalue",
+        "operationId": "UpsertTaskFiltervalue",
         "parameters": [
           {
             "name": "body",
@@ -1928,19 +2192,23 @@
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier."
+                  "description": "The job's unique identifier.",
+                  "required": true
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier."
+                  "description": "The task's unique identifier.",
+                  "required": true
                 },
                 "filterGroup": {
                   "type": "string",
-                  "description": "The group."
+                  "description": "The group.",
+                  "required": true
                 },
                 "filterValue": {
                   "type": "string",
-                  "description": "The value."
+                  "description": "The value.",
+                  "required": true
                 }
               }
             }
@@ -1958,7 +2226,7 @@
         },
         "summary": "Add or update the task's locked status",
         "description": "Add or update the task's locked status.",
-        "operationId": "upsertTaskLocked",
+        "operationId": "UpsertTaskLocked",
         "parameters": [
           {
             "name": "body",
@@ -1977,19 +2245,17 @@
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier."
+                  "description": "The job's unique identifier.",
+                  "required": true
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifer."
+                  "description": "The task's unique identifier.",
+                  "required": true
                 },
                 "locked": {
                   "type": "boolean",
                   "description": "Flag to indicate whether to lock the task."
-                },
-                "sentFromBackOffice": {
-                  "type": "boolean",
-                  "description": "Flag to indicate whether the record was sent from the back office."
                 }
               }
             }

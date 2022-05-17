@@ -16,28 +16,21 @@ In order to use the connector, you'll need:
 The custom connector provides all the capabilities that the Dime.Scheduler SDK and the Dime.Scheduler Azure Functions expose.
 The following entities can be managed through the custom connector:
 
-| Entity                | Create/Update | Delete |
-| --------------------- | ------------- | ------ |
-| Action URI            | ✅            | ✅     |
-| Appointment           | ✅            | ✅     |
-| Assignment            | ✅            | ✅     |
-| Caption               | ✅            | ✅     |
-| Category              | ✅            | ✅     |
-| Exchange Appointment  | ✅            | ✅     |
-| Time marker           | ✅            | ✅     |
-| Pin                   | ✅            | ✅     |
-| Filter Group          | ✅            | ✅     |
-| Filter Value          | ✅            | ✅     |
-| Job                   | ✅            | ✅     |
-| Notification          | ✅            | ✅     |
-| Resource              | ✅            | ✅     |
-| Resource Calendar     | ✅            | ✅     |
-| Resource Capacity     | ✅            | ✅     |
-| Resource Certificate  | ✅            | ✅     |
-| Resource Filter Value | ✅            | ✅     |
-| Resource GPS Tracking | ✅            | ✅     |
-| Resource URL          | ✅            | ✅     |
-| Task                  | ✅            | ✅     |
+| Entity               | Create/Update | Delete |
+| -------------------- | ------------- | ------ |
+| Action URI           | ✅            | ✅     |
+| Appointment          | ✅            | ✅     |
+| Assignment           | ✅            | ✅     |
+| Caption              | ✅            | ✅     |
+| Category             | ✅            | ✅     |
+| Time marker          | ✅            | ✅     |
+| Pin                  | ✅            | ✅     |
+| Filter Group         | ✅            | ✅     |
+| Filter Value         | ✅            | ✅     |
+| Job                  | ✅            | ✅     |
+| Notification         | ✅            | ✅     |
+| Resource             | ✅            | ✅     |
+| Task                 | ✅            | ✅     |
 
 The following operations are supported to manipulate certain properties of the entities:
 
@@ -52,3 +45,9 @@ The following operations are supported to manipulate certain properties of the e
 | Task        | Container         |
 | Task        | Filter value      |
 | Task        | Locked            |
+| Resource    | Calendar          |
+| Resource    | Capacity          |
+| Resource    | Certificate       |
+| Resource    | Filter Value      |
+| Resource    | GPS Tracking      |
+| Resource    | URL               |
