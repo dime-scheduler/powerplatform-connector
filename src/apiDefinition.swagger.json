@@ -25,7 +25,7 @@
     }
   ],
   "host": "import.dimescheduler.com",
-  "basePath": "/",
+  "basePath": "/v0.1",
   "schemes": ["https"],
   "consumes": ["application/json"],
   "produces": ["application/json"],
@@ -40,7 +40,7 @@
         },
         "summary": "Add or update a category",
         "description": "Add or update a category.",
-        "operationId": "UpsertCategory",
+        "operationId": "upsertCategory",
         "parameters": [
           {
             "name": "body",
@@ -80,7 +80,7 @@
         },
         "summary": "Add or update a time marker",
         "description": "Add or update a time marker.",
-        "operationId": "UpsertTimemarker",
+        "operationId": "upsertTimemarker",
         "parameters": [
           {
             "name": "body",
@@ -115,7 +115,7 @@
         },
         "summary": "Add or update a pin",
         "description": "Add or update a pin.",
-        "operationId": "UpsertPin",
+        "operationId": "upsertPin",
         "parameters": [
           {
             "name": "body",
@@ -150,7 +150,7 @@
         },
         "summary": "Add or update a resource",
         "description": "Add or update a resource.",
-        "operationId": "UpsertResource",
+        "operationId": "upsertResource",
         "parameters": [
           {
             "name": "body",
@@ -278,7 +278,7 @@
                   "description": ""
                 },
                 "TeamSort": {
-                  "type": "int32",
+                  "type": "integer",
                   "description": ""
                 },
                 "TeamMemberType": {
@@ -286,7 +286,7 @@
                   "description": "$2"
                 },
                 "TeamMemberSort": {
-                  "type": "int32",
+                  "type": "integer",
                   "description": ""
                 },
                 "DoNotShow": {
@@ -501,7 +501,7 @@
         },
         "summary": "Add or update an action link",
         "description": "Add or update an action link.",
-        "operationId": "UpsertActionuri",
+        "operationId": "upsertActionuri",
         "parameters": [
           {
             "name": "body",
@@ -555,7 +555,7 @@
         },
         "summary": "Add or update an appointment",
         "description": "Add or update an appointment.",
-        "operationId": "UpsertAppointment",
+        "operationId": "upsertAppointment",
         "parameters": [
           {
             "name": "body",
@@ -676,7 +676,7 @@
         },
         "summary": "Add or update the category of an appointment",
         "description": "Add or update the category of an appointment.",
-        "operationId": "UpsertAppointmentCategory",
+        "operationId": "upsertAppointmentCategory",
         "parameters": [
           {
             "name": "body",
@@ -723,7 +723,7 @@
         },
         "summary": "Add or update an appointment container",
         "description": "Add or update an appointment container.",
-        "operationId": "UpsertAppointmentContainer",
+        "operationId": "upsertAppointmentContainer",
         "parameters": [
           {
             "name": "body",
@@ -758,7 +758,7 @@
         },
         "summary": "Add or update the content of the appointment",
         "description": "Add or update the content of the appointment.",
-        "operationId": "UpsertAppointmentContent",
+        "operationId": "upsertAppointmentContent",
         "parameters": [
           {
             "name": "body",
@@ -807,7 +807,7 @@
         },
         "summary": "Add or update the priority of an appointment",
         "description": "Add or update the priority of an appointment.",
-        "operationId": "UpsertAppointmentImportance",
+        "operationId": "upsertAppointmentImportance",
         "parameters": [
           {
             "name": "body",
@@ -852,7 +852,7 @@
         },
         "summary": "Add or update the appointment's locked status",
         "description": "Add or update the appointment's locked status.",
-        "operationId": "UpsertAppointmentLocked",
+        "operationId": "upsertAppointmentLocked",
         "parameters": [
           {
             "name": "body",
@@ -897,7 +897,7 @@
         },
         "summary": "Add or update the appointment's planning quantity",
         "description": "Add or update the appointment's planning quantity.",
-        "operationId": "UpsertAppointmentPlanningQuantity",
+        "operationId": "upsertAppointmentPlanningQuantity",
         "parameters": [
           {
             "name": "body",
@@ -942,7 +942,7 @@
         },
         "summary": "Add or update the appointment's time marker",
         "description": "Add or update the appointment's time marker.",
-        "operationId": "UpsertAppointmentTimemarker",
+        "operationId": "upsertAppointmentTimemarker",
         "parameters": [
           {
             "name": "body",
@@ -988,7 +988,7 @@
         },
         "summary": "Add or update an appointment link",
         "description": "Add or update an appointment link.",
-        "operationId": "UpsertAppointmentUri",
+        "operationId": "upsertAppointmentUri",
         "parameters": [
           {
             "name": "body",
@@ -1039,7 +1039,7 @@
         },
         "summary": "Add or update an assignment",
         "description": "Add or update an assignment.",
-        "operationId": "UpsertAssignment",
+        "operationId": "upsertAssignment",
         "parameters": [
           {
             "name": "body",
@@ -1085,7 +1085,7 @@
         },
         "summary": "Add or update a caption",
         "description": "Add or update a caption.",
-        "operationId": "UpsertCaption",
+        "operationId": "upsertCaption",
         "parameters": [
           {
             "name": "body",
@@ -1135,7 +1135,7 @@
         },
         "summary": "Add or update a container",
         "description": "Add or update a container.",
-        "operationId": "UpsertContainer",
+        "operationId": "upsertContainer",
         "parameters": [
           {
             "name": "body",
@@ -1173,7 +1173,7 @@
         },
         "summary": "Add or update a filter group",
         "description": "Add or update a flter group.",
-        "operationId": "UpsertFilterGroup",
+        "operationId": "upsertFilterGroup",
         "parameters": [
           {
             "name": "body",
@@ -1203,7 +1203,7 @@
         },
         "summary": "Add or update a filter value",
         "description": "Add or update a filter value.",
-        "operationId": "UpsertFilterValue",
+        "operationId": "upsertFilterValue",
         "parameters": [
           {
             "name": "body",
@@ -1238,7 +1238,7 @@
         },
         "summary": "Add or update a job",
         "description": "Add or update a job.",
-        "operationId": "UpsertJob",
+        "operationId": "upsertJob",
         "parameters": [
           {
             "name": "body",
@@ -1663,7 +1663,7 @@
         },
         "summary": "Add or update notification",
         "description": "Add or update notification.",
-        "operationId": "UpsertNotification",
+        "operationId": "upsertNotification",
         "parameters": [
           {
             "name": "body",
@@ -1735,7 +1735,7 @@
         },
         "summary": "Add or update a calendar for a resource",
         "description": "Add or update a calendar for a resource.",
-        "operationId": "UpsertResourceCalendar",
+        "operationId": "upsertResourceCalendar",
         "parameters": [
           {
             "name": "body",
@@ -1764,7 +1764,7 @@
         },
         "summary": "Add or update the capacity of a resource",
         "description": "Add or update the capacity of a resource.",
-        "operationId": "UpsertResourceCapacity",
+        "operationId": "upsertResourceCapacity",
         "parameters": [
           {
             "name": "body",
@@ -1793,7 +1793,7 @@
         },
         "summary": "Add or update the filter value of a resource",
         "description": "Add or update the filter value of a resource.",
-        "operationId": "UpsertResourceFilterValue",
+        "operationId": "upsertResourceFilterValue",
         "parameters": [
           {
             "name": "body",
@@ -1822,7 +1822,7 @@
         },
         "summary": "Add or update the live location of a resource",
         "description": "Add or update the live location of a resource.",
-        "operationId": "UpsertResourceGpstracking",
+        "operationId": "upsertResourceGpstracking",
         "parameters": [
           {
             "name": "body",
@@ -1866,7 +1866,7 @@
         },
         "summary": "Add or update the uri of a resource",
         "description": "Add or update the uri of a resource.",
-        "operationId": "UpsertResourceUri",
+        "operationId": "upsertResourceUri",
         "parameters": [
           {
             "name": "body",
@@ -1906,7 +1906,7 @@
         },
         "summary": "Add or update a task",
         "description": "Add or update a task.",
-        "operationId": "UpsertTask",
+        "operationId": "upsertTask",
         "parameters": [
           {
             "name": "body",
@@ -2107,6 +2107,10 @@
                 "freeBit5": {
                   "type": "string",
                   "description": "The task's free boolean #5."
+                },
+                "requiredTotalDurationInSeconds": {
+                  "type": "integer",
+                  "description": "The duration of the task."
                 }
               }
             }
@@ -2124,7 +2128,7 @@
         },
         "summary": "Add or update a task container",
         "description": "Add or update a task container.",
-        "operationId": "UpsertTaskContainer",
+        "operationId": "upsertTaskContainer",
         "parameters": [
           {
             "name": "body",
@@ -2135,19 +2139,23 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "The source app."
+                  "description": "The source app.",
+                  "required":true
                 },
                 "sourceType": {
                   "type": "string",
-                  "description": "The source type."
+                  "description": "The source type.",
+                  "required":true
                 },
                 "jobNo": {
                   "type": "string",
-                  "description": "The job's unique identifier."
+                  "description": "The job's unique identifier.",
+                  "required":true
                 },
                 "taskNo": {
                   "type": "string",
-                  "description": "The task's unique identifier."
+                  "description": "The task's unique identifier.",
+                  "required":true
                 },
                 "name": {
                   "type": "string",
@@ -2173,7 +2181,7 @@
         },
         "summary": "Add or update a task filter value",
         "description": "Add or update a task filter value.",
-        "operationId": "UpsertTaskFiltervalue",
+        "operationId": "upsertTaskFiltervalue",
         "parameters": [
           {
             "name": "body",
@@ -2226,7 +2234,7 @@
         },
         "summary": "Add or update the task's locked status",
         "description": "Add or update the task's locked status.",
-        "operationId": "UpsertTaskLocked",
+        "operationId": "upsertTaskLocked",
         "parameters": [
           {
             "name": "body",
