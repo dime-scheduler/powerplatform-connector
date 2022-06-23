@@ -590,7 +590,7 @@
             "in": "body",
             "schema": {
               "$ref": "#/definitions/job"
-            },
+            },            
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
         ]
@@ -899,25 +899,31 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "uriType": {
+          "x-ms-summary": "URI type",
           "format": "int32",
           "type": "integer"
         },
         "uri": {
+          "x-ms-summary": "URI",
           "type": "string"
         },
         "description": {
+          "x-ms-summary": "Description",
           "maxLength": 255,
           "type": "string"
         },
         "default": {
+          "x-ms-summary": "Default",
           "type": "boolean"
         }
       },
@@ -934,93 +940,119 @@
       "type": "object",
       "properties": {
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
+          "x-ms-summary": "Task no.",
           "maxLength": 50,
           "type": "string"
         },
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "subject": {
+          "x-ms-summary": "Subject",
           "type": "string"
         },
         "body": {
+          "x-ms-summary": "Body",
           "type": "string"
         },
         "start": {
+          "x-ms-summary": "Start",
           "format": "date-time",
           "type": "string"
         },
         "end": {
+          "x-ms-summary": "End",
           "format": "date-time",
           "type": "string"
         },
         "isAllDay": {
+          "x-ms-summary": "Is all day",
           "type": "boolean"
         },
         "timeMarker": {
+          "x-ms-summary": "Time marker",
           "type": "string"
         },
         "category": {
+          "x-ms-summary": "Category",
           "type": "string"
         },
         "importance": {
-          "format": "int32",
-          "type": "integer"
+          "x-ms-summary": "Importance",
+          "type": "integer",
+          "default": 0,
+          "enum": [0, 1, 2]
         },
         "locked": {
+          "x-ms-summary": "Locked",
           "type": "boolean"
         },
         "replaceResource": {
+          "x-ms-summary": "Replace resource",
           "type": "boolean"
         },
         "backOfficeId": {
+          "x-ms-summary": "Back office id",
           "maxLength": 100,
           "type": "string"
         },
         "backOfficeParentId": {
+          "x-ms-summary": "Back office parent id",
           "maxLength": 100,
           "type": "string"
         },
         "unitOfMeasure": {
+          "x-ms-summary": "Unit of measure",
           "maxLength": 20,
           "type": "string"
         },
         "unitOfMeasureConversion": {
+          "x-ms-summary": "Unit of measure conversion",
           "format": "double",
           "type": "number"
         },
         "planningQuantity": {
+          "x-ms-summary": "Planning quantity",
           "format": "double",
           "type": "number"
         },
         "useFixedPlanningQuantity": {
+          "x-ms-summary": "Use fixed planning quantity",
           "type": "boolean"
         },
         "roundToUnitOfMeasure": {
+          "x-ms-summary": "Roudn to unit of measure",
           "type": "boolean"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back office",
           "type": "boolean"
         }
       },
@@ -1056,26 +1088,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "category": {
+          "x-ms-summary": "Category",
           "maxLength": 100,
           "type": "string"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1092,10 +1130,12 @@
       "type": "object",
       "properties": {
         "container": {
+          "x-ms-summary": "Container",
           "maxLength": 100,
           "type": "string"
         },
         "appointment": {
+          "x-ms-summary": "Appointment",
           "maxLength": 100,
           "type": "string"
         }
@@ -1109,28 +1149,35 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         },
         "subject": {
+          "x-ms-summary": "Subject",
           "type": "string"
         },
         "body": {
+          "x-ms-summary": "Body",
           "type": "string"
         }
       },
@@ -1148,26 +1195,34 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "importance": {
+          "x-ms-summary": "Importance",
           "format": "int32",
+          "default": 0,
+          "enum": [0, 1, 2],
           "type": "integer"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1184,25 +1239,31 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "locked": {
+          "x-ms-summary": "Locked",
           "type": "boolean"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1219,26 +1280,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "quantity": {
+          "x-ms-summary": "Quantity",
           "format": "double",
           "type": "number"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1255,26 +1322,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "timeMarker": {
+          "x-ms-summary": "Time marker",
           "maxLength": 100,
           "type": "string"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1291,26 +1364,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "uri": {
+          "x-ms-summary": "URI",
           "maxLength": 1000,
           "type": "string"
         },
         "description": {
+          "x-ms-summary": "Description",
           "maxLength": 255,
           "type": "string"
         }
@@ -1328,26 +1407,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -1364,22 +1449,27 @@
       "type": "object",
       "properties": {
         "context": {
+          "x-ms-summary": "Context",
           "format": "int32",
           "type": "integer"
         },
         "sourceTable": {
+          "x-ms-summary": "Source table",
           "maxLength": 255,
           "type": "string"
         },
         "fieldName": {
+          "x-ms-summary": "Field name",
           "maxLength": 255,
           "type": "string"
         },
         "language": {
+          "x-ms-summary": "Language",
           "maxLength": 10,
           "type": "string"
         },
         "text": {
+          "x-ms-summary": "Text",
           "maxLength": 100,
           "type": "string"
         }
@@ -1396,42 +1486,48 @@
       "type": "object",
       "properties": {
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 100,
           "type": "string"
         },
         "displayName": {
+          "x-ms-summary": "Display name",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
+          "x-ms-summary": "Color",
           "maxLength": 7,
           "type": "string"
         }
       },
       "example": {
-        "name": "string",
-        "displayName": "string",
-        "color": "string"
+        "name": "OOO",
+        "displayName": "Out of office",
+        "color": "#6e62b5"
       }
     },
     "container": {
       "type": "object",
       "properties": {
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 100,
           "type": "string"
         },
         "handleDate": {
+          "x-ms-summary": "Handle date",
           "format": "date-time",
           "type": "string"
         },
         "handleLocked": {
+          "x-ms-summary": "Handle locked",
           "type": "boolean"
         }
       },
       "example": {
-        "name": "string",
-        "handleDate": "string",
+        "name": "Project Icarus",
+        "handleDate": "2022-01-01T10:00",
         "handleLocked": true
       }
     },
@@ -1439,24 +1535,28 @@
       "type": "object",
       "properties": {
         "id": {
+          "x-ms-summary": "Id",
           "format": "int32",
           "type": "integer"
         },
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 50,
           "type": "string"
         },
         "columnNo": {
+          "x-ms-summary": "Column no.",
           "format": "int32",
           "type": "integer"
         },
         "dataFilter": {
+          "x-ms-summary": "Date filter",
           "type": "boolean"
         }
       },
       "example": {
         "id": 0,
-        "name": "string",
+        "name": "Driver's license",
         "columnNo": 0,
         "dataFilter": true
       }
@@ -1465,452 +1565,572 @@
       "type": "object",
       "properties": {
         "group": {
+          "x-ms-summary": "Group",
           "maxLength": 50,
           "type": "string"
         },
         "value": {
+          "x-ms-summary": "Value",
           "maxLength": 100,
           "type": "string"
         }
       },
       "example": {
-        "group": "string",
-        "value": "string"
+        "group": "Driver's license",
+        "value": "Class B"
       }
     },
     "job": {
       "type": "object",
+      "required": ["sourceApp", "sourceType", "jobNo", "shortDescription"],
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "shortDescription": {
+          "x-ms-summary": "Short description",
           "maxLength": 50,
           "type": "string"
         },
         "description": {
+          "x-ms-summary": "Description",
           "type": "string"
         },
         "type": {
+          "x-ms-summary": "Type",
           "maxLength": 50,
           "type": "string"
         },
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 255,
           "type": "string"
         },
         "category": {
+          "x-ms-summary": "Category",
           "maxLength": 100,
           "type": "string"
         },
         "timeMarker": {
+          "x-ms-summary": "Time marker",
           "maxLength": 100,
           "type": "string"
         },
         "pin": {
+          "x-ms-summary": "Pin",
           "maxLength": 100,
           "type": "string"
         },
         "customerNo": {
+          "x-ms-summary": "Customer no.",
           "maxLength": 20,
           "type": "string"
         },
         "customerName": {
+          "x-ms-summary": "Customer name",
           "maxLength": 50,
           "type": "string"
         },
         "customerAddress": {
+          "x-ms-summary": "Customer address",
           "type": "string"
         },
         "customerAddressGeoLong": {
+          "x-ms-summary": "Customer address longitude",
           "maxLength": 50,
           "type": "string"
         },
         "customerAddressGeoLat": {
+          "x-ms-summary": "Customer address latitude",
           "maxLength": 50,
           "type": "string"
         },
         "customerPhone": {
+          "x-ms-summary": "Customer phone",
           "maxLength": 50,
           "type": "string"
         },
         "customerEmail": {
+          "x-ms-summary": "Customer e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "contactNo": {
+          "x-ms-summary": "Contact no.",
           "maxLength": 20,
           "type": "string"
         },
         "contactName": {
+          "x-ms-summary": "Contact name",
           "maxLength": 50,
           "type": "string"
         },
         "contactAddress": {
+          "x-ms-summary": "Contact address",
           "type": "string"
         },
         "contactAddressGeoLong": {
+          "x-ms-summary": "Contact address longitude",
           "maxLength": 50,
           "type": "string"
         },
         "contactAddressGeoLat": {
+          "x-ms-summary": "Contact address latitude",
           "maxLength": 50,
           "type": "string"
         },
         "contactPhone": {
+          "x-ms-summary": "Contact phone",
           "maxLength": 50,
           "type": "string"
         },
         "contactEmail": {
+          "x-ms-summary": "Contact e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "siteNo": {
+          "x-ms-summary": "Site no.",
           "maxLength": 20,
           "type": "string"
         },
         "siteName": {
+          "x-ms-summary": "Site name",
           "maxLength": 50,
           "type": "string"
         },
         "siteAddress": {
+          "x-ms-summary": "Site address",
           "type": "string"
         },
         "siteAddressGeoLong": {
+          "x-ms-summary": "Site address longitude",
           "maxLength": 50,
           "type": "string"
         },
         "siteAddressGeoLat": {
+          "x-ms-summary": "Site address latitude",
           "maxLength": 50,
           "type": "string"
         },
         "sitePhone": {
+          "x-ms-summary": "Site phone",
           "maxLength": 50,
           "type": "string"
         },
         "siteEmail": {
+          "x-ms-summary": "Site e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "siteRegion": {
+          "x-ms-summary": "Site region",
           "maxLength": 10,
           "type": "string"
         },
         "siteStreet": {
+          "x-ms-summary": "Site street",
           "maxLength": 255,
           "type": "string"
         },
         "siteStreetNo": {
+          "x-ms-summary": "Site street no.",
           "maxLength": 20,
           "type": "string"
         },
         "sitePostcode": {
+          "x-ms-summary": "Site post code",
           "maxLength": 20,
           "type": "string"
         },
         "siteCity": {
+          "x-ms-summary": "Site city",
           "maxLength": 50,
           "type": "string"
         },
         "siteCounty": {
+          "x-ms-summary": "Site county",
           "maxLength": 50,
           "type": "string"
         },
         "siteState": {
+          "x-ms-summary": "Site state",
           "maxLength": 50,
           "type": "string"
         },
         "siteCountry": {
+          "x-ms-summary": "Site country",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromNo": {
+          "x-ms-summary": "Site from no.",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromName": {
+          "x-ms-summary": "Site from name",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromAddress": {
+          "x-ms-summary": "Site from address",
           "type": "string"
         },
         "siteFromAddressGeoLong": {
+          "x-ms-summary": "Site from longitude",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromAddressGeoLat": {
+          "x-ms-summary": "Site from latitude",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromPhone": {
+          "x-ms-summary": "Site from phone",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromEmail": {
+          "x-ms-summary": "Site from e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "siteFromRegion": {
+          "x-ms-summary": "Site from region",
           "maxLength": 10,
           "type": "string"
         },
         "siteFromStreet": {
+          "x-ms-summary": "Site from street",
           "maxLength": 255,
           "type": "string"
         },
         "siteFromStreetNo": {
+          "x-ms-summary": "Site from street no.",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromPostcode": {
+          "x-ms-summary": "Site from post code",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromCity": {
+          "x-ms-summary": "Site from city",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromCounty": {
+          "x-ms-summary": "Site from county",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromState": {
+          "x-ms-summary": "Site from state",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromCountry": {
+          "x-ms-summary": "Site from country",
           "maxLength": 50,
           "type": "string"
         },
         "billNo": {
+          "x-ms-summary": "Bill no.",
           "maxLength": 20,
           "type": "string"
         },
         "billName": {
+          "x-ms-summary": "Bill name",
           "maxLength": 50,
           "type": "string"
         },
         "billAddress": {
+          "x-ms-summary": "Bill address",
           "type": "string"
         },
         "billAddressGeoLong": {
+          "x-ms-summary": "Bill address longitude",
           "maxLength": 50,
           "type": "string"
         },
         "billAddressGeoLat": {
+          "x-ms-summary": "Bill address latitude",
           "maxLength": 50,
           "type": "string"
         },
         "billPhone": {
+          "x-ms-summary": "Bill phone",
           "maxLength": 50,
           "type": "string"
         },
         "billEmail": {
+          "x-ms-summary": "Bill e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "billRegion": {
+          "x-ms-summary": "Bill region",
           "maxLength": 10,
           "type": "string"
         },
         "importance": {
+          "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
           "enum": [0, 1, 2],
           "type": "integer"
         },
         "creationDateTime": {
+          "x-ms-summary": "Creation datetime",
           "format": "date-time",
           "type": "string"
         },
         "customerReference": {
+          "x-ms-summary": "Customer reference",
           "maxLength": 50,
           "type": "string"
         },
         "language": {
+          "x-ms-summary": "Language",
           "maxLength": 10,
           "type": "string"
         },
         "responsible": {
+          "x-ms-summary": "Responsible",
           "maxLength": 50,
           "type": "string"
         },
         "creator": {
+          "x-ms-summary": "Creator",
           "maxLength": 50,
           "type": "string"
         },
         "freeText1": {
+          "x-ms-summary": "Free text field #1",
           "maxLength": 100,
           "type": "string"
         },
         "freeText2": {
+          "x-ms-summary": "Free text field #2",
           "maxLength": 100,
           "type": "string"
         },
         "freeText3": {
+          "x-ms-summary": "Free text field #3",
           "maxLength": 100,
           "type": "string"
         },
         "freeText4": {
+          "x-ms-summary": "Free text field #4",
           "maxLength": 100,
           "type": "string"
         },
         "freeText5": {
+          "x-ms-summary": "Free text field #5",
           "maxLength": 100,
           "type": "string"
         },
         "freeText6": {
+          "x-ms-summary": "Free text field #6",
           "maxLength": 100,
           "type": "string"
         },
         "freeText7": {
+          "x-ms-summary": "Free text field #7",
           "maxLength": 100,
           "type": "string"
         },
         "freeText8": {
+          "x-ms-summary": "Free text field #8",
           "maxLength": 100,
           "type": "string"
         },
         "freeText9": {
+          "x-ms-summary": "Free text field #9",
           "maxLength": 100,
           "type": "string"
         },
         "freeText10": {
+          "x-ms-summary": "Free text field #10",
           "maxLength": 100,
           "type": "string"
         },
         "freeText11": {
+          "x-ms-summary": "Free text field #11",
           "maxLength": 100,
           "type": "string"
         },
         "freeText12": {
+          "x-ms-summary": "Free text field #12",
           "maxLength": 100,
           "type": "string"
         },
         "freeText13": {
+          "x-ms-summary": "Free text field #13",
           "maxLength": 100,
           "type": "string"
         },
         "freeText14": {
+          "x-ms-summary": "Free text field #14",
           "maxLength": 100,
           "type": "string"
         },
         "freeText15": {
+          "x-ms-summary": "Free text field #15",
           "maxLength": 100,
           "type": "string"
         },
         "freeText16": {
+          "x-ms-summary": "Free text field #16",
           "maxLength": 100,
           "type": "string"
         },
         "freeText17": {
+          "x-ms-summary": "Free text field #17",
           "maxLength": 100,
           "type": "string"
         },
         "freeText18": {
+          "x-ms-summary": "Free text field #18",
           "maxLength": 100,
           "type": "string"
         },
         "freeText19": {
+          "x-ms-summary": "Free text field #19",
           "maxLength": 100,
           "type": "string"
         },
         "freeText20": {
+          "x-ms-summary": "Free text field #20",
           "maxLength": 100,
           "type": "string"
         },
         "freeDecimal1": {
+          "x-ms-summary": "Free decimal field #1",
           "format": "double",
           "type": "number"
         },
         "freeDecimal2": {
+          "x-ms-summary": "Free decimal field #2",
           "format": "double",
           "type": "number"
         },
         "freeDecimal3": {
+          "x-ms-summary": "Free decimal field #3",
           "format": "double",
           "type": "number"
         },
         "freeDecimal4": {
+          "x-ms-summary": "Free decimal field #4",
           "format": "double",
           "type": "number"
         },
         "freeDecimal5": {
+          "x-ms-summary": "Free decimal field #5",
           "format": "double",
           "type": "number"
         },
         "freeDate1": {
+          "x-ms-summary": "Free date field #1",
           "format": "date-time",
           "type": "string"
         },
         "freeDate2": {
+          "x-ms-summary": "Free date field #2",
           "format": "date-time",
           "type": "string"
         },
         "freeDate3": {
+          "x-ms-summary": "Free date field #3",
           "format": "date-time",
           "type": "string"
         },
         "freeDate4": {
+          "x-ms-summary": "Free date field #4",
           "format": "date-time",
           "type": "string"
         },
         "freeDate5": {
+          "x-ms-summary": "Free date field #5",
           "format": "date-time",
           "type": "string"
         },
         "freeBit1": {
+          "x-ms-summary": "Free boolean field #1",
           "type": "boolean"
         },
         "freeBit2": {
+          "x-ms-summary": "Free boolean field #2",
           "type": "boolean"
         },
         "freeBit3": {
+          "x-ms-summary": "Free boolean field #3",
           "type": "boolean"
         },
         "freeBit4": {
+          "x-ms-summary": "Free boolean field #4",
           "type": "boolean"
         },
         "freeBit5": {
+          "x-ms-summary": "Free boolean field #5",
           "type": "boolean"
         },
         "enableManualSelection": {
+          "x-ms-summary": "Enable manual selection",
           "type": "boolean"
         },
         "availableInGantt": {
+          "x-ms-summary": "Available in Gantt chart",
           "type": "boolean"
         },
         "startDate": {
+          "x-ms-summary": "Start date",
           "format": "date-time",
           "type": "string"
         },
         "endDate": {
+          "x-ms-summary": "End date",
           "format": "date-time",
           "type": "string"
         },
         "allowDependencies": {
+          "x-ms-summary": "Allow dependencies",
           "type": "boolean"
         },
         "note": {
+          "x-ms-summary": "Note",
           "type": "string"
         },
         "overRuleGanttPlanning": {
+          "x-ms-summary": "Overrule Gantt chart planning",
           "type": "boolean"
         },
         "checkAppointments": {
+          "x-ms-summary": "Check appointmetns",
           "type": "boolean"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -2033,51 +2253,63 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "appointmentId": {
+          "x-ms-summary": "Appointment id",
           "format": "int64",
           "type": "integer"
         },
         "connectorId": {
+          "x-ms-summary": "Connector id",
           "maxLength": 50,
           "type": "string"
         },
         "type": {
+          "x-ms-summary": "Type",
           "format": "int32",
           "default": 0,
           "enum": [0, 1, 2],
           "type": "integer"
         },
         "code": {
+          "x-ms-summary": "Code",
           "maxLength": 20,
           "type": "string"
         },
         "text": {
+          "x-ms-summary": "Text",
           "type": "string"
         },
         "date": {
+          "x-ms-summary": "Date",
           "format": "date-time",
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
+          "x-ms-summary": "Task no.",
           "maxLength": 50,
           "type": "string"
         },
         "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
           "format": "uuid",
           "type": "string"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -2100,341 +2332,430 @@
       "type": "object",
       "properties": {
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
+          "x-ms-summary": "Color",
           "maxLength": 7,
           "type": "string"
         }
       },
       "example": {
-        "name": "string",
-        "color": "string"
+        "name": "Delivery trucks",
+        "color": "#4a877c"
       }
     },
     "resource": {
       "type": "object",
       "properties": {
-        "resourceNo": {
-          "maxLength": 50,
-          "type": "string"
-        },
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
+        "resourceNo": {
+          "x-ms-summary": "Resource no.",
+          "maxLength": 50,
+          "type": "string"
+        },
         "resourceType": {
+          "x-ms-summary": "Resource type",
           "maxLength": 100,
           "type": "string"
         },
         "resourceTypeId": {
+          "x-ms-summary": "Resource type id",
           "format": "int32",
           "type": "integer"
         },
         "resourceName": {
+          "x-ms-summary": "Resource name",
           "maxLength": 100,
           "type": "string"
         },
         "displayName": {
+          "x-ms-summary": "Display name",
           "maxLength": 100,
           "type": "string"
         },
         "department": {
+          "x-ms-summary": "Department",
           "maxLength": 50,
           "type": "string"
         },
         "email": {
+          "x-ms-summary": "E-mail",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "phone": {
+          "x-ms-summary": "Phone",
           "maxLength": 50,
           "type": "string"
         },
         "mobilePhone": {
+          "x-ms-summary": "Mobile phone",
           "maxLength": 50,
           "type": "string"
         },
         "replacementResource": {
+          "x-ms-summary": "Replacement resource",
           "type": "boolean"
         },
         "fieldServiceEmail": {
+          "x-ms-summary": "Field service e-mail",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "personalEmail": {
+          "x-ms-summary": "Person e-mail",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "gpsTrackingResourceNo": {
+          "x-ms-summary": "GPS tracking no.",
           "maxLength": 50,
           "type": "string"
         },
         "homeAddress": {
+          "x-ms-summary": "Home address",
           "type": "string"
         },
         "homeAddressGeoLong": {
+          "x-ms-summary": "Home address longitude",
           "format": "float",
           "type": "number"
         },
         "homeAddressGeoLat": {
+          "x-ms-summary": "Home address latitude",
           "format": "float",
           "type": "number"
         },
         "homePhone": {
+          "x-ms-summary": "Home phone",
           "maxLength": 50,
           "type": "string"
         },
         "homeEmail": {
+          "x-ms-summary": "Home e-mail",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "format": "email"
         },
         "homeStreet": {
+          "x-ms-summary": "Home street",
           "maxLength": 255,
           "type": "string"
         },
         "homeStreetNo": {
+          "x-ms-summary": "Home street no.",
           "maxLength": 20,
           "type": "string"
         },
         "homePostcode": {
+          "x-ms-summary": "Home post code",
           "maxLength": 20,
           "type": "string"
         },
         "homeCity": {
+          "x-ms-summary": "Home city",
           "maxLength": 50,
           "type": "string"
         },
         "homeCounty": {
+          "x-ms-summary": "Home county",
           "maxLength": 50,
           "type": "string"
         },
         "homeState": {
+          "x-ms-summary": "Home state",
           "maxLength": 50,
           "type": "string"
         },
         "homeCountry": {
+          "x-ms-summary": "Home country",
           "maxLength": 50,
           "type": "string"
         },
         "homeRegion": {
+          "x-ms-summary": "Home region",
           "maxLength": 10,
           "type": "string"
         },
         "teamCode": {
+          "x-ms-summary": "Team code",
           "maxLength": 20,
           "type": "string"
         },
         "teamName": {
+          "x-ms-summary": "Team name",
           "maxLength": 100,
           "type": "string"
         },
         "teamType": {
+          "x-ms-summary": "Team type",
           "maxLength": 20,
           "type": "string"
         },
         "teamSort": {
+          "x-ms-summary": "Team sort",
           "format": "int32",
           "type": "integer"
         },
         "teamMemberType": {
+          "x-ms-summary": "Team member type",
           "maxLength": 20,
           "type": "string"
         },
         "teamMemberSort": {
+          "x-ms-summary": "Team member sort",
           "format": "int32",
           "type": "integer"
         },
         "doNotShow": {
+          "x-ms-summary": "Do not show",
+          "type": "boolean"
+        },
+        "exchangeIntegrationEnabled": {
+          "x-ms-summary": "Enable exchange integration",
+          "type": "boolean"
+        },
+        "resourceGpsTrackingEnabled": {
+          "x-ms-summary": "Enable resource GPS tracking",
           "type": "boolean"
         },
         "inServiceFrom": {
+          "x-ms-summary": "In service from",
           "format": "date-time",
           "type": "string"
         },
         "inServiceTill": {
+          "x-ms-summary": "In service until",
           "format": "date-time",
           "type": "string"
         },
-        "exchangeIntegrationEnabled": {
-          "type": "boolean"
-        },
         "url1": {
+          "x-ms-summary": "URL 1",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription1": {
+          "x-ms-summary": "URL description #1",
           "maxLength": 255,
           "type": "string"
         },
         "url2": {
+          "x-ms-summary": "URL 2",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription2": {
+          "x-ms-summary": "URL description #2",
           "maxLength": 255,
           "type": "string"
         },
         "url3": {
+          "x-ms-summary": "URL 3",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription3": {
+          "x-ms-summary": "URL description #3",
           "maxLength": 255,
           "type": "string"
         },
         "bulkPlanning": {
+          "x-ms-summary": "Bulk planning",
           "type": "boolean"
         },
         "bulkCapacity": {
+          "x-ms-summary": "Bulk capacity",
           "format": "double",
           "type": "number"
         },
-        "resourceGpsTrackingEnabled": {
-          "type": "boolean"
-        },
         "pin": {
+          "x-ms-summary": "The pin indicator",
           "maxLength": 100,
           "type": "string"
         },
         "freeText1": {
+          "x-ms-summary": "Free text field #1",
           "maxLength": 100,
           "type": "string"
         },
         "freeText2": {
+          "x-ms-summary": "Free text field #2",
           "maxLength": 100,
           "type": "string"
         },
         "freeText3": {
+          "x-ms-summary": "Free text field #3",
           "maxLength": 100,
           "type": "string"
         },
         "freeText4": {
+          "x-ms-summary": "Free text field #4",
           "maxLength": 100,
           "type": "string"
         },
         "freeText5": {
+          "x-ms-summary": "Free text field #5",
           "maxLength": 100,
           "type": "string"
         },
         "freeText6": {
+          "x-ms-summary": "Free text field #6",
           "maxLength": 100,
           "type": "string"
         },
         "freeText7": {
+          "x-ms-summary": "Free text field #7",
           "maxLength": 100,
           "type": "string"
         },
         "freeText8": {
+          "x-ms-summary": "Free text field #8",
           "maxLength": 100,
           "type": "string"
         },
         "freeText9": {
+          "x-ms-summary": "Free text field #9",
           "maxLength": 100,
           "type": "string"
         },
         "freeText10": {
+          "x-ms-summary": "Free text field #10",
           "maxLength": 100,
           "type": "string"
         },
         "freeText11": {
+          "x-ms-summary": "Free text field #11",
           "maxLength": 100,
           "type": "string"
         },
         "freeText12": {
+          "x-ms-summary": "Free text field #12",
           "maxLength": 100,
           "type": "string"
         },
         "freeText13": {
+          "x-ms-summary": "Free text field #13",
           "maxLength": 100,
           "type": "string"
         },
         "freeText14": {
+          "x-ms-summary": "Free text field #14",
           "maxLength": 100,
           "type": "string"
         },
         "freeText15": {
+          "x-ms-summary": "Free text field #15",
           "maxLength": 100,
           "type": "string"
         },
         "freeText16": {
+          "x-ms-summary": "Free text field #16",
           "maxLength": 100,
           "type": "string"
         },
         "freeText17": {
+          "x-ms-summary": "Free text field #17",
           "maxLength": 100,
           "type": "string"
         },
         "freeText18": {
+          "x-ms-summary": "Free text field #18",
           "maxLength": 100,
           "type": "string"
         },
         "freeText19": {
+          "x-ms-summary": "Free text field #19",
           "maxLength": 100,
           "type": "string"
         },
         "freeText20": {
+          "x-ms-summary": "Free text field #20",
           "maxLength": 100,
           "type": "string"
         },
         "freeDecimal1": {
+          "x-ms-summary": "Free decimal field #1",
           "format": "double",
           "type": "number"
         },
         "freeDecimal2": {
+          "x-ms-summary": "Free decimal field #2",
           "format": "double",
           "type": "number"
         },
         "freeDecimal3": {
+          "x-ms-summary": "Free decimal field #3",
           "format": "double",
           "type": "number"
         },
         "freeDecimal4": {
+          "x-ms-summary": "Free decimal field #4",
           "format": "double",
           "type": "number"
         },
         "freeDecimal5": {
+          "x-ms-summary": "Free decimal field #5",
           "format": "double",
           "type": "number"
         },
         "freeDate1": {
+          "x-ms-summary": "Free decimal field #1",
           "format": "date-time",
           "type": "string"
         },
         "freeDate2": {
+          "x-ms-summary": "Free decimal field #2",
           "format": "date-time",
           "type": "string"
         },
         "freeDate3": {
+          "x-ms-summary": "Free decimal field #3",
           "format": "date-time",
           "type": "string"
         },
         "freeDate4": {
+          "x-ms-summary": "Free decimal field #4",
           "format": "date-time",
           "type": "string"
         },
         "freeDate5": {
+          "x-ms-summary": "Free decimal field #5",
           "format": "date-time",
           "type": "string"
         },
         "freeBit1": {
+          "x-ms-summary": "Free boolean field #1",
           "type": "boolean"
         },
         "freeBit2": {
+          "x-ms-summary": "Free boolean field #2",
           "type": "boolean"
         },
         "freeBit3": {
+          "x-ms-summary": "Free boolean field #3",
           "type": "boolean"
         },
         "freeBit4": {
+          "x-ms-summary": "Free boolean field #4",
           "type": "boolean"
         },
         "freeBit5": {
+          "x-ms-summary": "Free boolean field #5",
           "type": "boolean"
         }
       },
@@ -2528,22 +2849,27 @@
       "type": "object",
       "properties": {
         "code": {
+          "x-ms-summary": "Code",
           "maxLength": 50,
           "type": "string"
         },
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "calendarCode": {
+          "x-ms-summary": "Calendar code",
           "maxLength": 255,
           "type": "string"
         },
         "startDate": {
+          "x-ms-summary": "Start date",
           "format": "date-time",
           "type": "string"
         },
         "endDate": {
+          "x-ms-summary": "End date",
           "format": "date-time",
           "type": "string"
         }
@@ -2560,26 +2886,32 @@
       "type": "object",
       "properties": {
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "date": {
+          "x-ms-summary": "Date",
           "format": "date-time",
           "type": "string"
         },
         "capacityInSeconds": {
+          "x-ms-summary": "Capacity in seconds",
           "format": "int64",
           "type": "integer"
         },
         "quantity": {
+          "x-ms-summary": "Quantity",
           "format": "double",
           "type": "number"
         },
         "unitOfMeasure": {
+          "x-ms-summary": "Unit of measure",
           "maxLength": 20,
           "type": "string"
         },
         "unitOfMeasureConversion": {
+          "x-ms-summary": "Unit of measure conversion",
           "format": "double",
           "type": "number"
         }
@@ -2593,54 +2925,31 @@
         "unitOfMeasureConversion": 0
       }
     },
-    "resourceCertificate": {
-      "type": "object",
-      "properties": {
-        "resourceNo": {
-          "type": "string"
-        },
-        "no": {
-          "type": "string"
-        },
-        "score": {
-          "type": "string"
-        },
-        "lastScoreDate": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "validUntil": {
-          "format": "date-time",
-          "type": "string"
-        }
-      },
-      "example": {
-        "resourceNo": "string",
-        "no": "string",
-        "score": "string",
-        "lastScoreDate": "string",
-        "validUntil": "string"
-      }
-    },
     "resourceFilterValue": {
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "type": "string"
         },
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "type": "string"
         },
         "filterGroup": {
+          "x-ms-summary": "Filter group",
           "type": "string"
         },
         "filterValue": {
+          "x-ms-summary": "Filter value",
           "type": "string"
         },
         "transferToTemp": {
+          "x-ms-summary": "Transfer to temp",
           "type": "boolean"
         }
       },
@@ -2657,34 +2966,42 @@
       "type": "object",
       "properties": {
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "gpsTrackingResourceNo": {
+          "x-ms-summary": "GPS tracking resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "latitude": {
+          "x-ms-summary": "Latitude",
           "format": "double",
           "type": "number"
         },
         "longitude": {
+          "x-ms-summary": "Longitude",
           "format": "double",
           "type": "number"
         },
         "speed": {
+          "x-ms-summary": "Speed",
           "format": "int32",
           "type": "integer"
         },
         "date": {
+          "x-ms-summary": "Date",
           "format": "date-time",
           "type": "string"
         },
         "rowId": {
+          "x-ms-summary": "Row id",
           "maxLength": 100,
           "type": "string"
         },
         "power": {
+          "x-ms-summary": "Power",
           "maxLength": 50,
           "type": "string"
         }
@@ -2704,14 +3021,17 @@
       "type": "object",
       "properties": {
         "resourceNo": {
+          "x-ms-summary": "Resource no.",
           "maxLength": 50,
           "type": "string"
         },
         "uri": {
+          "x-ms-summary": "URI",
           "maxLength": 1000,
           "type": "string"
         },
         "description": {
+          "x-ms-summary": "Description",
           "maxLength": 255,
           "type": "string"
         }
@@ -3560,26 +3880,32 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
+          "x-ms-summary": "Task no.",
           "maxLength": 50,
           "type": "string"
         },
         "name": {
+          "x-ms-summary": "name",
           "maxLength": 255,
           "type": "string"
         },
         "index": {
+          "x-ms-summary": "Index",
           "format": "int32",
           "type": "integer"
         }
@@ -3597,30 +3923,37 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
+          "x-ms-summary": "Task no.",
           "maxLength": 50,
           "type": "string"
         },
         "filterGroup": {
+          "x-ms-summary": "Filter group",
           "maxLength": 50,
           "type": "string"
         },
         "filterValue": {
+          "x-ms-summary": "Filter value",
           "maxLength": 100,
           "type": "string"
         },
         "transferToTemp": {
+          "x-ms-summary": "Transfer to temp",
           "type": "boolean"
         }
       },
@@ -3638,25 +3971,31 @@
       "type": "object",
       "properties": {
         "sourceApp": {
+          "x-ms-summary": "Source application",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
+          "x-ms-summary": "Source type",
           "maxLength": 10,
           "type": "string"
         },
         "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
+          "x-ms-summary": "Task no.",
           "maxLength": 50,
           "type": "string"
         },
         "locked": {
+          "x-ms-summary": "Locked",
           "type": "boolean"
         },
         "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back-office",
           "type": "boolean"
         }
       },
@@ -3673,17 +4012,19 @@
       "type": "object",
       "properties": {
         "name": {
+          "x-ms-summary": "Name",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
+          "x-ms-summary": "Color",
           "maxLength": 7,
           "type": "string"
         }
       },
       "example": {
-        "name": "string",
-        "color": "string"
+        "name": "Underway for delivery",
+        "color": "#99bj2z"
       }
     },
     "timeSpan": {
