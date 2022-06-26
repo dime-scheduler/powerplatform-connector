@@ -35,7 +35,7 @@ In the src directory, run the following [paconn](https://docs.microsoft.com/en-u
 paconn create --api-prop apiProperties.json --api-def apiDefinition.swagger.json --icon icon.png
 ```
 
-If the app already exists, you may want to run this command:
+If the connector already exists, you may want to run this command:
 
 ```cmd
 paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
@@ -57,11 +57,13 @@ When the connector has been added to your environment, you should create a conne
 
 <img src="assets/connection.png?raw=true" height="250px">
 
-- Dime.Scheduler Connect Hub URI: `import.dimescheduler.com/{VERSION}`. The version corresponds to the version of the hub that matches a compatible Dime.Scheduler version. For example `v0.1`.
-- Dime.Scheduler URI: this needs to be the base URI of your Dime.Scheduler instance, that is publicly accessible.
-- E-mail address: the e-mail address of the Dime.Scheduler user that has sufficient rights to insert data into the solution.
-- Password: the password of said user
-- API Key: this is the key of the subscription that allows you to use Dime.Scheduler's connect hub. You can register [here](https://apim-dimescheduler.developer.azure-api.net). Once enrolled, navigate to your user profile and copy the primary key of your subscription.
+| Parameter                      | Value                                                                                                                                                                                                                                                             |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dime.Scheduler Connect Hub URI | `import.dimescheduler.com/{VERSION}`. The version corresponds to the version of the hub that matches a compatible Dime.Scheduler version. For example `v0.1`.                                                                                                     |
+| Dime.Scheduler URI             | This needs to be the base URI of your Dime.Scheduler instance, that is publicly accessible.                                                                                                                                                                       |
+| E-mail address                 | The e-mail address of the Dime.Scheduler user that has sufficient rights to insert data into the solution.                                                                                                                                                        |
+| Password                       | The password of said user                                                                                                                                                                                                                                         |
+| API Key                        | this is the key of the subscription that allows you to use Dime.Scheduler's connect hub. You can register [here](https://apim-dimescheduler.developer.azure-api.net). Once enrolled, navigate to your user profile and copy the primary key of your subscription. |
 
 ### Using the connector
 
@@ -71,42 +73,50 @@ The connector can be used in any PowerApp or Flow. The connector will be availab
 
 ## Development
 
-Adding an action is done by simple OpenAPI management through the apiDefinition.swagger.json file in the src directory:
+Adding an action is done by simple OpenAPI management through the `apiDefinition.swagger.json` file in the src directory:
 
 ```json
-"/timemarker": {
+"/timeMarker": {
   "post": {
-    "responses": {
-      "default": {
-        "description": "default",
-        "schema": {}
-      }
-    },
-    "summary": "Add or update time marker",
-    "description": "Add or update time marker",
-    "operationId": "crud-timemarker",
+    "summary": "Add, update or remove a time marker",
+    "description": "Add, update or remove a time marker.",
+    "operationId": "Timemarker",
+    "tags": ["indicator"],
     "parameters": [
       {
-        "name": "body",
+        "name": "ds-append",
+        "in": "header",
+        "description": "Append",
+        "type": "boolean",
+        "x-ms-summary": "Append"
+      },
+      {
+        "name": "timeMarker",
         "in": "body",
-        "required": false,
         "schema": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string",
-              "description": "name"
-            },
-            "color": {
-              "type": "string",
-              "description": "color"
-            }
-          }
-        }
+          "$ref": "#/definitions/timeMarker"
+        },
+        "description": "JSON request body containing the contents of the requested entity to be imported."
       }
-    ]
+    ],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "responses": {
+      "200": {
+        "$ref": "#/responses/200"
+      },
+      "400": {
+        "$ref": "#/responses/400"
+      },
+      "500": {
+        "$ref": "#/responses/500"
+      },
+      "default": {
+        "$ref": "#/responses/default"
+      }
+    }
   }
-}
+},
 ```
 
 For starters, copy, paste and modify the following metadata:
@@ -115,7 +125,7 @@ For starters, copy, paste and modify the following metadata:
 - Description
 - Operation ID
 
-Next is the endpoint of the Azure function that you'll need to specify. The naming convention is `entity`. Finally, you'll need to specify the entity type in the body.
+Next is the endpoint of the Azure function that you'll need to specify. The naming convention is `Entity`. Finally, you'll need to specify the entity type in the body.
 
 ## Contributing
 

@@ -35,6 +35,7 @@
         "summary": "Add, update or remove a category",
         "description": "Add, update or remove a category.",
         "operationId": "Category",
+        "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
@@ -56,18 +57,16 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -77,6 +76,7 @@
         "summary": "Add, update or remove a time marker",
         "description": "Add, update or remove a time marker.",
         "operationId": "Timemarker",
+        "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
@@ -98,18 +98,16 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -119,6 +117,7 @@
         "summary": "Add, update or remove a pin",
         "description": "Add, update or remove a pin.",
         "operationId": "Pin",
+        "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
@@ -140,18 +139,16 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -161,6 +158,7 @@
         "summary": "Add, update or remove a resource",
         "description": "Add, update or remove a resource.",
         "operationId": "Resource",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
@@ -182,18 +180,16 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -222,18 +218,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -243,6 +237,7 @@
         "summary": "Add, update or remove an appointment",
         "description": "Add, update or remove an appointment.",
         "operationId": "Appointment",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "ds-append",
@@ -262,18 +257,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -283,6 +276,7 @@
         "summary": "Add, update or remove the category of an appointment",
         "description": "Add, update or remove the category of an appointment.",
         "operationId": "AppointmentCategory",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentCategory",
@@ -295,18 +289,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -316,6 +308,7 @@
         "summary": "Add, update or remove an appointment container",
         "description": "Add, update or remove an appointment container.",
         "operationId": "AppointmentContainer",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "ds-append",
@@ -335,18 +328,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -356,6 +347,7 @@
         "summary": "Add, update or remove the content of the appointment",
         "description": "Add, update or remove the content of the appointment.",
         "operationId": "AppointmentContent",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentContent",
@@ -368,18 +360,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -389,6 +379,7 @@
         "summary": "Add, update or remove the priority of an appointment",
         "description": "Add, update or remove the priority of an appointment.",
         "operationId": "AppointmentImportance",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentImportance",
@@ -398,7 +389,21 @@
             },
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
-        ]
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
       }
     },
     "/appointmentLocked": {
@@ -406,6 +411,7 @@
         "summary": "Add, update or remove the appointment's locked status",
         "description": "Add, update or remove the appointment's locked status.",
         "operationId": "AppointmentLocked",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentLocked",
@@ -418,18 +424,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -439,6 +443,7 @@
         "summary": "Add, update or remove the appointment's planning quantity",
         "description": "Add, update or remove the appointment's planning quantity.",
         "operationId": "AppointmentPlanningQuantity",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentPlanningQuantity",
@@ -448,7 +453,21 @@
             },
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
-        ]
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
       }
     },
     "/appointmentTimeMarker": {
@@ -456,6 +475,7 @@
         "summary": "Add, update or remove the appointment's time marker",
         "description": "Add, update or remove the appointment's time marker.",
         "operationId": "AppointmentTimemarker",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "appointmentTimeMarker",
@@ -468,18 +488,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -489,6 +507,7 @@
         "summary": "Add, update or remove an appointment link",
         "description": "Add, update or remove an appointment link.",
         "operationId": "AppointmentUri",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "ds-append",
@@ -508,18 +527,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -529,6 +546,7 @@
         "summary": "Add, update or remove an assignment",
         "description": "Add, update or remove an assignment.",
         "operationId": "Assignment",
+        "tags": ["appointment"],
         "parameters": [
           {
             "name": "ds-append",
@@ -548,18 +566,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -588,18 +604,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -628,18 +642,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -649,6 +661,7 @@
         "summary": "Add, update or remove a filter group",
         "description": "Add, update or remove a flter group.",
         "operationId": "FilterGroup",
+        "tags": ["filters"],
         "parameters": [
           {
             "name": "ds-append",
@@ -668,18 +681,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -689,6 +700,7 @@
         "summary": "Add, update or remove a filter value",
         "description": "Add, update or remove a filter value.",
         "operationId": "FilterValue",
+        "tags": ["filters"],
         "parameters": [
           {
             "name": "ds-append",
@@ -708,18 +720,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -729,6 +739,7 @@
         "summary": "Add, update or remove a job",
         "description": "Add, update or remove a job.",
         "operationId": "Job",
+        "tags": ["task"],
         "parameters": [
           {
             "name": "ds-append",
@@ -748,18 +759,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -788,18 +797,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -809,6 +816,7 @@
         "summary": "Add, update or remove a calendar for a resource",
         "description": "Add, update or remove a calendar for a resource.",
         "operationId": "ResourceCalendar",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
@@ -828,18 +836,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -849,6 +855,7 @@
         "summary": "Add, update or remove the capacity of a resource",
         "description": "Add, update or remove the capacity of a resource.",
         "operationId": "ResourceCapacity",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
@@ -868,18 +875,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -889,6 +894,7 @@
         "summary": "Add, update or remove the filter value of a resource",
         "description": "Add, update or remove the filter value of a resource.",
         "operationId": "ResourceFilterValue",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
@@ -908,18 +914,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -929,6 +933,7 @@
         "summary": "Add, update or remove the live location of a resource",
         "description": "Add, update or remove the live location of a resource.",
         "operationId": "ResourceGpstracking",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
@@ -948,18 +953,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -988,18 +991,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -1009,6 +1010,7 @@
         "summary": "Add, update or remove a task",
         "description": "Add, update or remove a task.",
         "operationId": "Task",
+        "tags": ["task"],
         "parameters": [
           {
             "name": "ds-append",
@@ -1030,18 +1032,16 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -1053,6 +1053,7 @@
         "summary": "Add, update or remove a task container",
         "description": "Add, update or remove a task container.",
         "operationId": "TaskContainer",
+        "tags": ["task"],
         "parameters": [
           {
             "name": "ds-append",
@@ -1072,18 +1073,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -1093,6 +1092,7 @@
         "summary": "Add, update or remove a task filter value",
         "description": "Add, update or remove a task filter value.",
         "operationId": "TaskFiltervalue",
+        "tags": ["task"],
         "parameters": [
           {
             "name": "ds-append",
@@ -1112,18 +1112,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -1133,6 +1131,7 @@
         "summary": "Add, update or remove the task's locked status",
         "description": "Add, update or remove the task's locked status.",
         "operationId": "TaskLocked",
+        "tags": ["task"],
         "parameters": [
           {
             "name": "taskLocked",
@@ -1145,18 +1144,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
           },
           "default": {
-            "description": "Response to successful sending record",
-            "x-ms-summary": "Success response",
-            "schema": {
-              "$ref": "#/definitions/SendSuccessResponseBody"
-            }
+            "$ref": "#/responses/default"
           }
         }
       }
@@ -4344,6 +4341,9 @@
         }
       }
     },
+    "SendErrorResponseBody": {
+      "type": "string"
+    },
     "SendSuccessResponseBody": {
       "type": "object",
       "properties": {
@@ -4363,8 +4363,8 @@
         },
         "status": {
           "type": "number",
-          "title": "The status code",
-          "x-ms-summary": "The status code",
+          "title": "Status code",
+          "x-ms-summary": "Status code",
           "description": "The status code",
           "x-ms-visibility": "advanced"
         },
@@ -4374,19 +4374,38 @@
           "x-ms-summary": "Status code phrase",
           "description": "Status code phrase",
           "x-ms-visibility": "advanced"
-        },
-        "appointments": {
-          "type": "array",
-          "title": "The appointments",
-          "x-ms-summary": "The appointments",
-          "description": "The appointments",
-          "x-ms-visibility": "advanced"
         }
       }
     }
   },
   "parameters": {},
-  "responses": {},
+  "responses": {
+    "200": {
+      "description": "Response to successful sending record",
+      "x-ms-summary": "Success response",
+      "schema": {
+        "$ref": "#/definitions/SendSuccessResponseBody"
+      }
+    },
+    "400": {
+      "description": "The request was invalid.",
+      "x-ms-summary": "The request was invalid.",
+      "schema": {
+        "$ref": "#/definitions/SendErrorResponseBody"
+      }
+    },
+    "500": {
+      "description": "An error occurred on the server.",
+      "x-ms-summary": "An error occurred on the server.",
+      "schema": {
+        "$ref": "#/definitions/SendErrorResponseBody"
+      }
+    },
+    "default": {
+      "description": "Response to successful sending record",
+      "x-ms-summary": "Success response"
+    }
+  },
   "securityDefinitions": {
     "AzureFunctionsKey": {
       "type": "apiKey",
