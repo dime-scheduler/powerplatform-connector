@@ -4407,7 +4407,7 @@
     }
   },
   "securityDefinitions": {
-    "AzureFunctionsKey": {
+    "apiKey": {
       "type": "apiKey",
       "name": "x-functions-key",
       "in": "header"
