@@ -2,11 +2,11 @@
   "swagger": "2.0",
   "info": {
     "title": "Dime.Scheduler",
-    "description": "The Dime.Scheduler connector for the Power Platform allows you to feed the system with scheduling related entities such as resources, tasks, skills, etc.",
+    "description": "Dime.Scheduler is a resource and project planning solution that extends the capabilities of ERP, CRM and other business systems with powerful graphical scheduling tools.",
     "version": "0.1",
     "contact": {
-      "name": "Dime.Scheduler",
-      "url": "https://www.dimescheduler.com",
+      "name": "Dime.Scheduler Support",
+      "url": "https://docs.dimescheduler.com",
       "email": "support@dimescheduler.com"
     }
   },
@@ -24,7 +24,7 @@
       "propertyValue": "Business Management;Data"
     }
   ],
-  "host": "import.dimescheduler.com",
+  "host": "api.dimescheduler.com",
   "basePath": "/v0.1",
   "schemes": ["https"],
   "consumes": ["application/json"],
@@ -33,14 +33,14 @@
     "/category": {
       "post": {
         "summary": "Add, update or remove a category",
-        "description": "Add, update or remove a category.",
+        "description": "Add, update or remove a category, which is the visual indicator that renders the background of the appointment.",
         "operationId": "Category",
         "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -74,14 +74,14 @@
     "/timeMarker": {
       "post": {
         "summary": "Add, update or remove a time marker",
-        "description": "Add, update or remove a time marker.",
+        "description": "Add, update or remove a time marker, which is the visual indicator that renders the underscore of the appointment.",
         "operationId": "Timemarker",
         "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -115,14 +115,14 @@
     "/pin": {
       "post": {
         "summary": "Add, update or remove a pin",
-        "description": "Add, update or remove a pin.",
+        "description": "Add, update or remove a pin, which is the visual indicator that renders the colors of the markers on the map.",
         "operationId": "Pin",
         "tags": ["indicator"],
         "parameters": [
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -163,7 +163,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -203,7 +203,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -242,7 +242,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -313,7 +313,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -512,7 +512,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -544,14 +544,14 @@
     "/assignment": {
       "post": {
         "summary": "Add, update or remove an assignment",
-        "description": "Add, update or remove an assignment.",
+        "description": "Add, update or remove an assignment, which is the allocation of a resource to an appointment.",
         "operationId": "Assignment",
         "tags": ["appointment"],
         "parameters": [
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -589,7 +589,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -627,7 +627,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -666,7 +666,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -705,7 +705,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -744,7 +744,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -782,7 +782,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -821,7 +821,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -860,7 +860,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -899,7 +899,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -938,7 +938,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -972,11 +972,12 @@
         "summary": "Add, update or remove the uri of a resource",
         "description": "Add, update or remove the uri of a resource.",
         "operationId": "ResourceUri",
+        "tags": ["resource"],
         "parameters": [
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -1015,7 +1016,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -1058,7 +1059,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -1097,7 +1098,7 @@
           {
             "name": "ds-append",
             "in": "header",
-            "description": "Append",
+            "description": "True to create or update the record, false to remove.",
             "type": "boolean",
             "x-ms-summary": "Append"
           },
@@ -1313,7 +1314,7 @@
           "type": "boolean"
         },
         "roundToUnitOfMeasure": {
-          "x-ms-summary": "Roudn to unit of measure",
+          "x-ms-summary": "Round to unit of measure",
           "type": "boolean"
         },
         "sentFromBackOffice": {
@@ -1322,31 +1323,16 @@
         }
       },
       "example": {
-        "appointmentId": 0,
-        "appointmentGuid": "string",
-        "sourceApp": "string",
-        "sourceType": "string",
-        "jobNo": "string",
-        "taskNo": "string",
-        "resourceNo": "string",
-        "subject": "string",
-        "body": "string",
-        "start": "string",
-        "end": "string",
-        "isAllDay": true,
-        "timeMarker": "string",
-        "category": "string",
-        "importance": 0,
-        "locked": true,
-        "replaceResource": true,
-        "backOfficeId": "string",
-        "backOfficeParentId": "string",
-        "unitOfMeasure": "string",
-        "unitOfMeasureConversion": 0,
-        "planningQuantity": 0,
-        "useFixedPlanningQuantity": true,
-        "roundToUnitOfMeasure": true,
-        "sentFromBackOffice": true
+        "appointmentGuid": "04cd4567-1295-4226-86bd-5b1e99d7bab8",
+        "sourceApp": "MYCRMAPP",
+        "sourceType": "DEMO",
+        "jobNo": "DS_DEMO",
+        "taskNo": "DS_DEMO_15MIN",
+        "resourceNo": "JOHNDOE",
+        "subject": "Dime.Scheduler 15 minute introduction",
+        "body": "Dime.Scheduler 15 minute introduction. Teams meeting.",
+        "start": "2022-10-01T15:00:00Z",
+        "end": "2022-10-01T15:15:00Z"
       }
     },
     "appointmentCategory": {

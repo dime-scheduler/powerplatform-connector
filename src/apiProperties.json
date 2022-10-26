@@ -72,7 +72,7 @@
         "templateId": "dynamichosturl",
         "title": "HttpEndPointUrl",
         "parameters": {
-          "x-ms-apimTemplateParameter.urlTemplate": "https://import.dimescheduler.com/@connectionParameters('endpointVersion')"
+          "x-ms-apimTemplateParameter.urlTemplate": "https://api.dimescheduler.com/@connectionParameters('endpointVersion')"
         }
       },
       {
@@ -97,8 +97,8 @@
       },
       {
         "title": "Password",
-        "templateId": "setheader",  
-        "type": "securestring",        
+        "templateId": "setheader",
+        "type": "securestring",
         "parameters": {
           "x-ms-apimTemplateParameter.name": "ds-password",
           "x-ms-apimTemplateParameter.value": "@connectionParameters('password', '')",
@@ -127,7 +127,7 @@
         }
       }
     ],
-    "iconBrandColor": "#FFFFFF",
+    "iconBrandColor": "#6e62b5",
     "capabilities": [],
     "publisher": "Dime Software",
     "stackOwner": "Dime Software"
