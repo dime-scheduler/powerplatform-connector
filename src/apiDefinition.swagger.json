@@ -123,7 +123,7 @@
         ],
         "parameters": [
           {
-            "name": "timeMarker",
+            "name": "timeMarkerUpsert",
             "in": "body",
             "schema": {
               "$ref": "#/definitions/timeMarker"
@@ -195,7 +195,7 @@
       "post": {
         "summary": "Add or update a pin",
         "description": "Add or update a pin, which is the visual indicator that renders the colors of the markers on the map.",
-        "operationId": "Pin",
+        "operationId": "pinUpsert",
         "tags": [
           "indicator"
         ],
@@ -273,7 +273,7 @@
       "post": {
         "summary": "Add or update a resource",
         "description": "Add or update a resource.",
-        "operationId": "Resource",
+        "operationId": "resourceUpsert",
         "tags": [
           "resource"
         ],
@@ -351,7 +351,7 @@
       "post": {
         "summary": "Add or update an action link",
         "description": "Add or update an action link.",
-        "operationId": "Actionuri",
+        "operationId": "actionUriUpsert",
         "parameters": [
           {
             "name": "actionUri",
@@ -380,7 +380,7 @@
       "delete": {
         "summary": "Remove an action link",
         "description": "Remove an action link.",
-        "operationId": "actionUrlDelete",
+        "operationId": "actionUriDelete",
         "parameters": [
           {
             "name": "actionUri",
@@ -411,7 +411,7 @@
       "post": {
         "summary": "Add or update an appointment",
         "description": "Add or update an appointment.",
-        "operationId": "Appointment",
+        "operationId": "appointmentUpsert",
         "tags": [
           "appointment"
         ],
@@ -477,7 +477,7 @@
       "post": {
         "summary": "Add or update the category of an appointment",
         "description": "Add or update the category of an appointment.",
-        "operationId": "AppointmentCategory",
+        "operationId": "appointmentCategoryUpsert",
         "tags": [
           "appointment"
         ],
@@ -511,7 +511,7 @@
       "post": {
         "summary": "Add or update an appointment container",
         "description": "Add or update an appointment container.",
-        "operationId": "AppointmentContainer",
+        "operationId": "appointmentContainerUpsert",
         "tags": [
           "appointment"
         ],
@@ -577,7 +577,7 @@
       "post": {
         "summary": "Add or update the content of the appointment",
         "description": "Add or update the content of the appointment.",
-        "operationId": "AppointmentContent",
+        "operationId": "appointmentContentUpsert",
         "tags": [
           "appointment"
         ],
@@ -611,7 +611,7 @@
       "post": {
         "summary": "Add or update the priority of an appointment",
         "description": "Add or update the priority of an appointment.",
-        "operationId": "AppointmentImportance",
+        "operationId": "appointmentImportanceUpsert",
         "tags": [
           "appointment"
         ],
@@ -645,7 +645,7 @@
       "post": {
         "summary": "Add or update the appointment's locked status",
         "description": "Add or update the appointment's locked status.",
-        "operationId": "AppointmentLocked",
+        "operationId": "appointmentLockedUpsert",
         "tags": [
           "appointment"
         ],
@@ -679,7 +679,7 @@
       "post": {
         "summary": "Add or update the appointment's planning quantity",
         "description": "Add or update the appointment's planning quantity.",
-        "operationId": "AppointmentPlanningQuantity",
+        "operationId": "appointmentPlanningQuantityUpsert",
         "tags": [
           "appointment"
         ],
@@ -713,7 +713,7 @@
       "post": {
         "summary": "Sets the appointment's time marker",
         "description": "Sets the appointment's time marker.",
-        "operationId": "AppointmentTimemarker",
+        "operationId": "appointmentTimemarkerUpsert",
         "tags": [
           "appointment"
         ],
@@ -747,7 +747,7 @@
       "post": {
         "summary": "Add or update an appointment link",
         "description": "Add or update an appointment link.",
-        "operationId": "AppointmentUri",
+        "operationId": "appointmentUriUpsert",
         "tags": [
           "appointment"
         ],
@@ -813,7 +813,7 @@
       "post": {
         "summary": "Add or update an assignment",
         "description": "Add or update an assignment, which is the allocation of a resource to an appointment.",
-        "operationId": "Assignment",
+        "operationId": "assignmentUpsert",
         "tags": [
           "appointment"
         ],
@@ -879,7 +879,7 @@
       "post": {
         "summary": "Add or update a caption",
         "description": "Add or update a caption.",
-        "operationId": "Caption",
+        "operationId": "captionUpsert",
         "parameters": [
           {
             "name": "caption",
@@ -939,7 +939,7 @@
       "post": {
         "summary": "Add or update a container",
         "description": "Add or update a container.",
-        "operationId": "Container",
+        "operationId": "containerUpsert",
         "parameters": [
           {
             "name": "container",
@@ -999,7 +999,7 @@
       "post": {
         "summary": "Add or update a filter group",
         "description": "Add or update a flter group.",
-        "operationId": "FilterGroup",
+        "operationId": "filterGroupUpsert",
         "tags": [
           "filters"
         ],
@@ -1065,7 +1065,7 @@
       "post": {
         "summary": "Add or update a filter value",
         "description": "Add or update a filter value.",
-        "operationId": "FilterValue",
+        "operationId": "filterValueUpsert",
         "tags": [
           "filters"
         ],
@@ -1131,7 +1131,7 @@
       "post": {
         "summary": "Add or update a job",
         "description": "Add or update a job.",
-        "operationId": "Job",
+        "operationId": "jobUpsert",
         "tags": [
           "task"
         ],
@@ -1197,7 +1197,7 @@
       "post": {
         "summary": "Add or update notification",
         "description": "Add or update notification.",
-        "operationId": "Notification",
+        "operationId": "notificationUpsert",
         "parameters": [
           {
             "name": "notification",
@@ -1323,7 +1323,7 @@
       "post": {
         "summary": "Add or update the capacity of a resource",
         "description": "Add or update the capacity of a resource.",
-        "operationId": "ResourceCapacity",
+        "operationId": "resourceCapacityUpsert",
         "tags": [
           "resource"
         ],
@@ -1389,7 +1389,7 @@
       "post": {
         "summary": "Add or update the filter value of a resource",
         "description": "Add or update the filter value of a resource.",
-        "operationId": "ResourceFilterValue",
+        "operationId": "resourceFilterValueUpsert",
         "tags": [
           "resource"
         ],
@@ -1455,7 +1455,7 @@
       "post": {
         "summary": "Add or update the live location of a resource",
         "description": "Add or update the live location of a resource.",
-        "operationId": "ResourceGpstracking",
+        "operationId": "resourceGpstrackingUpsert",
         "tags": [
           "resource"
         ],
@@ -1521,7 +1521,7 @@
       "post": {
         "summary": "Add or update the uri of a resource",
         "description": "Add or update the uri of a resource.",
-        "operationId": "ResourceUri",
+        "operationId": "resourceUriUpsert",
         "tags": [
           "resource"
         ],
@@ -1587,7 +1587,7 @@
       "post": {
         "summary": "Add or update a task",
         "description": "Add or update a task.",
-        "operationId": "Task",
+        "operationId": "taskUpsert",
         "tags": [
           "task"
         ],
@@ -1671,7 +1671,7 @@
         ],
         "summary": "Add or update a task container",
         "description": "Add or update a task container.",
-        "operationId": "TaskContainer",
+        "operationId": "taskContainerUpsert",
         "tags": [
           "task"
         ],
@@ -1743,7 +1743,7 @@
       "post": {
         "summary": "Add or update a task filter value",
         "description": "Add or update a task filter value.",
-        "operationId": "TaskFiltervalue",
+        "operationId": "taskFiltervalueUpsert",
         "tags": [
           "task"
         ],
@@ -1809,7 +1809,7 @@
       "post": {
         "summary": "Add or update the task's locked status",
         "description": "Add or update the task's locked status.",
-        "operationId": "TaskLocked",
+        "operationId": "taskLockedUpsert",
         "tags": [
           "task"
         ],
