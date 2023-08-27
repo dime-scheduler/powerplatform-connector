@@ -57,12 +57,10 @@ When the connector has been added to your environment, you should create a conne
 
 <img src="assets/connection.png?raw=true" height="250px">
 
-| Parameter          | Value                                                                                                                                                                                                                                                             |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dime.Scheduler URI | This needs to be the base URI of your Dime.Scheduler instance, that is publicly accessible.                                                                                                                                                                       |
-| E-mail address     | The e-mail address of the Dime.Scheduler user that has sufficient rights to insert data into the solution.                                                                                                                                                        |
-| Password           | The password of said user                                                                                                                                                                                                                                         |
-| API Key            | this is the key of the subscription that allows you to use Dime.Scheduler's connect hub. You can register [here](https://connect.dimescheduler.com). Once enrolled, navigate to your user profile and copy the primary key of your subscription. |
+| Parameter      | Value                                                                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Environment    | The Dime.Scheduler environment                                                                                                                                                                                                                   |
+| API Key        | this is the key of the subscription that allows you to use Dime.Scheduler's connect hub. You can register [here](https://connect.dimescheduler.com). Once enrolled, navigate to your user profile and copy the primary key of your subscription. |
 
 ### Using the connector
 
@@ -82,13 +80,6 @@ Adding an action is done by simple OpenAPI management through the `apiDefinition
     "operationId": "Timemarker",
     "tags": ["indicator"],
     "parameters": [
-      {
-        "name": "ds-append",
-        "in": "header",
-        "description": "True to create or update the record, false to remove. True by default.",
-        "type": "boolean",
-        "x-ms-summary": "Append"
-      },
       {
         "name": "timeMarker",
         "in": "body",

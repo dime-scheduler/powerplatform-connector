@@ -3,7 +3,7 @@
   "info": {
     "title": "Dime.Scheduler",
     "description": "Dime.Scheduler is a resource and project planning solution that extends the capabilities of ERP, CRM and other business systems with powerful graphical scheduling tools.",
-    "version": "0.1",
+    "version": "2.0",
     "contact": {
       "name": "Dime.Scheduler Support",
       "url": "https://docs.dimescheduler.com",
@@ -17,7 +17,7 @@
     },
     {
       "propertyName": "Privacy Policy",
-      "propertyValue": "https://www.dime-software.com/privacy"
+      "propertyValue": "https://www.dimescheduler.com/privacy"
     },
     {
       "propertyName": "Categories",
@@ -25,25 +25,25 @@
     }
   ],
   "host": "api.dimescheduler.com",
-  "basePath": "/v0.1",
-  "schemes": ["https"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/category": {
       "post": {
-        "summary": "Add, update or remove a category",
-        "description": "Add, update or remove a category, which is the visual indicator that renders the background of the appointment.",
-        "operationId": "Category",
-        "tags": ["indicator"],
+        "summary": "Add or update a category",
+        "description": "Add or update a category, which is the visual indicator that renders the background of the appointment.",
+        "operationId": "categoryUpsert",
+        "tags": [
+          "indicator"
+        ],
         "parameters": [
-          {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
-          },
           {
             "name": "body",
             "in": "body",
@@ -53,8 +53,50 @@
             }
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a category",
+        "description": "Remove a category, which is the visual indicator that renders the background of the appointment.",
+        "operationId": "categoryDelete",
+        "tags": [
+          "indicator"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/category"
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "$ref": "#/responses/200"
@@ -73,18 +115,13 @@
     },
     "/timeMarker": {
       "post": {
-        "summary": "Add, update or remove a time marker",
-        "description": "Add, update or remove a time marker, which is the visual indicator that renders the underscore of the appointment.",
+        "summary": "Add or update a time marker",
+        "description": "Add or update a time marker, which is the visual indicator that renders the underscore of the appointment.",
         "operationId": "Timemarker",
-        "tags": ["indicator"],
+        "tags": [
+          "indicator"
+        ],
         "parameters": [
-          {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
-          },
           {
             "name": "timeMarker",
             "in": "body",
@@ -94,8 +131,50 @@
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a time marker",
+        "description": "Remove a time marker, which is the visual indicator that renders the underscore of the appointment.",
+        "operationId": "timeMarkerDelete",
+        "tags": [
+          "indicator"
+        ],
+        "parameters": [
+          {
+            "name": "timeMarker",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/timeMarker"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "$ref": "#/responses/200"
@@ -114,18 +193,13 @@
     },
     "/pin": {
       "post": {
-        "summary": "Add, update or remove a pin",
-        "description": "Add, update or remove a pin, which is the visual indicator that renders the colors of the markers on the map.",
+        "summary": "Add or update a pin",
+        "description": "Add or update a pin, which is the visual indicator that renders the colors of the markers on the map.",
         "operationId": "Pin",
-        "tags": ["indicator"],
+        "tags": [
+          "indicator"
+        ],
         "parameters": [
-          {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
-          },
           {
             "name": "pin",
             "in": "body",
@@ -135,8 +209,50 @@
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a pin",
+        "description": "Remove a pin, which is the visual indicator that renders the colors of the markers on the map.",
+        "operationId": "pinDelete",
+        "tags": [
+          "indicator"
+        ],
+        "parameters": [
+          {
+            "name": "pin",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/pin"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "$ref": "#/responses/200"
@@ -155,18 +271,13 @@
     },
     "/resource": {
       "post": {
-        "summary": "Add, update or remove a resource",
-        "description": "Add, update or remove a resource.",
+        "summary": "Add or update a resource",
+        "description": "Add or update a resource.",
         "operationId": "Resource",
-        "tags": ["resource"],
+        "tags": [
+          "resource"
+        ],
         "parameters": [
-          {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
-          },
           {
             "name": "resource",
             "in": "body",
@@ -176,8 +287,50 @@
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a resource",
+        "description": "Remove a resource.",
+        "operationId": "resourceDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
+          {
+            "name": "resource",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resource"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "$ref": "#/responses/200"
@@ -196,17 +349,39 @@
     },
     "/actionUri": {
       "post": {
-        "summary": "Add, update or remove an action link",
-        "description": "Add, update or remove an action link.",
+        "summary": "Add or update an action link",
+        "description": "Add or update an action link.",
         "operationId": "Actionuri",
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "actionUri",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/actionUri"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove an action link",
+        "description": "Remove an action link.",
+        "operationId": "actionUrlDelete",
+        "parameters": [
           {
             "name": "actionUri",
             "in": "body",
@@ -234,18 +409,45 @@
     },
     "/appointment": {
       "post": {
-        "summary": "Add, update or remove an appointment",
-        "description": "Add, update or remove an appointment.",
+        "summary": "Add or update an appointment",
+        "description": "Add or update an appointment.",
         "operationId": "Appointment",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/appointment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove an appointment",
+        "description": "Remove an appointment.",
+        "operationId": "appointmentDelete",
+        "tags": [
+          "appointment"
+        ],
+        "parameters": [
           {
             "name": "body",
             "in": "body",
@@ -273,10 +475,12 @@
     },
     "/appointmentCategory": {
       "post": {
-        "summary": "Add, update or remove the category of an appointment",
-        "description": "Add, update or remove the category of an appointment.",
+        "summary": "Add or update the category of an appointment",
+        "description": "Add or update the category of an appointment.",
         "operationId": "AppointmentCategory",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentCategory",
@@ -305,18 +509,45 @@
     },
     "/appointmentContainer": {
       "post": {
-        "summary": "Add, update or remove an appointment container",
-        "description": "Add, update or remove an appointment container.",
+        "summary": "Add or update an appointment container",
+        "description": "Add or update an appointment container.",
         "operationId": "AppointmentContainer",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "appointmentContainer",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/appointmentContainer"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove an appointment container",
+        "description": "Remove an appointment container.",
+        "operationId": "appointmentContainerDelete",
+        "tags": [
+          "appointment"
+        ],
+        "parameters": [
           {
             "name": "appointmentContainer",
             "in": "body",
@@ -344,10 +575,12 @@
     },
     "/appointmentContent": {
       "post": {
-        "summary": "Add, update or remove the content of the appointment",
-        "description": "Add, update or remove the content of the appointment.",
+        "summary": "Add or update the content of the appointment",
+        "description": "Add or update the content of the appointment.",
         "operationId": "AppointmentContent",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentContent",
@@ -376,10 +609,12 @@
     },
     "/appointmentImportance": {
       "post": {
-        "summary": "Add, update or remove the priority of an appointment",
-        "description": "Add, update or remove the priority of an appointment.",
+        "summary": "Add or update the priority of an appointment",
+        "description": "Add or update the priority of an appointment.",
         "operationId": "AppointmentImportance",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentImportance",
@@ -408,10 +643,12 @@
     },
     "/appointmentLocked": {
       "post": {
-        "summary": "Add, update or remove the appointment's locked status",
-        "description": "Add, update or remove the appointment's locked status.",
+        "summary": "Add or update the appointment's locked status",
+        "description": "Add or update the appointment's locked status.",
         "operationId": "AppointmentLocked",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentLocked",
@@ -440,10 +677,12 @@
     },
     "/appointmentPlanningQuantity": {
       "post": {
-        "summary": "Add, update or remove the appointment's planning quantity",
-        "description": "Add, update or remove the appointment's planning quantity.",
+        "summary": "Add or update the appointment's planning quantity",
+        "description": "Add or update the appointment's planning quantity.",
         "operationId": "AppointmentPlanningQuantity",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentPlanningQuantity",
@@ -472,10 +711,12 @@
     },
     "/appointmentTimeMarker": {
       "post": {
-        "summary": "Add, update or remove the appointment's time marker",
-        "description": "Add, update or remove the appointment's time marker.",
+        "summary": "Sets the appointment's time marker",
+        "description": "Sets the appointment's time marker.",
         "operationId": "AppointmentTimemarker",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
             "name": "appointmentTimeMarker",
@@ -504,18 +745,45 @@
     },
     "/appointmentUri": {
       "post": {
-        "summary": "Add, update or remove an appointment link",
-        "description": "Add, update or remove an appointment link.",
+        "summary": "Add or update an appointment link",
+        "description": "Add or update an appointment link.",
         "operationId": "AppointmentUri",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "appointmentUri",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/appointmentUri"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove an appointment link",
+        "description": "Remove an appointment link.",
+        "operationId": "appointmentUriDelete",
+        "tags": [
+          "appointment"
+        ],
+        "parameters": [
           {
             "name": "appointmentUri",
             "in": "body",
@@ -543,18 +811,45 @@
     },
     "/assignment": {
       "post": {
-        "summary": "Add, update or remove an assignment",
-        "description": "Add, update or remove an assignment, which is the allocation of a resource to an appointment.",
+        "summary": "Add or update an assignment",
+        "description": "Add or update an assignment, which is the allocation of a resource to an appointment.",
         "operationId": "Assignment",
-        "tags": ["appointment"],
+        "tags": [
+          "appointment"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "assignment",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/assignment"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove an assignment",
+        "description": "Remove an assignment, which is the allocation of a resource to an appointment.",
+        "operationId": "assignmentDelete",
+        "tags": [
+          "appointment"
+        ],
+        "parameters": [
           {
             "name": "assignment",
             "in": "body",
@@ -582,17 +877,39 @@
     },
     "/caption": {
       "post": {
-        "summary": "Add, update or remove a caption",
-        "description": "Add, update or remove a caption.",
+        "summary": "Add or update a caption",
+        "description": "Add or update a caption.",
         "operationId": "Caption",
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "caption",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/caption"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a caption",
+        "description": "Remove a caption.",
+        "operationId": "captionDelete",
+        "parameters": [
           {
             "name": "caption",
             "in": "body",
@@ -620,17 +937,39 @@
     },
     "/container": {
       "post": {
-        "summary": "Add, update or remove a container",
-        "description": "Add, update or remove a container.",
+        "summary": "Add or update a container",
+        "description": "Add or update a container.",
         "operationId": "Container",
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "container",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/container"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a container",
+        "description": "Remove a container.",
+        "operationId": "containerDelete",
+        "parameters": [
           {
             "name": "container",
             "in": "body",
@@ -658,18 +997,45 @@
     },
     "/filterGroup": {
       "post": {
-        "summary": "Add, update or remove a filter group",
-        "description": "Add, update or remove a flter group.",
+        "summary": "Add or update a filter group",
+        "description": "Add or update a flter group.",
         "operationId": "FilterGroup",
-        "tags": ["filters"],
+        "tags": [
+          "filters"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "filterGroup",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/filterGroup"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a filter group",
+        "description": "Remove a filter group.",
+        "operationId": "filterGroupDelete",
+        "tags": [
+          "filters"
+        ],
+        "parameters": [
           {
             "name": "filterGroup",
             "in": "body",
@@ -697,18 +1063,45 @@
     },
     "/filterValue": {
       "post": {
-        "summary": "Add, update or remove a filter value",
-        "description": "Add, update or remove a filter value.",
+        "summary": "Add or update a filter value",
+        "description": "Add or update a filter value.",
         "operationId": "FilterValue",
-        "tags": ["filters"],
+        "tags": [
+          "filters"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "filterValue",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/filterValue"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a filter value",
+        "description": "Remove a filter value.",
+        "operationId": "filterValueDelete",
+        "tags": [
+          "filters"
+        ],
+        "parameters": [
           {
             "name": "filterValue",
             "in": "body",
@@ -736,18 +1129,45 @@
     },
     "/job": {
       "post": {
-        "summary": "Add, update or remove a job",
-        "description": "Add, update or remove a job.",
+        "summary": "Add or update a job",
+        "description": "Add or update a job.",
         "operationId": "Job",
-        "tags": ["task"],
+        "tags": [
+          "task"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "job",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/job"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a job",
+        "description": "Remove a job.",
+        "operationId": "jobDelete",
+        "tags": [
+          "task"
+        ],
+        "parameters": [
           {
             "name": "job",
             "in": "body",
@@ -775,17 +1195,39 @@
     },
     "/notification": {
       "post": {
-        "summary": "Add, update or remove notification",
-        "description": "Add, update or remove notification.",
+        "summary": "Add or update notification",
+        "description": "Add or update notification.",
         "operationId": "Notification",
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "notification",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/notification"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Add or update notification",
+        "description": "Remove a notification.",
+        "operationId": "notificationDelete",
+        "parameters": [
           {
             "name": "notification",
             "in": "body",
@@ -813,18 +1255,45 @@
     },
     "/resourceCalendar": {
       "post": {
-        "summary": "Add, update or remove a calendar for a resource",
-        "description": "Add, update or remove a calendar for a resource.",
-        "operationId": "ResourceCalendar",
-        "tags": ["resource"],
+        "summary": "Add or update a calendar for a resource",
+        "description": "Add or update a calendar for a resource.",
+        "operationId": "resourceCalendarUpsert",
+        "tags": [
+          "resource"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "resourceCalendar",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resourceCalendar"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a calendar for a resource",
+        "description": "Remove a calendar for a resource.",
+        "operationId": "resourceCalendarDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
           {
             "name": "resourceCalendar",
             "in": "body",
@@ -852,18 +1321,45 @@
     },
     "/resourceCapacity": {
       "post": {
-        "summary": "Add, update or remove the capacity of a resource",
-        "description": "Add, update or remove the capacity of a resource.",
+        "summary": "Add or update the capacity of a resource",
+        "description": "Add or update the capacity of a resource.",
         "operationId": "ResourceCapacity",
-        "tags": ["resource"],
+        "tags": [
+          "resource"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "resourceCapacity",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resourceCapacity"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Add or update the capacity of a resource",
+        "description": "Remove the capacity of a resource.",
+        "operationId": "resourceCapacityDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
           {
             "name": "resourceCapacity",
             "in": "body",
@@ -891,18 +1387,45 @@
     },
     "/resourceFilterValue": {
       "post": {
-        "summary": "Add, update or remove the filter value of a resource",
-        "description": "Add, update or remove the filter value of a resource.",
+        "summary": "Add or update the filter value of a resource",
+        "description": "Add or update the filter value of a resource.",
         "operationId": "ResourceFilterValue",
-        "tags": ["resource"],
+        "tags": [
+          "resource"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "resourceFilterValue",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resourceFilterValue"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Add or update the filter value of a resource",
+        "description": "Remove the filter value of a resource.",
+        "operationId": "resourceFilterValueDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
           {
             "name": "resourceFilterValue",
             "in": "body",
@@ -930,18 +1453,45 @@
     },
     "/resourceGpsTracking": {
       "post": {
-        "summary": "Add, update or remove the live location of a resource",
-        "description": "Add, update or remove the live location of a resource.",
+        "summary": "Add or update the live location of a resource",
+        "description": "Add or update the live location of a resource.",
         "operationId": "ResourceGpstracking",
-        "tags": ["resource"],
+        "tags": [
+          "resource"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "resourceGpsTracking",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resourceGpsTracking"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Add or update the live location of a resource",
+        "description": "Remove the live location of a resource.",
+        "operationId": "resourceGpstrackingDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
           {
             "name": "resourceGpsTracking",
             "in": "body",
@@ -969,18 +1519,45 @@
     },
     "/resourceUri": {
       "post": {
-        "summary": "Add, update or remove the uri of a resource",
-        "description": "Add, update or remove the uri of a resource.",
+        "summary": "Add or update the uri of a resource",
+        "description": "Add or update the uri of a resource.",
         "operationId": "ResourceUri",
-        "tags": ["resource"],
+        "tags": [
+          "resource"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "resourceUri",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/resourceUri"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove the uri of a resource",
+        "description": "Remove the uri of a resource.",
+        "operationId": "resourceUriDelete",
+        "tags": [
+          "resource"
+        ],
+        "parameters": [
           {
             "name": "resourceUri",
             "in": "body",
@@ -1008,18 +1585,13 @@
     },
     "/task": {
       "post": {
-        "summary": "Add, update or remove a task",
-        "description": "Add, update or remove a task.",
+        "summary": "Add or update a task",
+        "description": "Add or update a task.",
         "operationId": "Task",
-        "tags": ["task"],
+        "tags": [
+          "task"
+        ],
         "parameters": [
-          {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
-          },
           {
             "name": "task",
             "in": "body",
@@ -1029,8 +1601,50 @@
             "description": "JSON request body containing the contents of the requested entity to be imported."
           }
         ],
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a task",
+        "description": "Remove a task.",
+        "operationId": "taskDelete",
+        "tags": [
+          "task"
+        ],
+        "parameters": [
+          {
+            "name": "task",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/task"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "$ref": "#/responses/200"
@@ -1049,20 +1663,57 @@
     },
     "/taskContainer": {
       "post": {
-        "consumes": ["application/json"],
-        "produces": ["application/json"],
-        "summary": "Add, update or remove a task container",
-        "description": "Add, update or remove a task container.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Add or update a task container",
+        "description": "Add or update a task container.",
         "operationId": "TaskContainer",
-        "tags": ["task"],
+        "tags": [
+          "task"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "taskContainer",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/taskContainer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "Add or update a task container",
+        "description": "Remove a task container.",
+        "operationId": "taskContainerDelete",
+        "tags": [
+          "task"
+        ],
+        "parameters": [
           {
             "name": "taskContainer",
             "in": "body",
@@ -1090,18 +1741,45 @@
     },
     "/taskFilterValue": {
       "post": {
-        "summary": "Add, update or remove a task filter value",
-        "description": "Add, update or remove a task filter value.",
+        "summary": "Add or update a task filter value",
+        "description": "Add or update a task filter value.",
         "operationId": "TaskFiltervalue",
-        "tags": ["task"],
+        "tags": [
+          "task"
+        ],
         "parameters": [
           {
-            "name": "ds-append",
-            "in": "header",
-            "description": "True to create or update the record, false to remove.",
-            "type": "boolean",
-            "x-ms-summary": "Append"
+            "name": "taskFilterValue",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/taskFilterValue"
+            },
+            "description": "JSON request body containing the contents of the requested entity to be imported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
           },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a task filter value",
+        "description": "Remove a task filter value.",
+        "operationId": "taskFiltervalueDelete",
+        "tags": [
+          "task"
+        ],
+        "parameters": [
           {
             "name": "taskFilterValue",
             "in": "body",
@@ -1129,10 +1807,12 @@
     },
     "/taskLocked": {
       "post": {
-        "summary": "Add, update or remove the task's locked status",
-        "description": "Add, update or remove the task's locked status.",
+        "summary": "Add or update the task's locked status",
+        "description": "Add or update the task's locked status.",
         "operationId": "TaskLocked",
-        "tags": ["task"],
+        "tags": [
+          "task"
+        ],
         "parameters": [
           {
             "name": "taskLocked",
@@ -1274,7 +1954,11 @@
           "x-ms-summary": "Importance",
           "type": "integer",
           "default": 0,
-          "enum": [0, 1, 2]
+          "enum": [
+            0,
+            1,
+            2
+          ]
         },
         "locked": {
           "x-ms-summary": "Locked",
@@ -1464,7 +2148,11 @@
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1, 2],
+          "enum": [
+            0,
+            1,
+            2
+          ],
           "type": "integer"
         },
         "appointmentGuid": {
@@ -1833,7 +2521,12 @@
     },
     "job": {
       "type": "object",
-      "required": ["sourceApp", "sourceType", "jobNo", "shortDescription"],
+      "required": [
+        "sourceApp",
+        "sourceType",
+        "jobNo",
+        "shortDescription"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -2148,7 +2841,11 @@
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1, 2],
+          "enum": [
+            0,
+            1,
+            2
+          ],
           "type": "integer"
         },
         "creationDateTime": {
@@ -2527,7 +3224,11 @@
           "x-ms-summary": "Type",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1, 2],
+          "enum": [
+            0,
+            1,
+            2
+          ],
           "type": "integer"
         },
         "code": {
@@ -3320,7 +4021,10 @@
           "x-ms-summary": "Task type",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1],
+          "enum": [
+            0,
+            1
+          ],
           "type": "integer"
         },
         "shortDescription": {
@@ -3471,7 +4175,11 @@
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1, 2],
+          "enum": [
+            0,
+            1,
+            2
+          ],
           "type": "integer"
         },
         "status": {
@@ -3850,7 +4558,12 @@
           "x-ms-summary": "Scheduling mode",
           "format": "int32",
           "default": 0,
-          "enum": [0, 1, 2, 3],
+          "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
           "type": "integer"
         },
         "baseLineStartDate": {
