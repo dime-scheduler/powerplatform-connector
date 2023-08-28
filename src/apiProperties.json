@@ -43,13 +43,6 @@
     },
     "policyTemplateInstances": [
       {
-        "templateId": "dynamichosturl",
-        "title": "HttpEndPointUrl",
-        "parameters": {
-          "x-ms-apimTemplateParameter.urlTemplate": "https://powerplatform.dimescheduler.com/api/"
-        }
-      },
-      {
         "title": "Dime.Scheduler URI",
         "templateId": "setheader",
         "parameters": {

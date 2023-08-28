@@ -25,6 +25,7 @@
     }
   ],
   "host": "powerplatform.dimescheduler.com",
+  "basePath": "/api",
   "schemes": [
     "https"
   ],
