@@ -35,6 +35,237 @@
     "application/json"
   ],
   "paths": {
+    "/webhooks/AppointmentCreated": {
+      "x-ms-notification-content": {
+        "description": "Appointment details for webhook",
+        "schema": {
+          "$ref": "#/definitions/appointment"
+        }
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Created."
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "summary": "When a appointment is created",
+        "description": "This trigger is used for listening to new appointments scheduled in Dime.Scheduler.",
+        "operationId": "CreateAppointment",
+        "x-ms-trigger": "single",
+        "x-ms-trigger-hint": "To see this trigger work, create an appointment in Dime.Scheduler",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "Unique identifier for this source application.",
+                  "title": "sourceApp",
+                  "x-ms-visibility": "important"
+                },
+                "notificationURL": {
+                  "type": "string",
+                  "description": "Notification URL where the appointment data will be posted.",
+                  "title": "notificationURL",
+                  "x-ms-visibility": "internal",
+                  "x-ms-notification-url": true
+                },
+                "resource": {
+                  "type": "string",
+                  "description": "resource",
+                  "title": "Resource",
+                  "default": "Appointments",
+                  "x-ms-visibility": "internal"
+                },
+                "changeType": {
+                  "description": "Changes to listen on",
+                  "x-ms-visibility": "internal",
+                  "type": "array",
+                  "default": [
+                    "Created"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "notificationURL",
+                "resource",
+                "changeType"
+              ]
+            }
+          }
+        ],
+        "x-ms-visibility": "important"
+      }
+    },
+    "/webhooks/AppointmentUpdated": {
+      "x-ms-notification-content": {
+        "description": "Appointment details for webhook",
+        "schema": {
+          "$ref": "#/definitions/appointment"
+        }
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Created."
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden. "
+          },
+          "429": {
+            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "summary": "When a appointment is updated",
+        "description": "This trigger is used for listening to new appointments scheduled in Dime.Scheduler.",
+        "operationId": "UpdateAppointment",
+        "x-ms-trigger": "single",
+        "x-ms-trigger-hint": "To see this trigger work, Create an appointment in Dime.Scheduler",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "notificationURL": {
+                  "type": "string",
+                  "description": "Notification URL where the appointment data will be posted.",
+                  "title": "notificationURL",
+                  "x-ms-visibility": "internal",
+                  "x-ms-notification-url": true
+                },
+                "resource": {
+                  "type": "string",
+                  "description": "resource",
+                  "title": "Resource",
+                  "default": "Appointments",
+                  "x-ms-visibility": "internal"
+                },
+                "changeType": {
+                  "description": "Changes to listen on",
+                  "x-ms-visibility": "internal",
+                  "type": "array",
+                  "default": [
+                    "Created"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "notificationURL",
+                "resource",
+                "changeType"
+              ]
+            }
+          }
+        ],
+        "x-ms-visibility": "important"
+      }
+    },
+    "/webhooks/AppointmentDeleted": {
+      "x-ms-notification-content": {
+        "description": "Appointment details for webhook",
+        "schema": {
+          "$ref": "#/definitions/appointment"
+        }
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "description": "Created."
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden. "
+          },
+          "429": {
+            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "summary": "When a appointment is deleted",
+        "description": "This trigger is used for listening to appointments scheduled in Dime.Scheduler.",
+        "operationId": "DeleteAppointment",
+        "x-ms-trigger": "single",
+        "x-ms-trigger-hint": "To see this trigger work, Create an appointment in Dime.Scheduler",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "notificationURL": {
+                  "type": "string",
+                  "description": "Notification URL where the appointment data will be posted.",
+                  "title": "notificationURL",
+                  "x-ms-visibility": "internal",
+                  "x-ms-notification-url": true
+                },
+                "resource": {
+                  "type": "string",
+                  "description": "resource",
+                  "title": "Resource",
+                  "default": "Appointments",
+                  "x-ms-visibility": "internal"
+                },
+                "changeType": {
+                  "description": "Changes to listen on",
+                  "x-ms-visibility": "internal",
+                  "type": "array",
+                  "default": [
+                    "Created"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "notificationURL",
+                "resource",
+                "changeType"
+              ]
+            }
+          }
+        ],
+        "x-ms-visibility": "important"
+      }
+    },
     "/category": {
       "post": {
         "summary": "Add or update a category",
