@@ -98,7 +98,7 @@
                   "x-ms-visibility": "internal",
                   "type": "array",
                   "default": [
-                    "Created"
+                    "Create"
                   ],
                   "items": {
                     "type": "string"
@@ -109,7 +109,7 @@
                 "notificationURL",
                 "resource",
                 "changeType",
-                "SourceApp"
+                "sourceApp"
               ]
             }
           }
@@ -180,7 +180,7 @@
                   "x-ms-visibility": "internal",
                   "type": "array",
                   "default": [
-                    "Created"
+                    "Update"
                   ],
                   "items": {
                     "type": "string"
@@ -262,7 +262,7 @@
                   "x-ms-visibility": "internal",
                   "type": "array",
                   "default": [
-                    "Created"
+                    "Delete"
                   ],
                   "items": {
                     "type": "string"
