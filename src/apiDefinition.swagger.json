@@ -2299,12 +2299,6 @@
               "Resource": {
                 "type": "object",
                 "properties": {
-                  "IsFiltered": {
-                    "type": "boolean"
-                  },
-                  "ResourceTypeId": {
-                    "type": "integer"
-                  },
                   "ResourceType": {
                     "type": "object",
                     "properties": {
@@ -2312,30 +2306,6 @@
                         "type": "string"
                       }
                     }
-                  },
-                  "ResourceCapacities": {
-                    "type": "array",
-                    "items": {}
-                  },
-                  "ResourceGpsTrackings": {
-                    "type": "array",
-                    "items": {}
-                  },
-                  "ResourceUrls": {
-                    "type": "array",
-                    "items": {}
-                  },
-                  "ResourceFilterValues": {
-                    "type": "array",
-                    "items": {}
-                  },
-                  "ProjectAssignments": {
-                    "type": "array",
-                    "items": {}
-                  },
-                  "Calendars": {
-                    "type": "array",
-                    "items": {}
                   },
                   "SourceApp": {
                     "type": "string"
@@ -2485,34 +2455,44 @@
                     "type": "string"
                   },
                   "FreeDecimal1": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal2": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal3": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal4": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal5": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal6": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal7": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal8": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal9": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeDecimal10": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "FreeBit1": {
                     "type": "boolean"
@@ -2542,13 +2522,11 @@
                     "type": "boolean"
                   },
                   "BulkCapacity": {
-                    "type": "integer"
+                    "format": "double",
+                    "type": "number"
                   },
                   "Name": {
                     "type": "string"
-                  },
-                  "Id": {
-                    "type": "integer"
                   }
                 }
               },
@@ -2571,10 +2549,6 @@
           "items": {}
         },
         "AppointmentContainers": {
-          "type": "array",
-          "items": {}
-        },
-        "Transactions": {
           "type": "array",
           "items": {}
         },
@@ -2605,22 +2579,10 @@
         "AppointmentChanged": {
           "type": "boolean"
         },
-        "PreventSynch": {
-          "type": "boolean"
-        },
-        "Timestamp": {
-          "type": "string"
-        },
         "AppointmentGuid": {
           "type": "string"
         },
-        "NonWorkingTime": {
-          "type": "integer"
-        },
         "Locked": {
-          "type": "boolean"
-        },
-        "UpdateTrigger": {
           "type": "boolean"
         },
         "PlanningUOM": {
@@ -2644,18 +2606,6 @@
         "LastModifiedUser": {
           "type": "string"
         },
-        "SentFromBackoffice": {
-          "type": "boolean"
-        },
-        "SentFromExchange": {
-          "type": "boolean"
-        },
-        "BackofficeID": {
-          "type": "string"
-        },
-        "BackofficeParentID": {
-          "type": "string"
-        },
         "IsRecurrenceException": {
           "type": "boolean"
         },
@@ -2664,9 +2614,6 @@
         },
         "IgnoreCalendars": {
           "type": "boolean"
-        },
-        "Id": {
-          "type": "integer"
         }
       },
       "example": {
