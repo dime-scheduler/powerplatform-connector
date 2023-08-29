@@ -2131,125 +2131,417 @@
     "appointment": {
       "type": "object",
       "properties": {
-        "appointmentId": {
-          "x-ms-summary": "Appointment id",
-          "format": "int64",
+        "CreatedDate": {
+          "type": "string"
+        },
+        "CreatedUser": {
+          "type": "string"
+        },
+        "Task": {
+          "type": "object",
+          "properties": {
+            "TaskNo": {
+              "type": "string"
+            }
+          }
+        },
+        "Category": {
+          "type": "object",
+          "properties": {
+            "HiddenToUser": {
+              "type": "boolean"
+            },
+            "Color": {
+              "type": "string"
+            }
+          }
+        },
+        "Notifications": {
+          "type": "array",
+          "items": {}
+        },
+        "Assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "AppointmentId": {
+                "type": "integer"
+              },
+              "ResourceId": {
+                "type": "integer"
+              },
+              "Resource": {
+                "type": "object",
+                "properties": {
+                  "IsFiltered": {
+                    "type": "boolean"
+                  },
+                  "ResourceTypeId": {
+                    "type": "integer"
+                  },
+                  "ResourceType": {
+                    "type": "object",
+                    "properties": {
+                      "DisplayName": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "ResourceCapacities": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "ResourceGpsTrackings": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "ResourceUrls": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "ResourceFilterValues": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "ProjectAssignments": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "Calendars": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "SourceApp": {
+                    "type": "string"
+                  },
+                  "SourceType": {
+                    "type": "string"
+                  },
+                  "DisplayName": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "ResourceNo": {
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "type": "string"
+                  },
+                  "MobilePhone": {
+                    "type": "string"
+                  },
+                  "ReplacementResource": {
+                    "type": "boolean"
+                  },
+                  "FieldServiceEmail": {
+                    "type": "string"
+                  },
+                  "PersonalEmail": {
+                    "type": "string"
+                  },
+                  "GpsTrackingResourceNo": {
+                    "type": "string"
+                  },
+                  "HomeAddress": {
+                    "type": "string"
+                  },
+                  "HomePhone": {
+                    "type": "string"
+                  },
+                  "HomeEmail": {
+                    "type": "string"
+                  },
+                  "HomeStreet": {
+                    "type": "string"
+                  },
+                  "HomeStreetNo": {
+                    "type": "string"
+                  },
+                  "HomeRegion": {
+                    "type": "string"
+                  },
+                  "HomePostcode": {
+                    "type": "string"
+                  },
+                  "HomeCity": {
+                    "type": "string"
+                  },
+                  "HomeCounty": {
+                    "type": "string"
+                  },
+                  "HomeState": {
+                    "type": "string"
+                  },
+                  "HomeCountry": {
+                    "type": "string"
+                  },
+                  "TeamCode": {
+                    "type": "string"
+                  },
+                  "TeamName": {
+                    "type": "string"
+                  },
+                  "TeamType": {
+                    "type": "string"
+                  },
+                  "TeamSort": {
+                    "type": "integer"
+                  },
+                  "TeamMemberType": {
+                    "type": "string"
+                  },
+                  "TeamMemberSort": {
+                    "type": "integer"
+                  },
+                  "FreeText1": {
+                    "type": "string"
+                  },
+                  "FreeText2": {
+                    "type": "string"
+                  },
+                  "FreeText3": {
+                    "type": "string"
+                  },
+                  "FreeText4": {
+                    "type": "string"
+                  },
+                  "FreeText5": {
+                    "type": "string"
+                  },
+                  "FreeText6": {
+                    "type": "string"
+                  },
+                  "FreeText7": {
+                    "type": "string"
+                  },
+                  "FreeText8": {
+                    "type": "string"
+                  },
+                  "FreeText9": {
+                    "type": "string"
+                  },
+                  "FreeText10": {
+                    "type": "string"
+                  },
+                  "FreeText11": {
+                    "type": "string"
+                  },
+                  "FreeText12": {
+                    "type": "string"
+                  },
+                  "FreeText13": {
+                    "type": "string"
+                  },
+                  "FreeText14": {
+                    "type": "string"
+                  },
+                  "FreeText15": {
+                    "type": "string"
+                  },
+                  "FreeText16": {
+                    "type": "string"
+                  },
+                  "FreeText17": {
+                    "type": "string"
+                  },
+                  "FreeText18": {
+                    "type": "string"
+                  },
+                  "FreeText19": {
+                    "type": "string"
+                  },
+                  "FreeText20": {
+                    "type": "string"
+                  },
+                  "FreeDecimal1": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal2": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal3": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal4": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal5": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal6": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal7": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal8": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal9": {
+                    "type": "integer"
+                  },
+                  "FreeDecimal10": {
+                    "type": "integer"
+                  },
+                  "FreeBit1": {
+                    "type": "boolean"
+                  },
+                  "FreeBit2": {
+                    "type": "boolean"
+                  },
+                  "FreeBit3": {
+                    "type": "boolean"
+                  },
+                  "FreeBit4": {
+                    "type": "boolean"
+                  },
+                  "FreeBit5": {
+                    "type": "boolean"
+                  },
+                  "DoNotShow": {
+                    "type": "boolean"
+                  },
+                  "ExchangeIntegrationEnabled": {
+                    "type": "boolean"
+                  },
+                  "GpsTrackingEnabled": {
+                    "type": "boolean"
+                  },
+                  "BulkPlanning": {
+                    "type": "boolean"
+                  },
+                  "BulkCapacity": {
+                    "type": "integer"
+                  },
+                  "Name": {
+                    "type": "string"
+                  },
+                  "Id": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "TaskAssignments": {
+                "type": "array",
+                "items": {}
+              },
+              "Id": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "AppointmentFieldValues": {
+          "type": "array",
+          "items": {}
+        },
+        "AppointmentUrls": {
+          "type": "array",
+          "items": {}
+        },
+        "AppointmentContainers": {
+          "type": "array",
+          "items": {}
+        },
+        "Transactions": {
+          "type": "array",
+          "items": {}
+        },
+        "ExternalId": {
           "type": "integer"
         },
-        "appointmentGuid": {
-          "x-ms-summary": "Appointment GUID",
-          "format": "uuid",
+        "Subject": {
           "type": "string"
         },
-        "sourceApp": {
-          "x-ms-summary": "Source application",
-          "maxLength": 30,
+        "Body": {
           "type": "string"
         },
-        "sourceType": {
-          "x-ms-summary": "Source type",
-          "maxLength": 10,
+        "StartDate": {
           "type": "string"
         },
-        "jobNo": {
-          "x-ms-summary": "Job no.",
-          "maxLength": 50,
+        "EndDate": {
           "type": "string"
         },
-        "taskNo": {
-          "x-ms-summary": "Task no.",
-          "maxLength": 50,
-          "type": "string"
-        },
-        "resourceNo": {
-          "x-ms-summary": "Resource no.",
-          "maxLength": 50,
-          "type": "string"
-        },
-        "subject": {
-          "x-ms-summary": "Subject",
-          "type": "string"
-        },
-        "body": {
-          "x-ms-summary": "Body",
-          "type": "string"
-        },
-        "start": {
-          "x-ms-summary": "Start",
-          "format": "date-time",
-          "type": "string"
-        },
-        "end": {
-          "x-ms-summary": "End",
-          "format": "date-time",
-          "type": "string"
-        },
-        "isAllDay": {
-          "x-ms-summary": "Is all day",
+        "IsAllDayEvent": {
           "type": "boolean"
         },
-        "timeMarker": {
-          "x-ms-summary": "Time marker",
-          "type": "string"
+        "Importance": {
+          "type": "integer"
         },
-        "category": {
-          "x-ms-summary": "Category",
-          "type": "string"
-        },
-        "importance": {
-          "x-ms-summary": "Importance",
-          "type": "integer",
-          "default": 0,
-          "enum": [
-            0,
-            1,
-            2
-          ]
-        },
-        "locked": {
-          "x-ms-summary": "Locked",
+        "HiddenToUser": {
           "type": "boolean"
         },
-        "replaceResource": {
-          "x-ms-summary": "Replace resource",
+        "AppointmentChanged": {
           "type": "boolean"
         },
-        "backOfficeId": {
-          "x-ms-summary": "Back office id",
-          "maxLength": 100,
+        "PreventSynch": {
+          "type": "boolean"
+        },
+        "Timestamp": {
           "type": "string"
         },
-        "backOfficeParentId": {
-          "x-ms-summary": "Back office parent id",
-          "maxLength": 100,
+        "AppointmentGuid": {
           "type": "string"
         },
-        "unitOfMeasure": {
-          "x-ms-summary": "Unit of measure",
-          "maxLength": 20,
+        "NonWorkingTime": {
+          "type": "integer"
+        },
+        "Locked": {
+          "type": "boolean"
+        },
+        "UpdateTrigger": {
+          "type": "boolean"
+        },
+        "PlanningUOM": {
           "type": "string"
         },
-        "unitOfMeasureConversion": {
-          "x-ms-summary": "Unit of measure conversion",
-          "format": "double",
-          "type": "number"
+        "PlanningUOMConversion": {
+          "type": "integer"
         },
-        "planningQuantity": {
-          "x-ms-summary": "Planning quantity",
-          "format": "double",
-          "type": "number"
+        "PlanningQty": {
+          "type": "integer"
         },
-        "useFixedPlanningQuantity": {
-          "x-ms-summary": "Use fixed planning quantity",
+        "UseFixPlanningQty": {
           "type": "boolean"
         },
-        "roundToUnitOfMeasure": {
-          "x-ms-summary": "Round to unit of measure",
+        "RoundToUOM": {
           "type": "boolean"
         },
-        "sentFromBackOffice": {
-          "x-ms-summary": "Sent from back office",
+        "LastModifiedDate": {
+          "type": "string"
+        },
+        "LastModifiedUser": {
+          "type": "string"
+        },
+        "SentFromBackoffice": {
           "type": "boolean"
+        },
+        "SentFromExchange": {
+          "type": "boolean"
+        },
+        "BackofficeID": {
+          "type": "string"
+        },
+        "BackofficeParentID": {
+          "type": "string"
+        },
+        "IsRecurrenceException": {
+          "type": "boolean"
+        },
+        "CapacityIndicator": {
+          "type": "boolean"
+        },
+        "IgnoreCalendars": {
+          "type": "boolean"
+        },
+        "Id": {
+          "type": "integer"
         }
       },
       "example": {
