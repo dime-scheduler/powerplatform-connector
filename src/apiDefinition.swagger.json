@@ -39,7 +39,7 @@
       "x-ms-notification-content": {
         "description": "Appointment details for webhook",
         "schema": {
-          "$ref": "#/definitions/appointment"
+          "$ref": "#/definitions/appointment-incoming"
         }
       },
       "post": {
@@ -121,7 +121,7 @@
       "x-ms-notification-content": {
         "description": "Appointment details for webhook",
         "schema": {
-          "$ref": "#/definitions/appointment"
+          "$ref": "#/definitions/appointment-incoming"
         }
       },
       "post": {
@@ -203,7 +203,7 @@
       "x-ms-notification-content": {
         "description": "Appointment details for webhook",
         "schema": {
-          "$ref": "#/definitions/appointment"
+          "$ref": "#/definitions/appointment-incoming"
         }
       },
       "post": {
@@ -667,7 +667,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/appointment"
+              "$ref": "#/definitions/appointment-outgoing"
             }
           }
         ],
@@ -699,7 +699,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/appointment"
+              "$ref": "#/definitions/appointment-outgoing"
             }
           }
         ],
@@ -2128,7 +2128,132 @@
         "default": true
       }
     },
-    "appointment": {
+    "appointment-outgoing": {
+      "type": "object",
+      "properties": {
+        "appointmentId": {
+          "x-ms-summary": "Appointment id",
+          "format": "int64",
+          "type": "integer"
+        },
+        "appointmentGuid": {
+          "x-ms-summary": "Appointment GUID",
+          "format": "uuid",
+          "type": "string"
+        },
+        "sourceApp": {
+          "x-ms-summary": "Source application",
+          "maxLength": 30,
+          "type": "string"
+        },
+        "sourceType": {
+          "x-ms-summary": "Source type",
+          "maxLength": 10,
+          "type": "string"
+        },
+        "jobNo": {
+          "x-ms-summary": "Job no.",
+          "maxLength": 50,
+          "type": "string"
+        },
+        "taskNo": {
+          "x-ms-summary": "Task no.",
+          "maxLength": 50,
+          "type": "string"
+        },
+        "resourceNo": {
+          "x-ms-summary": "Resource no.",
+          "maxLength": 50,
+          "type": "string"
+        },
+        "subject": {
+          "x-ms-summary": "Subject",
+          "type": "string"
+        },
+        "body": {
+          "x-ms-summary": "Body",
+          "type": "string"
+        },
+        "start": {
+          "x-ms-summary": "Start",
+          "format": "date-time",
+          "type": "string"
+        },
+        "end": {
+          "x-ms-summary": "End",
+          "format": "date-time",
+          "type": "string"
+        },
+        "isAllDay": {
+          "x-ms-summary": "Is all day",
+          "type": "boolean"
+        },
+        "timeMarker": {
+          "x-ms-summary": "Time marker",
+          "type": "string"
+        },
+        "category": {
+          "x-ms-summary": "Category",
+          "type": "string"
+        },
+        "importance": {
+          "x-ms-summary": "Importance",
+          "type": "integer",
+          "default": 0,
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "locked": {
+          "x-ms-summary": "Locked",
+          "type": "boolean"
+        },
+        "replaceResource": {
+          "x-ms-summary": "Replace resource",
+          "type": "boolean"
+        },
+        "backOfficeId": {
+          "x-ms-summary": "Back office id",
+          "maxLength": 100,
+          "type": "string"
+        },
+        "backOfficeParentId": {
+          "x-ms-summary": "Back office parent id",
+          "maxLength": 100,
+          "type": "string"
+        },
+        "unitOfMeasure": {
+          "x-ms-summary": "Unit of measure",
+          "maxLength": 20,
+          "type": "string"
+        },
+        "unitOfMeasureConversion": {
+          "x-ms-summary": "Unit of measure conversion",
+          "format": "double",
+          "type": "number"
+        },
+        "planningQuantity": {
+          "x-ms-summary": "Planning quantity",
+          "format": "double",
+          "type": "number"
+        },
+        "useFixedPlanningQuantity": {
+          "x-ms-summary": "Use fixed planning quantity",
+          "type": "boolean"
+        },
+        "roundToUnitOfMeasure": {
+          "x-ms-summary": "Round to unit of measure",
+          "type": "boolean"
+        },
+        "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back office",
+          "type": "boolean"
+        }
+      }
+    },
+    "appointment-incoming": {
       "type": "object",
       "properties": {
         "CreatedDate": {
