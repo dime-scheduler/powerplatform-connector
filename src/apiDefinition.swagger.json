@@ -54,13 +54,13 @@
             "description": "Access forbidden."
           },
           "429": {
-            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
           },
           "500": {
             "description": "Internal server error."
           }
         },
-        "summary": "When a appointment is created",
+        "summary": "When an appointment is created",
         "description": "This trigger is used for listening to new appointments scheduled in Dime.Scheduler.",
         "operationId": "CreateAppointment",
         "x-ms-trigger": "single",
@@ -76,7 +76,7 @@
                 "sourceApp": {
                   "type": "string",
                   "description": "Unique identifier for this source application.",
-                  "title": "sourceApp",
+                  "title": "Source App",
                   "x-ms-visibility": "important"
                 },
                 "notificationURL": {
@@ -108,7 +108,8 @@
               "required": [
                 "notificationURL",
                 "resource",
-                "changeType"
+                "changeType",
+                "SourceApp"
               ]
             }
           }
@@ -135,17 +136,17 @@
             "description": "Access forbidden. "
           },
           "429": {
-            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
           },
           "500": {
             "description": "Internal server error."
           }
         },
-        "summary": "When a appointment is updated",
+        "summary": "When an appointment is updated",
         "description": "This trigger is used for listening to new appointments scheduled in Dime.Scheduler.",
         "operationId": "UpdateAppointment",
         "x-ms-trigger": "single",
-        "x-ms-trigger-hint": "To see this trigger work, Create an appointment in Dime.Scheduler",
+        "x-ms-trigger-hint": "To see this trigger work, update an appointment in Dime.Scheduler",
         "parameters": [
           {
             "name": "body",
@@ -154,6 +155,12 @@
             "schema": {
               "type": "object",
               "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "Unique identifier for this source application.",
+                  "title": "Source App",
+                  "x-ms-visibility": "important"
+                },
                 "notificationURL": {
                   "type": "string",
                   "description": "Notification URL where the appointment data will be posted.",
@@ -183,7 +190,8 @@
               "required": [
                 "notificationURL",
                 "resource",
-                "changeType"
+                "changeType",
+                "sourceApp"
               ]
             }
           }
@@ -210,17 +218,17 @@
             "description": "Access forbidden. "
           },
           "429": {
-            "description": "Resource Exhausted. More than expected number of webhooks created for a calendar."
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
           },
           "500": {
             "description": "Internal server error."
           }
         },
-        "summary": "When a appointment is deleted",
-        "description": "This trigger is used for listening to appointments scheduled in Dime.Scheduler.",
+        "summary": "When an appointment is deleted",
+        "description": "This trigger is used for listening to appointments that have been removed in Dime.Scheduler.",
         "operationId": "DeleteAppointment",
         "x-ms-trigger": "single",
-        "x-ms-trigger-hint": "To see this trigger work, Create an appointment in Dime.Scheduler",
+        "x-ms-trigger-hint": "To see this trigger work, delete an appointment in Dime.Scheduler",
         "parameters": [
           {
             "name": "body",
@@ -229,6 +237,12 @@
             "schema": {
               "type": "object",
               "properties": {
+                "sourceApp": {
+                  "type": "string",
+                  "description": "Unique identifier for this source application.",
+                  "title": "Source App",
+                  "x-ms-visibility": "important"
+                },
                 "notificationURL": {
                   "type": "string",
                   "description": "Notification URL where the appointment data will be posted.",
@@ -256,6 +270,7 @@
                 }
               },
               "required": [
+                "sourceApp",
                 "notificationURL",
                 "resource",
                 "changeType"
