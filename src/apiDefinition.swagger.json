@@ -117,6 +117,31 @@
         "x-ms-visibility": "important"
       }
     },
+    "/webhooks/AppointmentCreated/{id}": {
+      "delete": {
+        "summary": "Deletes the new appointment webhook",
+        "description": "Deletes the new appointment webhook",
+        "operationId": "DeleteCreateAppointmentTrigger",
+        "x-ms-visibility": "internal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-url-encoding": "single",
+            "x-ms-summary": "ID",
+            "description": "Specify the ID of the WebHook"
+          }
+        ]
+      }
+    },
     "/webhooks/AppointmentUpdated": {
       "x-ms-notification-content": {
         "description": "Appointment details for webhook",
@@ -199,6 +224,31 @@
         "x-ms-visibility": "important"
       }
     },
+    "/webhooks/AppointmentUpdated/{id}": {
+      "delete": {
+        "summary": "Deletes the new appointment webhook",
+        "description": "Deletes the new appointment webhook",
+        "operationId": "DeleteUpdateAppointmentTrigger",
+        "x-ms-visibility": "internal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-url-encoding": "single",
+            "x-ms-summary": "ID",
+            "description": "Specify the ID of the WebHook"
+          }
+        ]
+      }
+    },
     "/webhooks/AppointmentDeleted": {
       "x-ms-notification-content": {
         "description": "Appointment details for webhook",
@@ -279,6 +329,31 @@
           }
         ],
         "x-ms-visibility": "important"
+      }
+    },
+    "/webhooks/AppointmentDeleted/{id}": {
+      "delete": {
+        "summary": "Deletes the new appointment webhook",
+        "description": "Deletes the new appointment webhook",
+        "operationId": "DeleteDeletedAppointmentTrigger",
+        "x-ms-visibility": "internal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-url-encoding": "single",
+            "x-ms-summary": "ID",
+            "description": "Specify the ID of the WebHook"
+          }
+        ]
       }
     },
     "/category": {
@@ -2273,17 +2348,24 @@
         "Category": {
           "type": "object",
           "properties": {
-            "HiddenToUser": {
-              "type": "boolean"
+            "DisplayName": {
+              "type": "string"
             },
             "Color": {
               "type": "string"
             }
           }
         },
-        "Notifications": {
-          "type": "array",
-          "items": {}
+        "TimeMarker": {
+          "type": "object",
+          "properties": {
+            "Name": {
+              "type": "string"
+            },
+            "Color": {
+              "type": "string"
+            }
+          }
         },
         "Assignments": {
           "type": "array",
@@ -2324,233 +2406,11 @@
                   },
                   "Email": {
                     "type": "string"
-                  },
-                  "Phone": {
-                    "type": "string"
-                  },
-                  "MobilePhone": {
-                    "type": "string"
-                  },
-                  "ReplacementResource": {
-                    "type": "boolean"
-                  },
-                  "FieldServiceEmail": {
-                    "type": "string"
-                  },
-                  "PersonalEmail": {
-                    "type": "string"
-                  },
-                  "GpsTrackingResourceNo": {
-                    "type": "string"
-                  },
-                  "HomeAddress": {
-                    "type": "string"
-                  },
-                  "HomePhone": {
-                    "type": "string"
-                  },
-                  "HomeEmail": {
-                    "type": "string"
-                  },
-                  "HomeStreet": {
-                    "type": "string"
-                  },
-                  "HomeStreetNo": {
-                    "type": "string"
-                  },
-                  "HomeRegion": {
-                    "type": "string"
-                  },
-                  "HomePostcode": {
-                    "type": "string"
-                  },
-                  "HomeCity": {
-                    "type": "string"
-                  },
-                  "HomeCounty": {
-                    "type": "string"
-                  },
-                  "HomeState": {
-                    "type": "string"
-                  },
-                  "HomeCountry": {
-                    "type": "string"
-                  },
-                  "TeamCode": {
-                    "type": "string"
-                  },
-                  "TeamName": {
-                    "type": "string"
-                  },
-                  "TeamType": {
-                    "type": "string"
-                  },
-                  "TeamSort": {
-                    "type": "integer"
-                  },
-                  "TeamMemberType": {
-                    "type": "string"
-                  },
-                  "TeamMemberSort": {
-                    "type": "integer"
-                  },
-                  "FreeText1": {
-                    "type": "string"
-                  },
-                  "FreeText2": {
-                    "type": "string"
-                  },
-                  "FreeText3": {
-                    "type": "string"
-                  },
-                  "FreeText4": {
-                    "type": "string"
-                  },
-                  "FreeText5": {
-                    "type": "string"
-                  },
-                  "FreeText6": {
-                    "type": "string"
-                  },
-                  "FreeText7": {
-                    "type": "string"
-                  },
-                  "FreeText8": {
-                    "type": "string"
-                  },
-                  "FreeText9": {
-                    "type": "string"
-                  },
-                  "FreeText10": {
-                    "type": "string"
-                  },
-                  "FreeText11": {
-                    "type": "string"
-                  },
-                  "FreeText12": {
-                    "type": "string"
-                  },
-                  "FreeText13": {
-                    "type": "string"
-                  },
-                  "FreeText14": {
-                    "type": "string"
-                  },
-                  "FreeText15": {
-                    "type": "string"
-                  },
-                  "FreeText16": {
-                    "type": "string"
-                  },
-                  "FreeText17": {
-                    "type": "string"
-                  },
-                  "FreeText18": {
-                    "type": "string"
-                  },
-                  "FreeText19": {
-                    "type": "string"
-                  },
-                  "FreeText20": {
-                    "type": "string"
-                  },
-                  "FreeDecimal1": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal2": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal3": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal4": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal5": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal6": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal7": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal8": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal9": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeDecimal10": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "FreeBit1": {
-                    "type": "boolean"
-                  },
-                  "FreeBit2": {
-                    "type": "boolean"
-                  },
-                  "FreeBit3": {
-                    "type": "boolean"
-                  },
-                  "FreeBit4": {
-                    "type": "boolean"
-                  },
-                  "FreeBit5": {
-                    "type": "boolean"
-                  },
-                  "DoNotShow": {
-                    "type": "boolean"
-                  },
-                  "ExchangeIntegrationEnabled": {
-                    "type": "boolean"
-                  },
-                  "GpsTrackingEnabled": {
-                    "type": "boolean"
-                  },
-                  "BulkPlanning": {
-                    "type": "boolean"
-                  },
-                  "BulkCapacity": {
-                    "format": "double",
-                    "type": "number"
-                  },
-                  "Name": {
-                    "type": "string"
                   }
                 }
-              },
-              "TaskAssignments": {
-                "type": "array",
-                "items": {}
-              },
-              "Id": {
-                "type": "integer"
               }
             }
           }
-        },
-        "AppointmentFieldValues": {
-          "type": "array",
-          "items": {}
-        },
-        "AppointmentUrls": {
-          "type": "array",
-          "items": {}
-        },
-        "AppointmentContainers": {
-          "type": "array",
-          "items": {}
         },
         "ExternalId": {
           "type": "integer"
@@ -2567,17 +2427,8 @@
         "EndDate": {
           "type": "string"
         },
-        "IsAllDayEvent": {
-          "type": "boolean"
-        },
         "Importance": {
           "type": "integer"
-        },
-        "HiddenToUser": {
-          "type": "boolean"
-        },
-        "AppointmentChanged": {
-          "type": "boolean"
         },
         "AppointmentGuid": {
           "type": "string"
@@ -2588,11 +2439,9 @@
         "PlanningUOM": {
           "type": "string"
         },
-        "PlanningUOMConversion": {
-          "type": "integer"
-        },
         "PlanningQty": {
-          "type": "integer"
+          "format": "double",
+          "type": "number"
         },
         "UseFixPlanningQty": {
           "type": "boolean"
@@ -2612,8 +2461,21 @@
         "CapacityIndicator": {
           "type": "boolean"
         },
-        "IgnoreCalendars": {
-          "type": "boolean"
+        "AppointmentFieldValues": {
+          "type": "array",
+          "items": {}
+        },
+        "AppointmentUrls": {
+          "type": "array",
+          "items": {}
+        },
+        "AppointmentContainers": {
+          "type": "array",
+          "items": {}
+        },
+        "Notifications": {
+          "type": "array",
+          "items": {}
         }
       },
       "example": {
@@ -5121,11 +4983,6 @@
           "maxLength": 20,
           "type": "string"
         },
-        "planningUOMConversion": {
-          "x-ms-summary": "Planning UOM conversion",
-          "format": "double",
-          "type": "number"
-        },
         "planningQty": {
           "x-ms-summary": "Planning quantity",
           "format": "double",
@@ -5419,7 +5276,6 @@
         "doNotCountAppointmentResource": true,
         "isComplete": true,
         "planningUOM": "string",
-        "planningUOMConversion": 0,
         "planningQty": 0,
         "useFixPlanningQty": true,
         "roundToUOM": true,
@@ -5718,7 +5574,7 @@
   "securityDefinitions": {
     "apiKey": {
       "type": "apiKey",
-      "name": "x-functions-key",
+      "name": "X-API-KEY",
       "in": "header"
     }
   },
