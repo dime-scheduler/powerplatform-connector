@@ -9,8 +9,7 @@ Dime.Scheduler, a Dime Software product, is a resource and project planning solu
 In order to use the connector, you'll need:
 
 - A Microsoft Power Apps or Power Automate plan with custom connector feature
-- A running instance of Dime.Scheduler on-premise or in the cloud, and must be accessible by the app that uses this connector.
-- An API key that you can obtain on [Dime.Scheduler Connect](https://connect.dimescheduler.com).
+- A Dime.Scheduler tenant and an API key that you can generate inside the app.
 
 ## Supported operations
 

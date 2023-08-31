@@ -79,6 +79,12 @@
                   "title": "Source App",
                   "x-ms-visibility": "important"
                 },
+                "name": {
+                  "type": "string",
+                  "description": "Provide a descriptive name to identify the purpose of this flow in Dime.Scheduler.",
+                  "title": "Name",
+                  "x-ms-visibility": "important"
+                },
                 "notificationURL": {
                   "type": "string",
                   "description": "Notification URL where the appointment data will be posted.",
@@ -117,7 +123,7 @@
         "x-ms-visibility": "important"
       }
     },
-    "/webhooks/AppointmentCreated/{id}": {
+    "/webhooks/AppointmentCreated/{hook_id}": {
       "delete": {
         "summary": "Deletes the new appointment webhook",
         "description": "Deletes the new appointment webhook",
@@ -130,11 +136,10 @@
         },
         "parameters": [
           {
-            "name": "id",
+            "name": "hook_id",
             "in": "path",
             "required": true,
             "type": "string",
-            "x-ms-visibility": "important",
             "x-ms-url-encoding": "single",
             "x-ms-summary": "ID",
             "description": "Specify the ID of the WebHook"
@@ -224,7 +229,7 @@
         "x-ms-visibility": "important"
       }
     },
-    "/webhooks/AppointmentUpdated/{id}": {
+    "/webhooks/AppointmentUpdated/{hook_id}": {
       "delete": {
         "summary": "Deletes the new appointment webhook",
         "description": "Deletes the new appointment webhook",
@@ -237,11 +242,10 @@
         },
         "parameters": [
           {
-            "name": "id",
+            "name": "hook_id",
             "in": "path",
             "required": true,
             "type": "string",
-            "x-ms-visibility": "important",
             "x-ms-url-encoding": "single",
             "x-ms-summary": "ID",
             "description": "Specify the ID of the WebHook"
@@ -331,7 +335,7 @@
         "x-ms-visibility": "important"
       }
     },
-    "/webhooks/AppointmentDeleted/{id}": {
+    "/webhooks/AppointmentDeleted/{hook_id}": {
       "delete": {
         "summary": "Deletes the new appointment webhook",
         "description": "Deletes the new appointment webhook",
@@ -344,11 +348,10 @@
         },
         "parameters": [
           {
-            "name": "id",
+            "name": "hook_id",
             "in": "path",
             "required": true,
             "type": "string",
-            "x-ms-visibility": "important",
             "x-ms-url-encoding": "single",
             "x-ms-summary": "ID",
             "description": "Specify the ID of the WebHook"
@@ -1319,7 +1322,7 @@
     "/filterGroup": {
       "post": {
         "summary": "Add or update a filter group",
-        "description": "Add or update a flter group.",
+        "description": "Add or update a filter group.",
         "operationId": "filterGroupUpsert",
         "tags": [
           "filters"
