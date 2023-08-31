@@ -359,30 +359,6 @@
         ]
       }
     },
-    "/resources": {
-      "get": {
-        "responses": {
-          "201": {
-            "description": "Created."
-          },
-          "401": {
-            "description": "Unauthenticated."
-          },
-          "403": {
-            "description": "Access forbidden."
-          },
-          "429": {
-            "description": "Resource exhausted. More than expected number of webhooks have been created."
-          },
-          "500": {
-            "description": "Internal server error."
-          }
-        },
-        "summary": "Gets the list of available resources in Dime.SCheduler",
-        "description": "Fetches the list of resources",
-        "operationId": "GetResources"
-      }
-    },
     "/resourcetype": {
       "get": {
         "produces": [
@@ -710,6 +686,32 @@
       }
     },
     "/resource": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval resources",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/resourcelist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "summary": "Gets the list of available resources in Dime.SCheduler",
+        "description": "Fetches the list of resources",
+        "operationId": "GetResources"
+      },
       "post": {
         "summary": "Add or update a resource",
         "description": "Add or update a resource.",
@@ -849,9 +851,41 @@
     },
     "/appointment": {
       "post": {
-        "summary": "Add or update an appointment",
-        "description": "Add or update an appointment.",
+        "summary": "Add an appointment",
+        "description": "Add an appointment.",
         "operationId": "appointmentUpsert",
+        "tags": [
+          "appointment"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/appointment-outgoing"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/200"
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          },
+          "default": {
+            "$ref": "#/responses/default"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an appointment",
+        "description": "Update an appointment.",
+        "operationId": "appointmentUpdate",
         "tags": [
           "appointment"
         ],
@@ -2147,7 +2181,7 @@
         "produces": [
           "application/json"
         ],
-        "summary": "Add or update a task container",
+        "summary": "Remove a task container",
         "description": "Remove a task container.",
         "operationId": "taskContainerDelete",
         "tags": [
@@ -2358,7 +2392,12 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "subject": {
           "x-ms-summary": "Subject",
@@ -2397,7 +2436,7 @@
           "x-ms-dynamic-values": {
             "operationId": "GetCategories",
             "value-path": "id",
-            "value-title": "displayName"
+            "value-title": "name"
           }
         },
         "importance": {
@@ -2491,10 +2530,12 @@
           "type": "object",
           "properties": {
             "Name": {
-              "type": "string"
+              "type": "string",
+              "title": "Time marker name"
             },
             "Color": {
-              "type": "string"
+              "type": "string",
+              "title": "Time marker color"
             }
           }
         },
@@ -2504,10 +2545,12 @@
             "type": "object",
             "properties": {
               "AppointmentId": {
-                "type": "integer"
+                "type": "integer",
+                "x-ms-visibility": "internal"
               },
               "ResourceId": {
-                "type": "integer"
+                "type": "integer",
+                "x-ms-visibility": "internal"
               },
               "Resource": {
                 "type": "object",
