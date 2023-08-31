@@ -359,7 +359,93 @@
         ]
       }
     },
-    "/category": {
+    "/resources": {
+      "get": {
+        "responses": {
+          "201": {
+            "description": "Created."
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "summary": "Gets the list of available resources in Dime.SCheduler",
+        "description": "Fetches the list of resources",
+        "operationId": "GetResources"
+      }
+    },
+    "/resourcetype": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval resource types",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/resourcetypelist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available resource types in Dime.Scheduler",
+        "description": "Fetches the list of resource types",
+        "operationId": "GetResourceTypes"
+      }
+    },
+    "/categories": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval categories",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/categorylist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available categories in Dime.Scheduler",
+        "description": "Fetches the list of categories",
+        "operationId": "GetCategories"
+      },
       "post": {
         "summary": "Add or update a category",
         "description": "Add or update a category, which is the visual indicator that renders the background of the appointment.",
@@ -438,6 +524,36 @@
       }
     },
     "/timeMarker": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval time markers",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/timemarkerlist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available time markers in Dime.Scheduler",
+        "description": "Fetches the list of time markers",
+        "operationId": "GetTimeMarkers"
+      },
       "post": {
         "summary": "Add or update a time marker",
         "description": "Add or update a time marker, which is the visual indicator that renders the underscore of the appointment.",
@@ -2266,13 +2382,23 @@
           "x-ms-summary": "Is all day",
           "type": "boolean"
         },
-        "timeMarker": {
-          "x-ms-summary": "Time marker",
-          "type": "string"
+        "timeMarkerId": {
+          "type": "integer",
+          "x-ms-summary": "Time Marker",
+          "x-ms-dynamic-values": {
+            "operationId": "GetTimeMarkers",
+            "value-path": "id",
+            "value-title": "name"
+          }
         },
-        "category": {
+        "categoryId": {
+          "type": "integer",
           "x-ms-summary": "Category",
-          "type": "string"
+          "x-ms-dynamic-values": {
+            "operationId": "GetCategories",
+            "value-path": "id",
+            "value-title": "displayName"
+          }
         },
         "importance": {
           "x-ms-summary": "Importance",
@@ -2352,10 +2478,12 @@
           "type": "object",
           "properties": {
             "DisplayName": {
-              "type": "string"
+              "type": "string",
+              "title": "Category name"
             },
             "Color": {
-              "type": "string"
+              "type": "string",
+              "title": "Category color"
             }
           }
         },
@@ -2913,6 +3041,39 @@
           "x-ms-summary": "Color",
           "maxLength": 7,
           "type": "string"
+        }
+      },
+      "example": {
+        "name": "OOO",
+        "displayName": "Out of office",
+        "color": "#6e62b5"
+      }
+    },
+    "categorylist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "id",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "name": {
+            "x-ms-summary": "Name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "displayName": {
+            "x-ms-summary": "Display name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "color": {
+            "x-ms-summary": "Color",
+            "maxLength": 7,
+            "type": "string"
+          }
         }
       },
       "example": {
@@ -3792,15 +3953,15 @@
           "maxLength": 50,
           "type": "string"
         },
-        "resourceType": {
-          "x-ms-summary": "Resource type",
-          "maxLength": 100,
-          "type": "string"
-        },
         "resourceTypeId": {
-          "x-ms-summary": "Resource type id",
+          "x-ms-summary": "Resource type",
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResourceTypes",
+            "value-path": "id",
+            "value-title": "displayName"
+          }
         },
         "resourceName": {
           "x-ms-summary": "Resource name",
@@ -4272,6 +4433,507 @@
         "freeBit5": true
       }
     },
+    "resourcelist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "ID",
+            "maxLength": 30,
+            "type": "integer"
+          },
+          "sourceApp": {
+            "x-ms-summary": "Source application",
+            "maxLength": 30,
+            "type": "string"
+          },
+          "sourceType": {
+            "x-ms-summary": "Source type",
+            "maxLength": 10,
+            "type": "string"
+          },
+          "resourceNo": {
+            "x-ms-summary": "Resource no.",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "resourceTypeId": {
+            "x-ms-summary": "Resource type",
+            "format": "int32",
+            "type": "integer"
+          },
+          "resourceName": {
+            "x-ms-summary": "Resource name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "displayName": {
+            "x-ms-summary": "Display name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "department": {
+            "x-ms-summary": "Department",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "email": {
+            "x-ms-summary": "E-mail",
+            "maxLength": 100,
+            "type": "string",
+            "format": "email"
+          },
+          "phone": {
+            "x-ms-summary": "Phone",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "mobilePhone": {
+            "x-ms-summary": "Mobile phone",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "replacementResource": {
+            "x-ms-summary": "Replacement resource",
+            "type": "boolean"
+          },
+          "fieldServiceEmail": {
+            "x-ms-summary": "Field service e-mail",
+            "maxLength": 100,
+            "type": "string",
+            "format": "email"
+          },
+          "personalEmail": {
+            "x-ms-summary": "Person e-mail",
+            "maxLength": 100,
+            "type": "string",
+            "format": "email"
+          },
+          "gpsTrackingResourceNo": {
+            "x-ms-summary": "GPS tracking no.",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeAddress": {
+            "x-ms-summary": "Home address",
+            "type": "string"
+          },
+          "homeAddressGeoLong": {
+            "x-ms-summary": "Home address longitude",
+            "format": "float",
+            "type": "number"
+          },
+          "homeAddressGeoLat": {
+            "x-ms-summary": "Home address latitude",
+            "format": "float",
+            "type": "number"
+          },
+          "homePhone": {
+            "x-ms-summary": "Home phone",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeEmail": {
+            "x-ms-summary": "Home e-mail",
+            "maxLength": 50,
+            "type": "string",
+            "format": "email"
+          },
+          "homeStreet": {
+            "x-ms-summary": "Home street",
+            "maxLength": 255,
+            "type": "string"
+          },
+          "homeStreetNo": {
+            "x-ms-summary": "Home street no.",
+            "maxLength": 20,
+            "type": "string"
+          },
+          "homePostcode": {
+            "x-ms-summary": "Home post code",
+            "maxLength": 20,
+            "type": "string"
+          },
+          "homeCity": {
+            "x-ms-summary": "Home city",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeCounty": {
+            "x-ms-summary": "Home county",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeState": {
+            "x-ms-summary": "Home state",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeCountry": {
+            "x-ms-summary": "Home country",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "homeRegion": {
+            "x-ms-summary": "Home region",
+            "maxLength": 10,
+            "type": "string"
+          },
+          "teamCode": {
+            "x-ms-summary": "Team code",
+            "maxLength": 20,
+            "type": "string"
+          },
+          "teamName": {
+            "x-ms-summary": "Team name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "teamType": {
+            "x-ms-summary": "Team type",
+            "maxLength": 20,
+            "type": "string"
+          },
+          "teamSort": {
+            "x-ms-summary": "Team sort",
+            "format": "int32",
+            "type": "integer"
+          },
+          "teamMemberType": {
+            "x-ms-summary": "Team member type",
+            "maxLength": 20,
+            "type": "string"
+          },
+          "teamMemberSort": {
+            "x-ms-summary": "Team member sort",
+            "format": "int32",
+            "type": "integer"
+          },
+          "doNotShow": {
+            "x-ms-summary": "Do not show",
+            "type": "boolean"
+          },
+          "exchangeIntegrationEnabled": {
+            "x-ms-summary": "Enable exchange integration",
+            "type": "boolean"
+          },
+          "resourceGpsTrackingEnabled": {
+            "x-ms-summary": "Enable resource GPS tracking",
+            "type": "boolean"
+          },
+          "inServiceFrom": {
+            "x-ms-summary": "In service from",
+            "format": "date-time",
+            "type": "string"
+          },
+          "inServiceTill": {
+            "x-ms-summary": "In service until",
+            "format": "date-time",
+            "type": "string"
+          },
+          "url1": {
+            "x-ms-summary": "URL 1",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "urlDescription1": {
+            "x-ms-summary": "URL description #1",
+            "maxLength": 255,
+            "type": "string"
+          },
+          "url2": {
+            "x-ms-summary": "URL 2",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "urlDescription2": {
+            "x-ms-summary": "URL description #2",
+            "maxLength": 255,
+            "type": "string"
+          },
+          "url3": {
+            "x-ms-summary": "URL 3",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "urlDescription3": {
+            "x-ms-summary": "URL description #3",
+            "maxLength": 255,
+            "type": "string"
+          },
+          "bulkPlanning": {
+            "x-ms-summary": "Bulk planning",
+            "type": "boolean"
+          },
+          "bulkCapacity": {
+            "x-ms-summary": "Bulk capacity",
+            "format": "double",
+            "type": "number"
+          },
+          "pin": {
+            "x-ms-summary": "The pin indicator",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText1": {
+            "x-ms-summary": "Free text field #1",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText2": {
+            "x-ms-summary": "Free text field #2",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText3": {
+            "x-ms-summary": "Free text field #3",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText4": {
+            "x-ms-summary": "Free text field #4",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText5": {
+            "x-ms-summary": "Free text field #5",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText6": {
+            "x-ms-summary": "Free text field #6",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText7": {
+            "x-ms-summary": "Free text field #7",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText8": {
+            "x-ms-summary": "Free text field #8",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText9": {
+            "x-ms-summary": "Free text field #9",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText10": {
+            "x-ms-summary": "Free text field #10",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText11": {
+            "x-ms-summary": "Free text field #11",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText12": {
+            "x-ms-summary": "Free text field #12",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText13": {
+            "x-ms-summary": "Free text field #13",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText14": {
+            "x-ms-summary": "Free text field #14",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText15": {
+            "x-ms-summary": "Free text field #15",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText16": {
+            "x-ms-summary": "Free text field #16",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText17": {
+            "x-ms-summary": "Free text field #17",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText18": {
+            "x-ms-summary": "Free text field #18",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText19": {
+            "x-ms-summary": "Free text field #19",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeText20": {
+            "x-ms-summary": "Free text field #20",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "freeDecimal1": {
+            "x-ms-summary": "Free decimal field #1",
+            "format": "double",
+            "type": "number"
+          },
+          "freeDecimal2": {
+            "x-ms-summary": "Free decimal field #2",
+            "format": "double",
+            "type": "number"
+          },
+          "freeDecimal3": {
+            "x-ms-summary": "Free decimal field #3",
+            "format": "double",
+            "type": "number"
+          },
+          "freeDecimal4": {
+            "x-ms-summary": "Free decimal field #4",
+            "format": "double",
+            "type": "number"
+          },
+          "freeDecimal5": {
+            "x-ms-summary": "Free decimal field #5",
+            "format": "double",
+            "type": "number"
+          },
+          "freeDate1": {
+            "x-ms-summary": "Free decimal field #1",
+            "format": "date-time",
+            "type": "string"
+          },
+          "freeDate2": {
+            "x-ms-summary": "Free decimal field #2",
+            "format": "date-time",
+            "type": "string"
+          },
+          "freeDate3": {
+            "x-ms-summary": "Free decimal field #3",
+            "format": "date-time",
+            "type": "string"
+          },
+          "freeDate4": {
+            "x-ms-summary": "Free decimal field #4",
+            "format": "date-time",
+            "type": "string"
+          },
+          "freeDate5": {
+            "x-ms-summary": "Free decimal field #5",
+            "format": "date-time",
+            "type": "string"
+          },
+          "freeBit1": {
+            "x-ms-summary": "Free boolean field #1",
+            "type": "boolean"
+          },
+          "freeBit2": {
+            "x-ms-summary": "Free boolean field #2",
+            "type": "boolean"
+          },
+          "freeBit3": {
+            "x-ms-summary": "Free boolean field #3",
+            "type": "boolean"
+          },
+          "freeBit4": {
+            "x-ms-summary": "Free boolean field #4",
+            "type": "boolean"
+          },
+          "freeBit5": {
+            "x-ms-summary": "Free boolean field #5",
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "resourceNo": "string",
+          "sourceApp": "string",
+          "sourceType": "string",
+          "resourceType": "string",
+          "resourceTypeId": 0,
+          "resourceName": "string",
+          "displayName": "string",
+          "department": "string",
+          "email": "string",
+          "phone": "string",
+          "mobilePhone": "string",
+          "replacementResource": true,
+          "fieldServiceEmail": "string",
+          "personalEmail": "string",
+          "gpsTrackingResourceNo": "string",
+          "homeAddress": "string",
+          "homeAddressGeoLong": 0,
+          "homeAddressGeoLat": 0,
+          "homePhone": "string",
+          "homeEmail": "string",
+          "homeStreet": "string",
+          "homeStreetNo": "string",
+          "homePostcode": "string",
+          "homeCity": "string",
+          "homeCounty": "string",
+          "homeState": "string",
+          "homeCountry": "string",
+          "homeRegion": "string",
+          "teamCode": "string",
+          "teamName": "string",
+          "teamType": "string",
+          "teamSort": 0,
+          "teamMemberType": "string",
+          "teamMemberSort": 0,
+          "doNotShow": true,
+          "inServiceFrom": "string",
+          "inServiceTill": "string",
+          "exchangeIntegrationEnabled": true,
+          "url1": "string",
+          "urlDescription1": "string",
+          "url2": "string",
+          "urlDescription2": "string",
+          "url3": "string",
+          "urlDescription3": "string",
+          "bulkPlanning": true,
+          "bulkCapacity": 0,
+          "resourceGpsTrackingEnabled": true,
+          "pin": "string",
+          "freeText1": "string",
+          "freeText2": "string",
+          "freeText3": "string",
+          "freeText4": "string",
+          "freeText5": "string",
+          "freeText6": "string",
+          "freeText7": "string",
+          "freeText8": "string",
+          "freeText9": "string",
+          "freeText10": "string",
+          "freeText11": "string",
+          "freeText12": "string",
+          "freeText13": "string",
+          "freeText14": "string",
+          "freeText15": "string",
+          "freeText16": "string",
+          "freeText17": "string",
+          "freeText18": "string",
+          "freeText19": "string",
+          "freeText20": "string",
+          "freeDecimal1": 0,
+          "freeDecimal2": 0,
+          "freeDecimal3": 0,
+          "freeDecimal4": 0,
+          "freeDecimal5": 0,
+          "freeDate1": "string",
+          "freeDate2": "string",
+          "freeDate3": "string",
+          "freeDate4": "string",
+          "freeDate5": "string",
+          "freeBit1": true,
+          "freeBit2": true,
+          "freeBit3": true,
+          "freeBit4": true,
+          "freeBit5": true
+        }
+      }
+    },
     "resourceCalendar": {
       "type": "object",
       "properties": {
@@ -4442,6 +5104,30 @@
         "date": "string",
         "rowId": "string",
         "power": "string"
+      }
+    },
+    "resourcetypelist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "id",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "name": {
+            "x-ms-summary": "name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "displayName": {
+            "x-ms-summary": "Display name",
+            "maxLength": 100,
+            "type": "string"
+          }
+        },
+        "example": {}
       }
     },
     "resourceUri": {
@@ -5458,6 +6144,34 @@
       "example": {
         "name": "Underway for delivery",
         "color": "#99bj2z"
+      }
+    },
+    "timemarkerlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "id",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "name": {
+            "x-ms-summary": "Name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "color": {
+            "x-ms-summary": "Color",
+            "maxLength": 7,
+            "type": "string"
+          }
+        }
+      },
+      "example": {
+        "name": "OOO",
+        "displayName": "Out of office",
+        "color": "#6e62b5"
       }
     },
     "timeSpan": {
