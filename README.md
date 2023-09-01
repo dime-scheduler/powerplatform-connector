@@ -17,13 +17,7 @@
 </div>
 <h1 align="center">⚡Power Platform Connector ⚡</h1>
 
-Connect to your Dime.Scheduler instance through a PowerApps custom connector.
-
-## Prerequisites
-
-- A Microsoft Power Apps or Power Automate plan with custom connector feature
-- A running Dime.Scheduler instance that is publicly accessible.
-- An API key of the [Dime.Scheduler connect hub](https://connect.dimescheduler.com/).
+Connect to Dime.Scheduler through a PowerApps custom connector.
 
 ## Getting started
 

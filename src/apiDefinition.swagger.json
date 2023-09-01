@@ -75,7 +75,7 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "Unique identifier for this source application.",
+                  "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
                   "title": "Source App",
                   "x-ms-visibility": "important"
                 },
@@ -187,7 +187,7 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "Unique identifier for this source application.",
+                  "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
                   "title": "Source App",
                   "x-ms-visibility": "important"
                 },
@@ -293,7 +293,7 @@
               "properties": {
                 "sourceApp": {
                   "type": "string",
-                  "description": "Unique identifier for this source application.",
+                  "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
                   "title": "Source App",
                   "x-ms-visibility": "important"
                 },
@@ -1409,6 +1409,38 @@
         }
       }
     },
+    "/calendar": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval calendars",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/calendarlist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available calendars in Dime.Scheduler",
+        "description": "Fetches the list of calendars",
+        "operationId": "GetCalendars"
+      }
+    },
     "/container": {
       "post": {
         "summary": "Add or update a container",
@@ -1669,8 +1701,8 @@
     },
     "/notification": {
       "post": {
-        "summary": "Add or update notification",
-        "description": "Add or update notification.",
+        "summary": "Add or update a notification",
+        "description": "Add or update a notification.",
         "operationId": "notificationUpsert",
         "parameters": [
           {
@@ -1698,7 +1730,7 @@
         }
       },
       "delete": {
-        "summary": "Add or update notification",
+        "summary": "Remove a notification",
         "description": "Remove a notification.",
         "operationId": "notificationDelete",
         "parameters": [
@@ -1827,7 +1859,7 @@
         }
       },
       "delete": {
-        "summary": "Add or update the capacity of a resource",
+        "summary": "Remove the capacity of a resource",
         "description": "Remove the capacity of a resource.",
         "operationId": "resourceCapacityDelete",
         "tags": [
@@ -1893,7 +1925,7 @@
         }
       },
       "delete": {
-        "summary": "Add or update the filter value of a resource",
+        "summary": "Remove the filter value of a resource",
         "description": "Remove the filter value of a resource.",
         "operationId": "resourceFilterValueDelete",
         "tags": [
@@ -1959,7 +1991,7 @@
         }
       },
       "delete": {
-        "summary": "Add or update the live location of a resource",
+        "summary": "Remove the live location of a resource",
         "description": "Remove the live location of a resource.",
         "operationId": "resourceGpstrackingDelete",
         "tags": [
@@ -2320,11 +2352,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2371,11 +2405,13 @@
         },
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2417,10 +2453,6 @@
           "format": "date-time",
           "type": "string"
         },
-        "isAllDay": {
-          "x-ms-summary": "Is all day",
-          "type": "boolean"
-        },
         "timeMarkerId": {
           "type": "integer",
           "x-ms-summary": "Time Marker",
@@ -2455,44 +2487,53 @@
         },
         "replaceResource": {
           "x-ms-summary": "Replace resource",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         },
         "backOfficeId": {
           "x-ms-summary": "Back office id",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "backOfficeParentId": {
           "x-ms-summary": "Back office parent id",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "unitOfMeasure": {
           "x-ms-summary": "Unit of measure",
           "maxLength": 20,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "unitOfMeasureConversion": {
           "x-ms-summary": "Unit of measure conversion",
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-ms-visibility": "advanced"
         },
         "planningQuantity": {
           "x-ms-summary": "Planning quantity",
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-ms-visibility": "advanced"
         },
         "useFixedPlanningQuantity": {
           "x-ms-summary": "Use fixed planning quantity",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         },
         "roundToUnitOfMeasure": {
           "x-ms-summary": "Round to unit of measure",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       }
     },
@@ -2541,6 +2582,7 @@
         },
         "Assignments": {
           "type": "array",
+          "description": "The list of resources assigned to the appointment.",
           "items": {
             "type": "object",
             "properties": {
@@ -2554,6 +2596,7 @@
               },
               "Resource": {
                 "type": "object",
+                "description": "The resource",
                 "properties": {
                   "ResourceType": {
                     "type": "object",
@@ -2564,22 +2607,30 @@
                     }
                   },
                   "SourceApp": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource source app",
+                    "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to."
                   },
                   "SourceType": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource source type",
+                    "description": "A discriminator that describes the type of entity that this record represents."
                   },
                   "DisplayName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource display name"
                   },
                   "Department": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource department"
                   },
                   "ResourceNo": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource Number"
                   },
                   "Email": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Resource email"
                   }
                 }
               }
@@ -2596,10 +2647,14 @@
           "type": "string"
         },
         "StartDate": {
-          "type": "string"
+          "type": "string",
+          "format": "date-time",
+          "title": "Start date"
         },
         "EndDate": {
-          "type": "string"
+          "type": "string",
+          "format": "date-time",
+          "title": "End date"
         },
         "Importance": {
           "type": "integer"
@@ -2611,29 +2666,37 @@
           "type": "boolean"
         },
         "PlanningUOM": {
-          "type": "string"
+          "type": "string",
+          "title": "Planning unit of measure"
         },
         "PlanningQty": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "title": "Planning quantity"
         },
         "UseFixPlanningQty": {
-          "type": "boolean"
+          "type": "boolean",
+          "title": "Use fixed planning quantity"
         },
         "RoundToUOM": {
-          "type": "boolean"
+          "type": "boolean",
+          "title": "Rount to unit of measure"
         },
         "LastModifiedDate": {
-          "type": "string"
+          "type": "string",
+          "title": "Last modified date"
         },
         "LastModifiedUser": {
-          "type": "string"
+          "type": "string",
+          "title": "Last modified user"
         },
         "IsRecurrenceException": {
-          "type": "boolean"
+          "type": "boolean",
+          "title": "Is recurrence exception"
         },
         "CapacityIndicator": {
-          "type": "boolean"
+          "type": "boolean",
+          "title": "Capacity indicator"
         },
         "AppointmentFieldValues": {
           "type": "array",
@@ -2670,11 +2733,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2731,11 +2796,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2777,11 +2844,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2825,11 +2894,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2866,11 +2937,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2908,11 +2981,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2950,11 +3025,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -2993,11 +3070,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -3014,7 +3093,12 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
@@ -3028,6 +3112,30 @@
         "appointmentGuid": "string",
         "resourceNo": "string",
         "sentFromBackOffice": true
+      }
+    },
+    "calendarlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "id",
+            "maxLength": 100,
+            "type": "integer"
+          },
+          "name": {
+            "x-ms-summary": "name",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "code": {
+            "x-ms-summary": "Code",
+            "maxLength": 100,
+            "type": "string"
+          }
+        },
+        "example": {}
       }
     },
     "caption": {
@@ -3209,11 +3317,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -3881,11 +3991,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -3983,18 +4095,26 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
         "resourceNo": {
           "x-ms-summary": "Resource no.",
+          "description": "Text that uniquely identifies this resource.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "resourceTypeId": {
           "x-ms-summary": "Resource type",
@@ -4488,21 +4608,29 @@
           },
           "sourceApp": {
             "x-ms-summary": "Source application",
+            "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
             "maxLength": 30,
             "type": "string"
           },
           "sourceType": {
             "x-ms-summary": "Source type",
+            "description": "A discriminator that describes the type of entity that this record represents.",
             "maxLength": 10,
             "type": "string"
           },
           "resourceNo": {
             "x-ms-summary": "Resource no.",
             "maxLength": 50,
-            "type": "string"
+            "type": "string",
+            "x-ms-dynamic-values": {
+              "operationId": "GetResources",
+              "value-path": "resourceNo",
+              "value-title": "displayName"
+            }
           },
           "resourceTypeId": {
             "x-ms-summary": "Resource type",
+            "description": "The resource type",
             "format": "int32",
             "type": "integer"
           },
@@ -4988,12 +5116,22 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "calendarCode": {
           "x-ms-summary": "Calendar code",
           "maxLength": 255,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetCalendars",
+            "value-path": "code",
+            "value-title": "name"
+          }
         },
         "startDate": {
           "x-ms-summary": "Start date",
@@ -5020,7 +5158,12 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "date": {
           "x-ms-summary": "Date",
@@ -5062,15 +5205,22 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "type": "string"
         },
         "resourceNo": {
           "x-ms-summary": "Resource no.",
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "filterGroup": {
           "x-ms-summary": "Filter group",
@@ -5100,42 +5250,54 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "gpsTrackingResourceNo": {
           "x-ms-summary": "GPS tracking resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "latitude": {
           "x-ms-summary": "Latitude",
+          "description": "The latitude of this resource.",
           "format": "double",
           "type": "number"
         },
         "longitude": {
           "x-ms-summary": "Longitude",
+          "description": "The longitude of this resource.",
           "format": "double",
           "type": "number"
         },
         "speed": {
           "x-ms-summary": "Speed",
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
         },
         "date": {
           "x-ms-summary": "Date",
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "rowId": {
           "x-ms-summary": "Row id",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "power": {
           "x-ms-summary": "Power",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
@@ -5179,7 +5341,12 @@
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
         },
         "uri": {
           "x-ms-summary": "URI",
@@ -5203,11 +5370,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -6043,11 +6212,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -6086,11 +6257,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
@@ -6116,7 +6289,8 @@
         },
         "transferToTemp": {
           "x-ms-summary": "Transfer to temp",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
@@ -6134,11 +6308,13 @@
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
           "type": "string"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
           "type": "string"
         },
