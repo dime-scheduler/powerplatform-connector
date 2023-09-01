@@ -1502,6 +1502,36 @@
       }
     },
     "/filterGroup": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval filter groups",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/filtergrouplist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available filter groups in Dime.Scheduler",
+        "description": "Fetches the list of filter groups",
+        "operationId": "GetFilterGroups"
+      },
       "post": {
         "summary": "Add or update a filter group",
         "description": "Add or update a filter group.",
@@ -1568,6 +1598,36 @@
       }
     },
     "/filterValue": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Response to successful retrieval filter values",
+            "x-ms-summary": "Success response",
+            "schema": {
+              "$ref": "#/definitions/filtervaluelist"
+            }
+          },
+          "401": {
+            "description": "Unauthenticated."
+          },
+          "403": {
+            "description": "Access forbidden."
+          },
+          "429": {
+            "description": "Resource exhausted. More than expected number of webhooks have been created."
+          },
+          "500": {
+            "description": "Internal server error."
+          }
+        },
+        "x-ms-visibility": "internal",
+        "summary": "Gets the list of available filter values in Dime.Scheduler",
+        "description": "Fetches the list of filter values",
+        "operationId": "GetFilterValues"
+      },
       "post": {
         "summary": "Add or update a filter value",
         "description": "Add or update a filter value.",
@@ -3263,7 +3323,8 @@
         "id": {
           "x-ms-summary": "Id",
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "internal"
         },
         "name": {
           "x-ms-summary": "Name",
@@ -3273,11 +3334,46 @@
         "columnNo": {
           "x-ms-summary": "Column no.",
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
         },
         "dataFilter": {
           "x-ms-summary": "Date filter",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        }
+      },
+      "example": {
+        "id": 0,
+        "name": "Driver's license",
+        "columnNo": 0,
+        "dataFilter": true
+      }
+    },
+    "filtergrouplist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "x-ms-summary": "Id",
+            "format": "int32",
+            "type": "integer"
+          },
+          "name": {
+            "x-ms-summary": "Name",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "columnNo": {
+            "x-ms-summary": "Column no.",
+            "format": "int32",
+            "type": "integer"
+          },
+          "dataFilter": {
+            "x-ms-summary": "Date filter",
+            "type": "boolean"
+          }
         }
       },
       "example": {
@@ -3304,6 +3400,28 @@
       "example": {
         "group": "Driver's license",
         "value": "Class B"
+      }
+    },
+    "filtervaluelist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group": {
+            "x-ms-summary": "Group",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "value": {
+            "x-ms-summary": "Value",
+            "maxLength": 100,
+            "type": "string"
+          }
+        },
+        "example": {
+          "group": "Driver's license",
+          "value": "Class B"
+        }
       }
     },
     "job": {
@@ -5108,11 +5226,6 @@
     "resourceCalendar": {
       "type": "object",
       "properties": {
-        "code": {
-          "x-ms-summary": "Code",
-          "maxLength": 50,
-          "type": "string"
-        },
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "maxLength": 50,
@@ -5224,11 +5337,21 @@
         },
         "filterGroup": {
           "x-ms-summary": "Filter group",
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetFilterGroups",
+            "value-path": "GroupId",
+            "value-title": "Label"
+          }
         },
         "filterValue": {
           "x-ms-summary": "Filter value",
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetFilterValues",
+            "value-path": "Id",
+            "value-title": "Value"
+          }
         },
         "transferToTemp": {
           "x-ms-summary": "Transfer to temp",
