@@ -863,7 +863,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/appointment-outgoing"
+              "$ref": "#/definitions/appointment-outgoing-new"
             }
           }
         ],
@@ -949,8 +949,8 @@
     },
     "/appointmentCategory": {
       "post": {
-        "summary": "Add or update the category of an appointment",
-        "description": "Add or update the category of an appointment.",
+        "summary": "Set the category of an appointment",
+        "description": "Set the category of an appointment.",
         "operationId": "appointmentCategoryUpsert",
         "tags": [
           "appointment"
@@ -1049,8 +1049,8 @@
     },
     "/appointmentContent": {
       "post": {
-        "summary": "Add or update the content of the appointment",
-        "description": "Add or update the content of the appointment.",
+        "summary": "Set the content of the appointment",
+        "description": "Set the content of the appointment.",
         "operationId": "appointmentContentUpsert",
         "tags": [
           "appointment"
@@ -1083,8 +1083,8 @@
     },
     "/appointmentImportance": {
       "post": {
-        "summary": "Add or update the priority of an appointment",
-        "description": "Add or update the priority of an appointment.",
+        "summary": "Set the priority of an appointment",
+        "description": "Set the priority of an appointment.",
         "operationId": "appointmentImportanceUpsert",
         "tags": [
           "appointment"
@@ -1117,8 +1117,8 @@
     },
     "/appointmentLocked": {
       "post": {
-        "summary": "Add or update the appointment's locked status",
-        "description": "Add or update the appointment's locked status.",
+        "summary": "Set the appointment's locked status",
+        "description": "Set the appointment's locked status.",
         "operationId": "appointmentLockedUpsert",
         "tags": [
           "appointment"
@@ -1151,8 +1151,8 @@
     },
     "/appointmentPlanningQuantity": {
       "post": {
-        "summary": "Add or update the appointment's planning quantity",
-        "description": "Add or update the appointment's planning quantity.",
+        "summary": "Set the appointment's planning quantity",
+        "description": "Set the appointment's planning quantity.",
         "operationId": "appointmentPlanningQuantityUpsert",
         "tags": [
           "appointment"
@@ -1185,8 +1185,8 @@
     },
     "/appointmentTimeMarker": {
       "post": {
-        "summary": "Sets the appointment's time marker",
-        "description": "Sets the appointment's time marker.",
+        "summary": "Set the time marker of an appointment",
+        "description": "Set the time marker of an appointment",
         "operationId": "appointmentTimemarkerUpsert",
         "tags": [
           "appointment"
@@ -1887,8 +1887,8 @@
     },
     "/resourceCapacity": {
       "post": {
-        "summary": "Add or update the capacity of a resource",
-        "description": "Add or update the capacity of a resource.",
+        "summary": "Set the capacity of a resource",
+        "description": "Set the capacity of a resource.",
         "operationId": "resourceCapacityUpsert",
         "tags": [
           "resource"
@@ -1953,8 +1953,8 @@
     },
     "/resourceFilterValue": {
       "post": {
-        "summary": "Add or update the filter value of a resource",
-        "description": "Add or update the filter value of a resource.",
+        "summary": "Set the filter value of a resource",
+        "description": "Set the filter value of a resource.",
         "operationId": "resourceFilterValueUpsert",
         "tags": [
           "resource"
@@ -2019,8 +2019,8 @@
     },
     "/resourceGpsTracking": {
       "post": {
-        "summary": "Add or update the live location of a resource",
-        "description": "Add or update the live location of a resource.",
+        "summary": "Set the live location of a resource",
+        "description": "Set the live location of a resource.",
         "operationId": "resourceGpstrackingUpsert",
         "tags": [
           "resource"
@@ -2085,8 +2085,8 @@
     },
     "/resourceUri": {
       "post": {
-        "summary": "Add or update the uri of a resource",
-        "description": "Add or update the uri of a resource.",
+        "summary": "Set the uri of a resource",
+        "description": "Set the uri of a resource.",
         "operationId": "resourceUriUpsert",
         "tags": [
           "resource"
@@ -2373,8 +2373,8 @@
     },
     "/taskLocked": {
       "post": {
-        "summary": "Add or update the task's locked status",
-        "description": "Add or update the task's locked status.",
+        "summary": "Set the task's locked status",
+        "description": "Set the task's locked status.",
         "operationId": "taskLockedUpsert",
         "tags": [
           "task"
@@ -2456,11 +2456,17 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
+          "type": "string",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
           "type": "string"
         },
         "sourceApp": {
@@ -2535,6 +2541,171 @@
           "x-ms-summary": "Importance",
           "type": "integer",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "locked": {
+          "x-ms-summary": "Locked",
+          "type": "boolean"
+        },
+        "replaceResource": {
+          "x-ms-summary": "Replace resource",
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        },
+        "backOfficeId": {
+          "x-ms-summary": "Back office id",
+          "maxLength": 100,
+          "type": "string",
+          "x-ms-visibility": "advanced"
+        },
+        "backOfficeParentId": {
+          "x-ms-summary": "Back office parent id",
+          "maxLength": 100,
+          "type": "string",
+          "x-ms-visibility": "advanced"
+        },
+        "unitOfMeasure": {
+          "x-ms-summary": "Unit of measure",
+          "maxLength": 20,
+          "type": "string",
+          "x-ms-visibility": "advanced"
+        },
+        "unitOfMeasureConversion": {
+          "x-ms-summary": "Unit of measure conversion",
+          "format": "double",
+          "type": "number",
+          "x-ms-visibility": "advanced"
+        },
+        "planningQuantity": {
+          "x-ms-summary": "Planning quantity",
+          "format": "double",
+          "type": "number",
+          "x-ms-visibility": "advanced"
+        },
+        "useFixedPlanningQuantity": {
+          "x-ms-summary": "Use fixed planning quantity",
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        },
+        "roundToUnitOfMeasure": {
+          "x-ms-summary": "Round to unit of measure",
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        },
+        "sentFromBackOffice": {
+          "x-ms-summary": "Sent from back office",
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        }
+      }
+    },
+    "appointment-outgoing-new": {
+      "type": "object",
+      "properties": {
+        "sourceApp": {
+          "x-ms-summary": "Source application",
+          "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
+          "maxLength": 30,
+          "type": "string"
+        },
+        "sourceType": {
+          "x-ms-summary": "Source type",
+          "description": "A discriminator that describes the type of entity that this record represents.",
+          "maxLength": 10,
+          "type": "string"
+        },
+        "jobNo": {
+          "x-ms-summary": "Job no.",
+          "maxLength": 50,
+          "type": "string"
+        },
+        "taskNo": {
+          "x-ms-summary": "Task no.",
+          "maxLength": 50,
+          "type": "string"
+        },
+        "resourceNo": {
+          "x-ms-summary": "Resource no.",
+          "maxLength": 50,
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetResources",
+            "value-path": "resourceNo",
+            "value-title": "displayName"
+          }
+        },
+        "subject": {
+          "x-ms-summary": "Subject",
+          "type": "string"
+        },
+        "body": {
+          "x-ms-summary": "Body",
+          "type": "string"
+        },
+        "start": {
+          "x-ms-summary": "Start",
+          "format": "date-time",
+          "type": "string"
+        },
+        "end": {
+          "x-ms-summary": "End",
+          "format": "date-time",
+          "type": "string"
+        },
+        "timeMarkerId": {
+          "type": "integer",
+          "x-ms-summary": "Time Marker",
+          "x-ms-dynamic-values": {
+            "operationId": "GetTimeMarkers",
+            "value-path": "id",
+            "value-title": "name"
+          }
+        },
+        "categoryId": {
+          "type": "integer",
+          "x-ms-summary": "Category",
+          "x-ms-dynamic-values": {
+            "operationId": "GetCategories",
+            "value-path": "id",
+            "value-title": "name"
+          }
+        },
+        "importance": {
+          "x-ms-summary": "Importance",
+          "type": "integer",
+          "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
           "enum": [
             0,
             1,
@@ -2600,102 +2771,13 @@
     "appointment-incoming": {
       "type": "object",
       "properties": {
-        "CreatedDate": {
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
           "type": "string"
         },
-        "CreatedUser": {
-          "type": "string"
-        },
-        "Task": {
-          "type": "object",
-          "properties": {
-            "TaskNo": {
-              "type": "string"
-            }
-          }
-        },
-        "Category": {
-          "type": "object",
-          "properties": {
-            "DisplayName": {
-              "type": "string",
-              "title": "Category name"
-            },
-            "Color": {
-              "type": "string",
-              "title": "Category color"
-            }
-          }
-        },
-        "TimeMarker": {
-          "type": "object",
-          "properties": {
-            "Name": {
-              "type": "string",
-              "title": "Time marker name"
-            },
-            "Color": {
-              "type": "string",
-              "title": "Time marker color"
-            }
-          }
-        },
-        "Assignments": {
-          "type": "array",
-          "description": "The list of resources assigned to the appointment.",
-          "items": {
-            "type": "object",
-            "properties": {
-              "AppointmentId": {
-                "type": "integer",
-                "x-ms-visibility": "internal"
-              },
-              "ResourceId": {
-                "type": "integer",
-                "x-ms-visibility": "internal"
-              },
-              "Resource": {
-                "type": "object",
-                "description": "The resource",
-                "properties": {
-                  "ResourceType": {
-                    "type": "object",
-                    "properties": {
-                      "DisplayName": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "SourceApp": {
-                    "type": "string",
-                    "title": "Resource source app",
-                    "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to."
-                  },
-                  "SourceType": {
-                    "type": "string",
-                    "title": "Resource source type",
-                    "description": "A discriminator that describes the type of entity that this record represents."
-                  },
-                  "DisplayName": {
-                    "type": "string",
-                    "title": "Resource display name"
-                  },
-                  "Department": {
-                    "type": "string",
-                    "title": "Resource department"
-                  },
-                  "ResourceNo": {
-                    "type": "string",
-                    "title": "Resource Number"
-                  },
-                  "Email": {
-                    "type": "string",
-                    "title": "Resource email"
-                  }
-                }
-              }
-            }
-          }
+        "id": {
+          "format": "int64",
+          "type": "integer"
         },
         "ExternalId": {
           "type": "integer"
@@ -2773,6 +2855,112 @@
         "Notifications": {
           "type": "array",
           "items": {}
+        },
+        "CreatedDate": {
+          "type": "string"
+        },
+        "CreatedUser": {
+          "type": "string"
+        },
+        "Task": {
+          "type": "object",
+          "properties": {
+            "TaskNo": {
+              "type": "string"
+            },
+            "Job": {
+              "type": "object",
+              "properties": {
+                "SourceApp": {
+                  "type": "string",
+                  "title": "Job source app"
+                },
+                "SourceType": {
+                  "type": "string",
+                  "title": "Job source type"
+                }
+              }
+            }
+          }
+        },
+        "Category": {
+          "type": "object",
+          "properties": {
+            "DisplayName": {
+              "type": "string",
+              "title": "Category name"
+            },
+            "Color": {
+              "type": "string",
+              "title": "Category color"
+            }
+          }
+        },
+        "TimeMarker": {
+          "type": "object",
+          "properties": {
+            "Name": {
+              "type": "string",
+              "title": "Time marker name"
+            },
+            "Color": {
+              "type": "string",
+              "title": "Time marker color"
+            }
+          }
+        },
+        "Assignments": {
+          "type": "array",
+          "description": "The list of resources assigned to the appointment.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ResourceId": {
+                "type": "integer",
+                "x-ms-visibility": "internal"
+              },
+              "Resource": {
+                "type": "object",
+                "description": "The resource",
+                "properties": {
+                  "ResourceType": {
+                    "type": "object",
+                    "properties": {
+                      "DisplayName": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "SourceApp": {
+                    "type": "string",
+                    "title": "Resource source app",
+                    "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to."
+                  },
+                  "SourceType": {
+                    "type": "string",
+                    "title": "Resource source type",
+                    "description": "A discriminator that describes the type of entity that this record represents."
+                  },
+                  "DisplayName": {
+                    "type": "string",
+                    "title": "Resource display name"
+                  },
+                  "Department": {
+                    "type": "string",
+                    "title": "Resource department"
+                  },
+                  "ResourceNo": {
+                    "type": "string",
+                    "title": "Resource Number"
+                  },
+                  "Email": {
+                    "type": "string",
+                    "title": "Resource email"
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "example": {
@@ -2806,30 +2994,40 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "category": {
           "x-ms-summary": "Category",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetCategories",
+            "value-path": "name",
+            "value-title": "name"
+          }
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "category": "string",
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "appointmentContainer": {
@@ -2869,16 +3067,23 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         },
         "subject": {
           "x-ms-summary": "Subject",
@@ -2892,9 +3097,7 @@
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "appointmentGuid": "string",
-        "sentFromBackOffice": true,
         "subject": "string",
         "body": "string"
       }
@@ -2917,12 +3120,31 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "importance": {
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
           "enum": [
             0,
             1,
@@ -2933,20 +3155,20 @@
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "importance": 0,
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "appointmentLocked": {
@@ -2967,7 +3189,12 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "locked": {
           "x-ms-summary": "Locked",
@@ -2976,20 +3203,20 @@
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "locked": true,
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "appointmentPlanningQuantity": {
@@ -3010,7 +3237,12 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "quantity": {
           "x-ms-summary": "Quantity",
@@ -3020,20 +3252,20 @@
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "quantity": 0,
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "appointmentTimeMarker": {
@@ -3054,30 +3286,40 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "timeMarker": {
           "x-ms-summary": "Time marker",
           "maxLength": 100,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetTimeMarkers",
+            "value-path": "name",
+            "value-title": "name"
+          }
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "timeMarker": "string",
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "appointmentUri": {
@@ -3098,12 +3340,18 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "uri": {
           "x-ms-summary": "URI",
@@ -3119,7 +3367,6 @@
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "appointmentGuid": "string",
         "uri": "string",
         "description": "string"
@@ -3143,12 +3390,18 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "type": "string"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "resourceNo": {
           "x-ms-summary": "Resource no.",
@@ -3162,16 +3415,15 @@
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "appointmentGuid": "string",
-        "resourceNo": "string",
-        "sentFromBackOffice": true
+        "resourceNo": "string"
       }
     },
     "calendarlist": {
@@ -3748,6 +4000,20 @@
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
           "enum": [
             0,
             1,
@@ -3986,7 +4252,8 @@
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
@@ -4100,8 +4367,7 @@
         "allowDependencies": true,
         "note": "string",
         "overRuleGanttPlanning": true,
-        "checkAppointments": true,
-        "sentFromBackOffice": true
+        "checkAppointments": true
       }
     },
     "notification": {
@@ -4122,17 +4388,45 @@
         "appointmentId": {
           "x-ms-summary": "Appointment id",
           "format": "int64",
-          "type": "integer"
+          "type": "integer",
+          "x-ms-visibility": "advanced"
         },
-        "connectorId": {
-          "x-ms-summary": "Connector id",
+        "jobNo": {
+          "x-ms-summary": "Job no.",
           "maxLength": 50,
+          "description": "Optional. Specify the job number to create a notification for all tasks and appointments that belong to this job.",
+          "type": "string"
+        },
+        "taskNo": {
+          "x-ms-summary": "Task no.",
+          "maxLength": 50,
+          "description": "Optional. Specify the task number to create a notification for all appointments that belong to this task.",
+          "type": "string"
+        },
+        "appointmentNo": {
+          "x-ms-summary": "Appointment No",
+          "description": "Optional. Specify the appointment number to create a notification for this particular appointment.",
           "type": "string"
         },
         "type": {
           "x-ms-summary": "Type",
           "format": "int32",
           "default": 0,
+          "description": "The severity of this notification.",
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
           "enum": [
             0,
             1,
@@ -4143,41 +4437,41 @@
         "code": {
           "x-ms-summary": "Code",
           "maxLength": 20,
-          "type": "string"
+          "type": "string",
+          "description": "The notification code."
         },
         "text": {
           "x-ms-summary": "Text",
-          "type": "string"
+          "type": "string",
+          "description": "The notification message."
         },
         "date": {
           "x-ms-summary": "Date",
           "format": "date-time",
-          "type": "string"
-        },
-        "jobNo": {
-          "x-ms-summary": "Job no.",
-          "maxLength": 50,
-          "type": "string"
-        },
-        "taskNo": {
-          "x-ms-summary": "Task no.",
-          "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "description": "Optional. The date stamp for this notificiation."
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
           "format": "uuid",
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
+        },
+        "connectorId": {
+          "x-ms-summary": "Connector id",
+          "maxLength": 50,
+          "type": "string",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
         "sourceApp": "string",
         "sourceType": "string",
-        "appointmentId": 0,
         "connectorId": "string",
         "type": 0,
         "code": "string",
@@ -4185,8 +4479,7 @@
         "date": "string",
         "jobNo": "string",
         "taskNo": "string",
-        "appointmentGuid": "string",
-        "sentFromBackOffice": true
+        "appointmentGuid": "string"
       }
     },
     "pin": {
@@ -5517,6 +5810,16 @@
           "x-ms-summary": "Task type",
           "format": "int32",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Planning",
+              "value": 0
+            },
+            {
+              "displayName": "Project",
+              "value": 1
+            }
+          ],
           "enum": [
             0,
             1
@@ -5671,6 +5974,20 @@
           "x-ms-summary": "Importance",
           "format": "int32",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Medium",
+              "value": 0
+            },
+            {
+              "displayName": "High",
+              "value": 1
+            },
+            {
+              "displayName": "Low",
+              "value": 2
+            }
+          ],
           "enum": [
             0,
             1,
@@ -6049,6 +6366,24 @@
           "x-ms-summary": "Scheduling mode",
           "format": "int32",
           "default": 0,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Option 1",
+              "value": 0
+            },
+            {
+              "displayName": "Option 2",
+              "value": 1
+            },
+            {
+              "displayName": "Option 3",
+              "value": 2
+            },
+            {
+              "displayName": "Option 3",
+              "value": 3
+            }
+          ],
           "enum": [
             0,
             1,
@@ -6144,7 +6479,8 @@
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
@@ -6326,8 +6662,7 @@
         "ignoreCalendars": true,
         "containerName": "string",
         "containerIndex": 0,
-        "checkAppointments": true,
-        "sentFromBackOffice": true
+        "checkAppointments": true
       }
     },
     "taskContainer": {
@@ -6457,7 +6792,8 @@
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
-          "type": "boolean"
+          "type": "boolean",
+          "x-ms-visibility": "advanced"
         }
       },
       "example": {
@@ -6465,8 +6801,7 @@
         "sourceType": "string",
         "jobNo": "string",
         "taskNo": "string",
-        "locked": true,
-        "sentFromBackOffice": true
+        "locked": true
       }
     },
     "timeMarker": {
