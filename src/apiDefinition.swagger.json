@@ -433,7 +433,7 @@
           {
             "name": "body",
             "in": "body",
-            "required": false,
+            "required": true,
             "schema": {
               "$ref": "#/definitions/category"
             }
@@ -471,7 +471,7 @@
           {
             "name": "body",
             "in": "body",
-            "required": false,
+            "required": true,
             "schema": {
               "$ref": "#/definitions/category"
             }
@@ -541,6 +541,7 @@
           {
             "name": "timeMarkerUpsert",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/timeMarker"
             },
@@ -579,6 +580,7 @@
           {
             "name": "timeMarker",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/timeMarker"
             },
@@ -619,6 +621,7 @@
           {
             "name": "pin",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/pin"
             },
@@ -657,6 +660,7 @@
           {
             "name": "pin",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/pin"
             },
@@ -724,6 +728,7 @@
           {
             "name": "resource",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resource"
             },
@@ -799,6 +804,7 @@
           {
             "name": "actionUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/actionUri"
             },
@@ -828,6 +834,7 @@
           {
             "name": "actionUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/actionUri"
             },
@@ -960,6 +967,7 @@
           {
             "name": "appointmentCategory",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentCategory"
             },
@@ -994,6 +1002,7 @@
           {
             "name": "appointmentContainer",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentContainer"
             },
@@ -1026,6 +1035,7 @@
           {
             "name": "appointmentContainer",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentContainer"
             },
@@ -1060,6 +1070,7 @@
           {
             "name": "appointmentContent",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentContent"
             },
@@ -1094,6 +1105,7 @@
           {
             "name": "appointmentImportance",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentImportance"
             },
@@ -1196,6 +1208,7 @@
           {
             "name": "appointmentTimeMarker",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentTimeMarker"
             },
@@ -1230,6 +1243,7 @@
           {
             "name": "appointmentUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentUri"
             },
@@ -1262,6 +1276,7 @@
           {
             "name": "appointmentUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/appointmentUri"
             },
@@ -1296,6 +1311,7 @@
           {
             "name": "assignment",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/assignment"
             },
@@ -1328,6 +1344,7 @@
           {
             "name": "assignment",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/assignment"
             },
@@ -1359,6 +1376,7 @@
           {
             "name": "caption",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/caption"
             },
@@ -1388,6 +1406,7 @@
           {
             "name": "caption",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/caption"
             },
@@ -1451,6 +1470,7 @@
           {
             "name": "container",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/container"
             },
@@ -1480,6 +1500,7 @@
           {
             "name": "container",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/container"
             },
@@ -1544,6 +1565,7 @@
           {
             "name": "filterGroup",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/filterGroup"
             },
@@ -1576,6 +1598,7 @@
           {
             "name": "filterGroup",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/filterGroup"
             },
@@ -1640,6 +1663,7 @@
           {
             "name": "filterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/filterValue"
             },
@@ -1672,6 +1696,7 @@
           {
             "name": "filterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/filterValue"
             },
@@ -1706,6 +1731,7 @@
           {
             "name": "job",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/job"
             },
@@ -1738,6 +1764,7 @@
           {
             "name": "job",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/job-delete"
             },
@@ -1769,6 +1796,7 @@
           {
             "name": "notification",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/notification"
             },
@@ -1798,6 +1826,7 @@
           {
             "name": "notification",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/notification"
             },
@@ -1832,6 +1861,7 @@
           {
             "name": "resourceCalendar",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceCalendar"
             },
@@ -1864,6 +1894,7 @@
           {
             "name": "resourceCalendar",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceCalendar"
             },
@@ -1898,6 +1929,7 @@
           {
             "name": "resourceCapacity",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceCapacity"
             },
@@ -1930,6 +1962,7 @@
           {
             "name": "resourceCapacity",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceCapacity"
             },
@@ -1964,6 +1997,7 @@
           {
             "name": "resourceFilterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceFilterValue"
             },
@@ -1996,6 +2030,7 @@
           {
             "name": "resourceFilterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceFilterValue"
             },
@@ -2030,6 +2065,7 @@
           {
             "name": "resourceGpsTracking",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceGpsTracking"
             },
@@ -2062,6 +2098,7 @@
           {
             "name": "resourceGpsTracking",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceGpsTracking"
             },
@@ -2096,6 +2133,7 @@
           {
             "name": "resourceUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceUri"
             },
@@ -2128,6 +2166,7 @@
           {
             "name": "resourceUri",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/resourceUri"
             },
@@ -2162,6 +2201,7 @@
           {
             "name": "task",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/task"
             },
@@ -2200,6 +2240,7 @@
           {
             "name": "task",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/task-delete"
             },
@@ -2228,7 +2269,6 @@
         }
       }
     },
-
     "/taskContainer": {
       "post": {
         "consumes": [
@@ -2319,6 +2359,7 @@
           {
             "name": "taskFilterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/taskFilterValue"
             },
@@ -2351,6 +2392,7 @@
           {
             "name": "taskFilterValue",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/taskFilterValue"
             },
@@ -2385,6 +2427,7 @@
           {
             "name": "taskLocked",
             "in": "body",
+            "required": true,
             "schema": {
               "$ref": "#/definitions/taskLocked"
             },
@@ -2504,11 +2547,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -2642,6 +2687,15 @@
     },
     "appointment-outgoing-new": {
       "type": "object",
+      "required": [
+        "sourceApp",
+        "sourceType",
+        "jobNo",
+        "taskNo",
+        "resourceNo",
+        "start",
+        "end"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -2657,11 +2711,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -3003,6 +3059,10 @@
     },
     "appointmentCategory": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "category"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3058,6 +3118,9 @@
     },
     "appointmentContainer": {
       "type": "object",
+      "required": [
+        "appointment"
+      ],
       "properties": {
         "container": {
           "x-ms-summary": "Container",
@@ -3077,6 +3140,9 @@
     },
     "appointmentContent": {
       "type": "object",
+      "required": [
+        "appointmentNo"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3130,6 +3196,10 @@
     },
     "appointmentImportance": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "importance"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3199,6 +3269,10 @@
     },
     "appointmentLocked": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "locked"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3247,6 +3321,10 @@
     },
     "appointmentPlanningQuantity": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "quantity"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3296,6 +3374,10 @@
     },
     "appointmentTimeMarker": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "timeMarker"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3351,6 +3433,11 @@
     },
     "appointmentUri": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "uri",
+        "description"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3401,6 +3488,10 @@
     },
     "assignment": {
       "type": "object",
+      "required": [
+        "appointmentNo",
+        "resourceNo"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -3727,6 +3818,7 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
@@ -4475,6 +4567,7 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
@@ -5998,11 +6091,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -6596,7 +6691,12 @@
         "calendarCode": {
           "x-ms-summary": "Calendar code",
           "maxLength": 255,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetCalendars",
+            "value-path": "code",
+            "value-title": "name"
+          }
         },
         "startDate": {
           "x-ms-summary": "Gantt: Start date",
@@ -6955,12 +7055,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
-
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -6987,11 +7088,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -7032,11 +7135,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
@@ -7090,11 +7195,13 @@
         },
         "jobNo": {
           "x-ms-summary": "Job no.",
+          "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
+          "description": "The unique identifier that is associated with the task.",
           "maxLength": 50,
           "type": "string"
         },
