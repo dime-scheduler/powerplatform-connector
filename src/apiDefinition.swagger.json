@@ -4422,7 +4422,7 @@
           "type": "boolean"
         },
         "checkAppointments": {
-          "x-ms-summary": "Check appointmetns",
+          "x-ms-summary": "Check appointments",
           "type": "boolean"
         },
         "sentFromBackOffice": {
@@ -6074,7 +6074,8 @@
         "sourceType",
         "jobNo",
         "taskNo",
-        "description"
+        "description",
+        "shortDescription"
       ],
       "properties": {
         "sourceApp": {
@@ -6094,6 +6095,11 @@
           "description": "The unique identifier that is associated with the job.",
           "maxLength": 50,
           "type": "string"
+        },
+        "createJob": {
+          "x-ms-summary": "Create job",
+          "description": "Use this field to create a job for this task.",
+          "type": "boolean"
         },
         "taskNo": {
           "x-ms-summary": "Task no.",
