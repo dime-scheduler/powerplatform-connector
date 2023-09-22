@@ -3068,13 +3068,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
@@ -3148,13 +3150,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
@@ -3205,13 +3209,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
@@ -3278,13 +3284,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
@@ -3330,13 +3338,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
@@ -3383,13 +3393,15 @@
           "x-ms-summary": "Source application",
           "description": "A unique identifier that lets Dime.Scheduler know to which back-office system this record belongs to.",
           "maxLength": 30,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "sourceType": {
           "x-ms-summary": "Source type",
           "description": "A discriminator that describes the type of entity that this record represents.",
           "maxLength": 10,
-          "type": "string"
+          "type": "string",
+          "x-ms-visibility": "advanced"
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
