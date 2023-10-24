@@ -4632,23 +4632,19 @@
           "type": "integer",
           "format": "int32",
           "default": 0,
-          "description": "The action link type",
+          "description": "Severity",
           "x-ms-enum-values": [
             {
-              "displayName": "Planning Board",
+              "displayName": "Info",
               "value": 0
             },
             {
-              "displayName": "Appointment",
+              "displayName": "Warning",
               "value": 1
             },
             {
-              "displayName": "Task",
+              "displayName": "Error",
               "value": 2
-            },
-            {
-              "displayName": "Map",
-              "value": 3
             }
           ],
           "enum": [
