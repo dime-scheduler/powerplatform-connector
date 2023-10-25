@@ -2947,7 +2947,8 @@
           "type": "object",
           "properties": {
             "TaskNo": {
-              "type": "string"
+              "type": "string",
+              "title": "Task No"
             },
             "Job": {
               "type": "object",
@@ -2959,6 +2960,10 @@
                 "SourceType": {
                   "type": "string",
                   "title": "Job source type"
+                },
+                "JobNo": {
+                  "type": "string",
+                  "title": "Job No"
                 }
               }
             }
