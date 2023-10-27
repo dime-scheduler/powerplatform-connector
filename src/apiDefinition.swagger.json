@@ -3645,7 +3645,7 @@
       "example": {
         "name": "OOO",
         "displayName": "Out of office",
-        "color": "#6e62b5"
+        "color": "#7f61ff"
       }
     },
     "categorylist": {
@@ -3678,7 +3678,7 @@
       "example": {
         "name": "OOO",
         "displayName": "Out of office",
-        "color": "#6e62b5"
+        "color": "#7f61ff"
       }
     },
     "container": {
@@ -7286,7 +7286,7 @@
       "example": {
         "name": "OOO",
         "displayName": "Out of office",
-        "color": "#6e62b5"
+        "color": "#7f61ff"
       }
     },
     "timeSpan": {

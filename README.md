@@ -32,7 +32,7 @@ paconn create --api-prop apiProperties.json --api-def apiDefinition.swagger.json
 If the connector already exists, you may want to run this command:
 
 ```cmd
-paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json
+paconn update --api-prop apiProperties.json --api-def apiDefinition.swagger.json --icon icon.png
 ```
 
 Follow the instructions in the terminal. You'll need to select an environment, and when updating a connector, select the connector to overwrite the changes.
