@@ -7,10 +7,11 @@
           "displayName": "Environment",
           "description": "Environment",
           "tooltip": "Endpoint",
+          "defaultValue": "https://api.dimescheduler.com",
           "constraints": {
             "tabIndex": 1,
             "clearText": false,
-            "required": "true",
+            "required": "false",
             "allowedValues": [
               {
                 "text": "Production",
@@ -19,14 +20,6 @@
               {
                 "text": "Staging",
                 "value": "https://sandbox.api.dimescheduler.com"
-              },
-              {
-                "text": "Test",
-                "value": "https://test.api.dimescheduler.com"
-              },
-              {
-                "text": "Dev",
-                "value": "https://dev.api.dimescheduler.com"
               }
             ]
           }
