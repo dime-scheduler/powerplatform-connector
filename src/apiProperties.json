@@ -18,15 +18,15 @@
               },
               {
                 "text": "Staging",
-                "value": "https://api-u.dimescheduler.com"
+                "value": "https://sandbox.api.dimescheduler.com"
               },
               {
                 "text": "Test",
-                "value": "https://api-t.dimescheduler.com"
+                "value": "https://test.api.dimescheduler.com"
               },
               {
                 "text": "Dev",
-                "value": "https://api-d.dimescheduler.com"
+                "value": "https://dev.api.dimescheduler.com"
               }
             ]
           }
