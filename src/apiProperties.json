@@ -3,22 +3,22 @@
     "connectionParameters": {
       "endpoint": {
         "type": "string",
+        "defaultValue": "https://api.dimescheduler.com",
         "uiDefinition": {
           "displayName": "Environment",
           "description": "Environment",
           "tooltip": "Endpoint",
-          "defaultValue": "https://api.dimescheduler.com",
           "constraints": {
             "tabIndex": 1,
             "clearText": false,
-            "required": "false",
+            "required": "true",
             "allowedValues": [
               {
                 "text": "Production",
                 "value": "https://api.dimescheduler.com"
               },
               {
-                "text": "Staging",
+                "text": "Sandbox",
                 "value": "https://sandbox.api.dimescheduler.com"
               }
             ]
