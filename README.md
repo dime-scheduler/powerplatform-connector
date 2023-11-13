@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://cdn.dimescheduler.com/dime-scheduler/Dime.Scheduler-Black.svg" height="100px" />
+<img src="https://cdn.dimescheduler.com/dime-scheduler/v2/logo.svg" height="100px" />
 </div>
 
 <p align="center">
