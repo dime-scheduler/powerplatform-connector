@@ -388,7 +388,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available resource types in Dime.Scheduler",
         "description": "Fetches the list of resource types",
-        "operationId": "GetResourceTypes"
+        "operationId": "GetResourceTypes",
+        "tags": [
+          "resource"
+        ]
       }
     },
     "/categories": {
@@ -420,7 +423,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available categories in Dime.Scheduler",
         "description": "Fetches the list of categories",
-        "operationId": "GetCategories"
+        "operationId": "GetCategories",
+        "tags": [
+          "indicator"
+        ]
       },
       "post": {
         "summary": "Add or update a category",
@@ -528,7 +534,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available time markers in Dime.Scheduler",
         "description": "Fetches the list of time markers",
-        "operationId": "GetTimeMarkers"
+        "operationId": "GetTimeMarkers",
+        "tags": [
+          "indicator"
+        ]
       },
       "post": {
         "summary": "Add or update a time marker",
@@ -545,7 +554,7 @@
             "schema": {
               "$ref": "#/definitions/timeMarker"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -584,7 +593,7 @@
             "schema": {
               "$ref": "#/definitions/timeMarker"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -625,7 +634,7 @@
             "schema": {
               "$ref": "#/definitions/pin"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -664,7 +673,7 @@
             "schema": {
               "$ref": "#/definitions/pin"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -715,7 +724,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available resources in Dime.SCheduler",
         "description": "Fetches the list of resources",
-        "operationId": "GetResources"
+        "operationId": "GetResources",
+        "tags": [
+          "resource"
+        ]
       },
       "post": {
         "summary": "Add or update a resource",
@@ -732,7 +744,7 @@
             "schema": {
               "$ref": "#/definitions/resource"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -770,7 +782,7 @@
             "schema": {
               "$ref": "#/definitions/resource"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -808,7 +820,7 @@
             "schema": {
               "$ref": "#/definitions/actionUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -838,7 +850,7 @@
             "schema": {
               "$ref": "#/definitions/actionUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -971,7 +983,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentCategory"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1006,7 +1018,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentContainer"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1039,7 +1051,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentContainer"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1074,7 +1086,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentContent"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1109,7 +1121,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentImportance"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1143,7 +1155,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentLocked"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1177,7 +1189,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentPlanningQuantity"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1212,7 +1224,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentTimeMarker"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1247,7 +1259,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1280,7 +1292,7 @@
             "schema": {
               "$ref": "#/definitions/appointmentUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1315,7 +1327,7 @@
             "schema": {
               "$ref": "#/definitions/assignment"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1348,7 +1360,7 @@
             "schema": {
               "$ref": "#/definitions/assignment"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1380,7 +1392,7 @@
             "schema": {
               "$ref": "#/definitions/caption"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1410,7 +1422,7 @@
             "schema": {
               "$ref": "#/definitions/caption"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1474,7 +1486,7 @@
             "schema": {
               "$ref": "#/definitions/container"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1504,7 +1516,7 @@
             "schema": {
               "$ref": "#/definitions/container"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1552,7 +1564,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available filter groups in Dime.Scheduler",
         "description": "Fetches the list of filter groups",
-        "operationId": "GetFilterGroups"
+        "operationId": "GetFilterGroups",
+        "tags": [
+          "filters"
+        ]
       },
       "post": {
         "summary": "Add or update a filter group",
@@ -1569,7 +1584,7 @@
             "schema": {
               "$ref": "#/definitions/filterGroup"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1602,7 +1617,7 @@
             "schema": {
               "$ref": "#/definitions/filterGroup"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1650,7 +1665,10 @@
         "x-ms-visibility": "internal",
         "summary": "Gets the list of available filter values in Dime.Scheduler",
         "description": "Fetches the list of filter values",
-        "operationId": "GetFilterValues"
+        "operationId": "GetFilterValues",
+        "tags": [
+          "filters"
+        ]
       },
       "post": {
         "summary": "Add or update a filter value",
@@ -1667,7 +1685,7 @@
             "schema": {
               "$ref": "#/definitions/filterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1700,7 +1718,7 @@
             "schema": {
               "$ref": "#/definitions/filterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1735,7 +1753,7 @@
             "schema": {
               "$ref": "#/definitions/job"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1768,7 +1786,7 @@
             "schema": {
               "$ref": "#/definitions/job-delete"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1800,7 +1818,7 @@
             "schema": {
               "$ref": "#/definitions/notification"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1830,7 +1848,7 @@
             "schema": {
               "$ref": "#/definitions/notification"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1865,7 +1883,7 @@
             "schema": {
               "$ref": "#/definitions/resourceCalendar"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1898,7 +1916,7 @@
             "schema": {
               "$ref": "#/definitions/resourceCalendar"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1933,7 +1951,7 @@
             "schema": {
               "$ref": "#/definitions/resourceCapacity"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -1966,7 +1984,7 @@
             "schema": {
               "$ref": "#/definitions/resourceCapacity"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2001,7 +2019,7 @@
             "schema": {
               "$ref": "#/definitions/resourceFilterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2034,7 +2052,7 @@
             "schema": {
               "$ref": "#/definitions/resourceFilterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2069,7 +2087,7 @@
             "schema": {
               "$ref": "#/definitions/resourceGpsTracking"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2102,7 +2120,7 @@
             "schema": {
               "$ref": "#/definitions/resourceGpsTracking"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2137,7 +2155,7 @@
             "schema": {
               "$ref": "#/definitions/resourceUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2170,7 +2188,7 @@
             "schema": {
               "$ref": "#/definitions/resourceUri"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2205,7 +2223,7 @@
             "schema": {
               "$ref": "#/definitions/task"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -2244,7 +2262,7 @@
             "schema": {
               "$ref": "#/definitions/task-delete"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "consumes": [
@@ -2363,7 +2381,7 @@
             "schema": {
               "$ref": "#/definitions/taskFilterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2396,7 +2414,7 @@
             "schema": {
               "$ref": "#/definitions/taskFilterValue"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2431,7 +2449,7 @@
             "schema": {
               "$ref": "#/definitions/taskLocked"
             },
-            "description": "JSON request body containing the contents of the requested entity to be imported."
+            "description": "JSON request body containing the contents of the requested entity to be posted."
           }
         ],
         "responses": {
@@ -2454,6 +2472,9 @@
   "definitions": {
     "actionUri": {
       "type": "object",
+      "required": [
+        "uri"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -2499,12 +2520,12 @@
         },
         "uri": {
           "x-ms-summary": "URI",
-          "description": "The URI to call upon invocation.",
+          "description": "The URI to call upon invocation",
           "type": "string"
         },
         "description": {
           "x-ms-summary": "Description",
-          "description": "The display text",
+          "description": "The display text of the action URI",
           "maxLength": 255,
           "type": "string"
         },
@@ -2527,12 +2548,14 @@
       "properties": {
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -2579,10 +2602,12 @@
         },
         "subject": {
           "x-ms-summary": "Subject",
+          "description": "The appointment's subject",
           "type": "string"
         },
         "body": {
           "x-ms-summary": "Body",
+          "description": "The appointment's body",
           "type": "string"
         },
         "start": {
@@ -3116,6 +3141,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3138,6 +3164,7 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3158,16 +3185,19 @@
     "appointmentContainer": {
       "type": "object",
       "required": [
-        "appointment"
+        "appointment",
+        "container"
       ],
       "properties": {
         "container": {
           "x-ms-summary": "Container",
+          "description": "The container code to assign this appointment to",
           "maxLength": 100,
           "type": "string"
         },
         "appointment": {
           "x-ms-summary": "Appointment",
+          "description": "The appointment's identifier",
           "maxLength": 100,
           "type": "string"
         }
@@ -3199,6 +3229,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3210,22 +3241,25 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
+        },
+        "subject": {
+          "x-ms-summary": "Subject",
+          "description": "The appointment's subject",
+          "type": "string"
+        },
+        "body": {
+          "x-ms-summary": "Body",
+          "description": "The appointment's body",
+          "type": "string"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
           "type": "boolean",
           "x-ms-visibility": "advanced"
-        },
-        "subject": {
-          "x-ms-summary": "Subject",
-          "type": "string"
-        },
-        "body": {
-          "x-ms-summary": "Body",
-          "type": "string"
         }
       },
       "example": {
@@ -3259,6 +3293,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3270,6 +3305,7 @@
         },
         "importance": {
           "x-ms-summary": "Importance",
+          "description": "The appointment's priority",
           "format": "int32",
           "default": 0,
           "x-ms-enum-values": [
@@ -3295,6 +3331,7 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3335,6 +3372,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3346,10 +3384,12 @@
         },
         "locked": {
           "x-ms-summary": "Locked",
+          "description": "True to lock the appointment, and false to unlock.",
           "type": "boolean"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3390,6 +3430,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3401,11 +3442,13 @@
         },
         "quantity": {
           "x-ms-summary": "Quantity",
+          "description": "The planning quantity value",
           "format": "double",
           "type": "number"
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3446,6 +3489,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3468,6 +3512,7 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3507,6 +3552,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3518,17 +3564,20 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "uri": {
           "x-ms-summary": "URI",
+          "description": "The absolute URI",
           "maxLength": 1000,
           "type": "string"
         },
         "description": {
           "x-ms-summary": "Description",
+          "description": "The display text for the URI",
           "maxLength": 255,
           "type": "string"
         }
@@ -3545,7 +3594,9 @@
       "type": "object",
       "required": [
         "appointmentNo",
-        "resourceNo"
+        "resourceNo",
+        "sourceApp",
+        "sourceType"
       ],
       "properties": {
         "sourceApp": {
@@ -3562,6 +3613,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -3573,6 +3625,7 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -3627,29 +3680,91 @@
     },
     "caption": {
       "type": "object",
+      "required": [
+        "context"
+      ],
       "properties": {
         "context": {
           "x-ms-summary": "Context",
           "format": "int32",
+          "default": 1,
+          "x-ms-enum-values": [
+            {
+              "displayName": "Resource",
+              "value": 1
+            },
+            {
+              "displayName": "Appointment",
+              "value": 2
+            },
+            {
+              "displayName": "Appointment Field Value",
+              "value": 3
+            },
+            {
+              "displayName": "Database Field",
+              "value": 6
+            },
+            {
+              "displayName": "Task Details",
+              "value": 7
+            },
+            {
+              "displayName": "Context",
+              "value": 10
+            },
+            {
+              "displayName": "Target Pane",
+              "value": 11
+            },
+            {
+              "displayName": "Target Pane Group",
+              "value": 12
+            },
+            {
+              "displayName": "Task",
+              "value": 13
+            },
+            {
+              "displayName": "Job",
+              "value": 14
+            }
+          ],
+          "enum": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
           "type": "integer"
         },
         "sourceTable": {
           "x-ms-summary": "Source table",
+          "description": "The entity name. Choose between Job, Resource, Task, Appointment",
           "maxLength": 255,
           "type": "string"
         },
         "fieldName": {
           "x-ms-summary": "Field name",
+          "description": "The field's identifier",
           "maxLength": 255,
           "type": "string"
         },
         "language": {
           "x-ms-summary": "Language",
+          "description": "The language code",
           "maxLength": 10,
           "type": "string"
         },
         "text": {
           "x-ms-summary": "Text",
+          "description": "The custom caption",
           "maxLength": 100,
           "type": "string"
         }
@@ -3664,6 +3779,11 @@
     },
     "category": {
       "type": "object",
+      "required": [
+        "name",
+        "displayName",
+        "color"
+      ],
       "properties": {
         "name": {
           "x-ms-summary": "Name",
@@ -3673,11 +3793,13 @@
         },
         "displayName": {
           "x-ms-summary": "Display name",
+          "description": "Specifies the background color of the appointment in the planning board. Used to represent any kind of status or property that applies to your business.",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
           "x-ms-summary": "Color",
+          "default": "The hex color code",
           "maxLength": 7,
           "type": "string"
         }
@@ -3723,6 +3845,9 @@
     },
     "container": {
       "type": "object",
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "x-ms-summary": "Name",
@@ -3747,6 +3872,9 @@
     },
     "filterGroup": {
       "type": "object",
+      "required": [
+        "name"
+      ],
       "properties": {
         "id": {
           "x-ms-summary": "Id",
@@ -3813,6 +3941,10 @@
     },
     "filterValue": {
       "type": "object",
+      "required": [
+        "group",
+        "value"
+      ],
       "properties": {
         "group": {
           "x-ms-summary": "Group",
@@ -3892,11 +4024,13 @@
         },
         "type": {
           "x-ms-summary": "Type",
+          "description": "The type of job",
           "maxLength": 50,
           "type": "string"
         },
         "name": {
           "x-ms-summary": "Name",
+          "description": "The job's name",
           "maxLength": 255,
           "type": "string"
         },
@@ -3928,53 +4062,63 @@
         },
         "customerNo": {
           "x-ms-summary": "Customer no.",
+          "description": "The customer number",
           "maxLength": 20,
           "type": "string"
         },
         "customerName": {
           "x-ms-summary": "Customer name",
+          "description": "The customer name",
           "maxLength": 50,
           "type": "string"
         },
         "customerAddress": {
           "x-ms-summary": "Customer address",
+          "description": "The customer address",
           "type": "string"
         },
         "customerAddressGeoLong": {
           "x-ms-summary": "Customer address longitude",
+          "description": "The customer's address longitude coordinate",
           "maxLength": 50,
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "customerAddressGeoLat": {
           "x-ms-summary": "Customer address latitude",
+          "description": "The customer's address latitude coordinate",
           "maxLength": 50,
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "customerPhone": {
           "x-ms-summary": "Customer phone",
+          "description": "The customer's phone number",
           "maxLength": 50,
           "type": "string"
         },
         "customerEmail": {
           "x-ms-summary": "Customer e-mail",
+          "description": "The customer's email address",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "contactNo": {
           "x-ms-summary": "Contact no.",
+          "description": "The customer's contact number",
           "maxLength": 20,
           "type": "string"
         },
         "contactName": {
           "x-ms-summary": "Contact name",
+          "description": "The customer's contact name",
           "maxLength": 50,
           "type": "string"
         },
         "contactAddress": {
           "x-ms-summary": "Contact address",
+          "description": "The customer's contact address",
           "type": "string"
         },
         "contactAddressGeoLong": {
@@ -3991,27 +4135,32 @@
         },
         "contactPhone": {
           "x-ms-summary": "Contact phone",
+          "description": "The customer's contact phone",
           "maxLength": 50,
           "type": "string"
         },
         "contactEmail": {
           "x-ms-summary": "Contact e-mail",
+          "description": "The customer's contact email address",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "siteNo": {
           "x-ms-summary": "Site no.",
+          "description": "The job's site number",
           "maxLength": 20,
           "type": "string"
         },
         "siteName": {
           "x-ms-summary": "Site name",
+          "description": "The job's site name",
           "maxLength": 50,
           "type": "string"
         },
         "siteAddress": {
           "x-ms-summary": "Site address",
+          "description": "The job's site address. This field is used in geocoding.",
           "type": "string"
         },
         "siteAddressGeoLong": {
@@ -4028,67 +4177,80 @@
         },
         "sitePhone": {
           "x-ms-summary": "Site phone",
+          "description": "The job's site phone number",
           "maxLength": 50,
           "type": "string"
         },
         "siteEmail": {
           "x-ms-summary": "Site e-mail",
+          "description": "The job's site email address",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "siteRegion": {
           "x-ms-summary": "Site region",
+          "description": "The job's site region. This field is used in geocoding.",
           "maxLength": 10,
           "type": "string"
         },
         "siteStreet": {
           "x-ms-summary": "Site street",
+          "description": "The job's site street. This field is used in geocoding.",
           "maxLength": 255,
           "type": "string"
         },
         "siteStreetNo": {
           "x-ms-summary": "Site street no.",
+          "description": "The job's site street number. This field is used in geocoding.",
           "maxLength": 20,
           "type": "string"
         },
         "sitePostcode": {
           "x-ms-summary": "Site post code",
+          "description": "The job's site ZIP number. This field is used in geocoding.",
           "maxLength": 20,
           "type": "string"
         },
         "siteCity": {
           "x-ms-summary": "Site city",
+          "description": "The job's site city. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "siteCounty": {
           "x-ms-summary": "Site county",
+          "description": "The job's site county. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "siteState": {
           "x-ms-summary": "Site state",
+          "description": "The job's site state. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "siteCountry": {
           "x-ms-summary": "Site country",
+          "description": "The job's site country. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromNo": {
           "x-ms-summary": "Site from no.",
+          "description": "The job's site from number.",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromName": {
           "x-ms-summary": "Site from name",
+          "description": "The job's site from name.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromAddress": {
           "x-ms-summary": "Site from address",
+          "description": "The job's site from address.",
           "type": "string"
         },
         "siteFromAddressGeoLong": {
@@ -4105,67 +4267,80 @@
         },
         "siteFromPhone": {
           "x-ms-summary": "Site from phone",
+          "description": "The job's site from phone number.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromEmail": {
           "x-ms-summary": "Site from e-mail",
+          "description": "The job's site from email address.",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "siteFromRegion": {
           "x-ms-summary": "Site from region",
+          "description": "The job's site from region.",
           "maxLength": 10,
           "type": "string"
         },
         "siteFromStreet": {
           "x-ms-summary": "Site from street",
+          "description": "The job's site from street.",
           "maxLength": 255,
           "type": "string"
         },
         "siteFromStreetNo": {
           "x-ms-summary": "Site from street no.",
+          "description": "The job's site from street no.",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromPostcode": {
           "x-ms-summary": "Site from post code",
+          "description": "The job's site from ZIP code.",
           "maxLength": 20,
           "type": "string"
         },
         "siteFromCity": {
           "x-ms-summary": "Site from city",
+          "description": "The job's site from city.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromCounty": {
           "x-ms-summary": "Site from county",
+          "description": "The job's site from county.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromState": {
           "x-ms-summary": "Site from state",
+          "description": "The job's site from state.",
           "maxLength": 50,
           "type": "string"
         },
         "siteFromCountry": {
           "x-ms-summary": "Site from country",
+          "description": "The job's site from country.",
           "maxLength": 50,
           "type": "string"
         },
         "billNo": {
           "x-ms-summary": "Bill no.",
+          "description": "The job's billing number.",
           "maxLength": 20,
           "type": "string"
         },
         "billName": {
           "x-ms-summary": "Bill name",
+          "description": "The job's billing name.",
           "maxLength": 50,
           "type": "string"
         },
         "billAddress": {
           "x-ms-summary": "Bill address",
+          "description": "The job's billing address.",
           "type": "string"
         },
         "billAddressGeoLong": {
@@ -4182,22 +4357,26 @@
         },
         "billPhone": {
           "x-ms-summary": "Bill phone",
+          "description": "The job's billing phone number.",
           "maxLength": 50,
           "type": "string"
         },
         "billEmail": {
           "x-ms-summary": "Bill e-mail",
+          "description": "The job's billing email address.",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "billRegion": {
           "x-ms-summary": "Bill region",
+          "description": "The job's billing region.",
           "maxLength": 10,
           "type": "string"
         },
         "importance": {
           "x-ms-summary": "Importance",
+          "description": "The job's priority.",
           "format": "int32",
           "default": 0,
           "x-ms-enum-values": [
@@ -4223,26 +4402,31 @@
         },
         "creationDateTime": {
           "x-ms-summary": "Creation datetime",
+          "description": "Created on.",
           "format": "date-time",
           "type": "string"
         },
         "customerReference": {
           "x-ms-summary": "Customer reference",
+          "description": "The customer's reference",
           "maxLength": 50,
           "type": "string"
         },
         "language": {
           "x-ms-summary": "Language",
+          "description": "The job's language.",
           "maxLength": 10,
           "type": "string"
         },
         "responsible": {
           "x-ms-summary": "Responsible",
+          "description": "The job's responsible.",
           "maxLength": 50,
           "type": "string"
         },
         "creator": {
           "x-ms-summary": "Creator",
+          "description": "The job's creator.",
           "maxLength": 50,
           "type": "string"
         },
@@ -4654,6 +4838,7 @@
         },
         "appointmentId": {
           "x-ms-summary": "Appointment id",
+          "description": "The unique number to identify this appointment",
           "format": "int64",
           "type": "integer",
           "x-ms-visibility": "advanced"
@@ -4677,10 +4862,10 @@
         },
         "type": {
           "x-ms-summary": "Type",
+          "description": "The severity of this notification.",
           "type": "integer",
           "format": "int32",
           "default": 0,
-          "description": "Severity",
           "x-ms-enum-values": [
             {
               "displayName": "Info",
@@ -4721,6 +4906,7 @@
         },
         "appointmentGuid": {
           "x-ms-summary": "Appointment GUID",
+          "description": "The GUID to identify this appointment",
           "format": "uuid",
           "type": "string",
           "x-ms-visibility": "advanced"
@@ -4755,11 +4941,13 @@
       "properties": {
         "name": {
           "x-ms-summary": "Name",
+          "description": "The name of the marker.",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
           "x-ms-summary": "Color",
+          "description": "The marker's hex color code",
           "maxLength": 7,
           "type": "string"
         }
@@ -4771,6 +4959,9 @@
     },
     "resource": {
       "type": "object",
+      "required": [
+        "resourceNo"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -5863,7 +6054,19 @@
     },
     "resourceCalendar": {
       "type": "object",
+      "required": [
+        "code",
+        "resourceNo",
+        "calendarCode",
+        "startDate",
+        "endDate"
+      ],
       "properties": {
+        "code": {
+          "x-ms-summary": "Code",
+          "description": "The resource calendar code",
+          "type": "string"
+        },
         "resourceNo": {
           "x-ms-summary": "Resource no.",
           "description": "The unique identifier that is associated with the resource.",
@@ -5906,6 +6109,9 @@
     },
     "resourceCapacity": {
       "type": "object",
+      "required": [
+        "resourceNo"
+      ],
       "properties": {
         "resourceNo": {
           "x-ms-summary": "Resource no.",
@@ -5955,6 +6161,11 @@
     },
     "resourceFilterValue": {
       "type": "object",
+      "required": [
+        "resourceNo",
+        "filterGroup",
+        "filterValue"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -5978,15 +6189,17 @@
         },
         "filterGroup": {
           "x-ms-summary": "Filter group",
+          "description": "The filter group",
           "type": "string",
           "x-ms-dynamic-values": {
             "operationId": "GetFilterGroups",
-            "value-path": "Label",
-            "value-title": "Label"
+            "value-path": "Name",
+            "value-title": "Name"
           }
         },
         "filterValue": {
           "x-ms-summary": "Filter value",
+          "description": "The filter value",
           "type": "string",
           "x-ms-dynamic-values": {
             "operationId": "GetFilterValues",
@@ -6010,6 +6223,11 @@
     },
     "resourceGpsTracking": {
       "type": "object",
+      "required": [
+        "resourceNo",
+        "latitude",
+        "longitude"
+      ],
       "properties": {
         "resourceNo": {
           "x-ms-summary": "Resource no.",
@@ -6102,6 +6320,9 @@
     },
     "resourceUri": {
       "type": "object",
+      "required": [
+        "resourceNo"
+      ],
       "properties": {
         "resourceNo": {
           "x-ms-summary": "Resource no.",
@@ -6462,10 +6683,12 @@
         },
         "subject": {
           "x-ms-summary": "Subject",
+          "description": "The appointment's subject",
           "type": "string"
         },
         "body": {
           "x-ms-summary": "Body",
+          "description": "The appointment's body",
           "type": "string"
         },
         "infiniteTask": {
@@ -7152,6 +7375,13 @@
     },
     "taskContainer": {
       "type": "object",
+      "required": [
+        "sourceApp",
+        "sourceType",
+        "jobNo",
+        "taskNo",
+        "name"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -7199,6 +7429,14 @@
     },
     "taskFilterValue": {
       "type": "object",
+      "required": [
+        "sourceApp",
+        "sourceType",
+        "jobNo",
+        "taskNo",
+        "filterValue",
+        "filterGroup"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -7229,8 +7467,8 @@
           "type": "string",
           "x-ms-dynamic-values": {
             "operationId": "GetFilterGroups",
-            "value-path": "Label",
-            "value-title": "Label"
+            "value-path": "Name",
+            "value-title": "Name"
           }
         },
         "filterValue": {
@@ -7259,6 +7497,12 @@
     },
     "taskLocked": {
       "type": "object",
+      "required": [
+        "sourceApp",
+        "sourceType",
+        "jobNo",
+        "taskNo"
+      ],
       "properties": {
         "sourceApp": {
           "x-ms-summary": "Source application",
@@ -7304,14 +7548,20 @@
     },
     "timeMarker": {
       "type": "object",
+      "required": [
+        "name",
+        "color"
+      ],
       "properties": {
         "name": {
           "x-ms-summary": "Name",
+          "description": "The name of this visual indicator.",
           "maxLength": 100,
           "type": "string"
         },
         "color": {
           "x-ms-summary": "Color",
+          "description": "The hex color code",
           "maxLength": 7,
           "type": "string"
         }
