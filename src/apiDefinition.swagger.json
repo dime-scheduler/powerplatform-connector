@@ -2781,11 +2781,13 @@
         },
         "start": {
           "x-ms-summary": "Start",
+          "description": "The start date. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         },
         "end": {
           "x-ms-summary": "End",
+          "description": "The end date. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         },
@@ -3856,6 +3858,7 @@
         },
         "handleDate": {
           "x-ms-summary": "Handle date",
+          "description": "The handle date. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         },
@@ -3949,7 +3952,12 @@
         "group": {
           "x-ms-summary": "Group",
           "maxLength": 50,
-          "type": "string"
+          "type": "string",
+          "x-ms-dynamic-values": {
+            "operationId": "GetFilterGroups",
+            "value-path": "Name",
+            "value-title": "Name"
+          }
         },
         "value": {
           "x-ms-summary": "Value",
@@ -4988,6 +4996,7 @@
         },
         "resourceTypeId": {
           "x-ms-summary": "Resource type",
+          "description": "Categorizes the resources",
           "format": "int32",
           "type": "integer",
           "x-ms-dynamic-values": {
@@ -4998,58 +5007,69 @@
         },
         "resourceName": {
           "x-ms-summary": "Resource name",
+          "description": "The resource name",
           "maxLength": 100,
           "type": "string"
         },
         "displayName": {
           "x-ms-summary": "Display name",
+          "description": "The resource's display name",
           "maxLength": 100,
           "type": "string"
         },
         "department": {
           "x-ms-summary": "Department",
+          "description": "The resource's department",
           "maxLength": 50,
           "type": "string"
         },
         "email": {
           "x-ms-summary": "E-mail",
+          "description": "The resource's email address. This field is used in the bi-directional Exchange connector.",
           "maxLength": 100,
           "type": "string",
           "format": "email"
         },
         "phone": {
           "x-ms-summary": "Phone",
+          "description": "The resource's phone number",
           "maxLength": 50,
           "type": "string"
         },
         "mobilePhone": {
           "x-ms-summary": "Mobile phone",
+          "description": "The resource's mobile phone number",
           "maxLength": 50,
           "type": "string"
         },
         "replacementResource": {
           "x-ms-summary": "Replacement resource",
+          "description": "A boolean to represent if this resource is to be replaced.",
           "type": "boolean"
         },
         "fieldServiceEmail": {
           "x-ms-summary": "Field service e-mail",
+          "description": "The resource's field service email",
           "maxLength": 100,
           "type": "string",
           "format": "email"
         },
         "personalEmail": {
           "x-ms-summary": "Person e-mail",
+          "description": "The resource's personal email",
           "maxLength": 100,
           "type": "string",
           "format": "email"
         },
         "gpsTrackingResourceNo": {
           "x-ms-summary": "GPS tracking no.",
+          "description": "The resource's GPS tracking number",
           "maxLength": 50,
           "type": "string"
         },
         "homeAddress": {
           "x-ms-summary": "Home address",
+          "description": "The resource's home address. This field is used in geocoding.",
           "type": "string"
         },
         "homeAddressGeoLong": {
@@ -5066,143 +5086,172 @@
         },
         "homePhone": {
           "x-ms-summary": "Home phone",
+          "description": "The resource's home phone.",
           "maxLength": 50,
           "type": "string"
         },
         "homeEmail": {
           "x-ms-summary": "Home e-mail",
+          "description": "The resource's home email.",
           "maxLength": 50,
           "type": "string",
           "format": "email"
         },
         "homeStreet": {
           "x-ms-summary": "Home street",
+          "description": "The resource's home street.",
           "maxLength": 255,
           "type": "string"
         },
         "homeStreetNo": {
           "x-ms-summary": "Home street no.",
+          "description": "The resource's home street number. This field is used in geocoding.",
           "maxLength": 20,
           "type": "string"
         },
         "homePostcode": {
           "x-ms-summary": "Home post code",
+          "description": "The resource's home ZIP code. This field is used in geocoding.",
           "maxLength": 20,
           "type": "string"
         },
         "homeCity": {
           "x-ms-summary": "Home city",
+          "description": "The resource's home city. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "homeCounty": {
           "x-ms-summary": "Home county",
+          "description": "The resource's home county. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "homeState": {
           "x-ms-summary": "Home state",
+          "description": "The resource's home state. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "homeCountry": {
           "x-ms-summary": "Home country",
+          "description": "The resource's home country. This field is used in geocoding.",
           "maxLength": 50,
           "type": "string"
         },
         "homeRegion": {
           "x-ms-summary": "Home region",
+          "description": "The resource's home region. This field is used in geocoding.",
           "maxLength": 10,
           "type": "string"
         },
         "teamCode": {
           "x-ms-summary": "Team code",
+          "description": "The resource's team code",
           "maxLength": 20,
           "type": "string"
         },
         "teamName": {
           "x-ms-summary": "Team name",
+          "description": "The resource's team name",
           "maxLength": 100,
           "type": "string"
         },
         "teamType": {
           "x-ms-summary": "Team type",
+          "description": "The resource's team type",
           "maxLength": 20,
           "type": "string"
         },
         "teamSort": {
           "x-ms-summary": "Team sort",
+          "description": "The resource's team sorting",
           "format": "int32",
           "type": "integer"
         },
         "teamMemberType": {
           "x-ms-summary": "Team member type",
+          "description": "The resource's team member type",
           "maxLength": 20,
           "type": "string"
         },
         "teamMemberSort": {
           "x-ms-summary": "Team member sort",
+          "description": "The resource's team member sorting",
           "format": "int32",
           "type": "integer"
         },
         "doNotShow": {
           "x-ms-summary": "Do not show",
+          "description": "Set to true to hide the resource from the planning board. Set to false to exclude this resource from the license count.",
           "type": "boolean"
         },
         "exchangeIntegrationEnabled": {
-          "x-ms-summary": "Enable exchange integration",
+          "x-ms-summary": "Enable Exchange integration",
+          "description": "Set to true to synchronize the planning to the resource's Exchange calendar. This field is used in the Exchange connector.",
           "type": "boolean"
         },
         "resourceGpsTrackingEnabled": {
           "x-ms-summary": "Enable resource GPS tracking",
+          "description": "Set to true to enable track and trace for this resource on the map.",
           "type": "boolean"
         },
         "inServiceFrom": {
           "x-ms-summary": "In service from",
+          "description": "In service from date",
           "format": "date-time",
           "type": "string"
         },
         "inServiceTill": {
           "x-ms-summary": "In service until",
+          "description": "In service until date",
           "format": "date-time",
           "type": "string"
         },
         "url1": {
           "x-ms-summary": "URL 1",
+          "description": "A custom URI for this resource.",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription1": {
           "x-ms-summary": "URL description #1",
+          "description": "A custom URI for this resource.",
           "maxLength": 255,
           "type": "string"
         },
         "url2": {
           "x-ms-summary": "URL 2",
+          "description": "A custom URI for this resource.",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription2": {
           "x-ms-summary": "URL description #2",
+          "description": "A custom URI for this resource.",
           "maxLength": 255,
           "type": "string"
         },
         "url3": {
           "x-ms-summary": "URL 3",
+          "description": "A custom URI for this resource.",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription3": {
           "x-ms-summary": "URL description #3",
+          "description": "A custom URI for this resource.",
           "maxLength": 255,
           "type": "string"
         },
         "bulkPlanning": {
           "x-ms-summary": "Bulk planning",
+          "description": "True to enable bulk planning.",
           "type": "boolean"
         },
         "bulkCapacity": {
           "x-ms-summary": "Bulk capacity",
+          "description": "Bulk planning capacity",
           "format": "double",
           "type": "number"
         },
@@ -6090,11 +6139,13 @@
         },
         "startDate": {
           "x-ms-summary": "Start date",
+          "description": "The start date. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         },
         "endDate": {
           "x-ms-summary": "End date",
+          "description": "The end date. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         }
@@ -6126,26 +6177,31 @@
         },
         "date": {
           "x-ms-summary": "Date",
+          "description": "The date to set the resource's capacity.",
           "format": "date-time",
           "type": "string"
         },
         "capacityInSeconds": {
           "x-ms-summary": "Capacity in seconds",
+          "description": "The capacity in seconds",
           "format": "int64",
           "type": "integer"
         },
         "quantity": {
           "x-ms-summary": "Quantity",
+          "description": "The quantity.",
           "format": "double",
           "type": "number"
         },
         "unitOfMeasure": {
           "x-ms-summary": "Unit of measure",
+          "description": "Unit of measure",
           "maxLength": 20,
           "type": "string"
         },
         "unitOfMeasureConversion": {
           "x-ms-summary": "Unit of measure conversion",
+          "description": "Unit of measure conversion",
           "format": "double",
           "type": "number"
         }
@@ -6394,6 +6450,7 @@
         },
         "taskType": {
           "x-ms-summary": "Task type",
+          "description": "Specify the component where planning will take place: Gantt chart or planning board.",
           "format": "int32",
           "default": 0,
           "x-ms-enum-values": [
@@ -6426,16 +6483,19 @@
         },
         "name": {
           "x-ms-summary": "Name",
+          "description": "The task name",
           "maxLength": 255,
           "type": "string"
         },
         "type": {
           "x-ms-summary": "Type",
+          "description": "The task type",
           "maxLength": 20,
           "type": "string"
         },
         "importance": {
           "x-ms-summary": "Importance",
+          "description": "The task's priority",
           "format": "int32",
           "default": 0,
           "x-ms-enum-values": [
@@ -6487,16 +6547,19 @@
         },
         "requiredTotalDurationInSeconds": {
           "x-ms-summary": "Required total duration (in seconds)",
+          "description": "Specifies the required total duration (= the budget) in seconds",
           "format": "int64",
           "type": "integer"
         },
         "expectedResponseDateTime": {
           "x-ms-summary": "Expected response date",
+          "description": "The expected response date",
           "format": "date-time",
           "type": "string"
         },
         "actualResponseDateTime": {
           "x-ms-summary": "Actual response date",
+          "description": "The actual response date",
           "format": "date-time",
           "type": "string"
         },
@@ -6536,148 +6599,178 @@
         },
         "confirmedStartDate": {
           "x-ms-summary": "Confirmed start date",
+          "description": "Confirmed start date",
           "format": "date-time",
           "type": "string"
         },
         "confirmedEndDate": {
           "x-ms-summary": "Confirmed end date",
+          "description": "Confirmed end date",
           "format": "date-time",
           "type": "string"
         },
         "actualStartDate": {
           "x-ms-summary": "Actual start date",
+          "description": "Actual start date",
           "format": "date-time",
           "type": "string"
         },
         "actualEndDate": {
           "x-ms-summary": "Actual end date",
+          "description": "Actual end date",
           "format": "date-time",
           "type": "string"
         },
         "serviceNo": {
           "x-ms-summary": "Service no.",
+          "description": "Service no.",
           "maxLength": 50,
           "type": "string"
         },
         "serviceGroup": {
           "x-ms-summary": "Service group",
+          "description": "Service group",
           "maxLength": 20,
           "type": "string"
         },
         "serviceClass": {
           "x-ms-summary": "Service class",
+          "description": "Service class",
           "maxLength": 20,
           "type": "string"
         },
         "serviceSerialNo": {
           "x-ms-summary": "Service serial no.",
+          "description": "Service serial no.",
           "maxLength": 50,
           "type": "string"
         },
         "serviceName": {
           "x-ms-summary": "Service name",
+          "description": "Service name",
           "maxLength": 50,
           "type": "string"
         },
         "irisFault": {
           "x-ms-summary": "IRIS fault",
+          "description": "IRIS fault",
           "maxLength": 10,
           "type": "string"
         },
         "irisSymptom": {
           "x-ms-summary": "IRIS symptom",
+          "description": "IRIS symptom",
           "maxLength": 10,
           "type": "string"
         },
         "irisArea": {
           "x-ms-summary": "IRIS area",
+          "description": "IRIS area",
           "maxLength": 10,
           "type": "string"
         },
         "irisReason": {
           "x-ms-summary": "IRIS reason",
+          "description": "IRIS reason",
           "maxLength": 10,
           "type": "string"
         },
         "irisResolution": {
           "x-ms-summary": "IRIS resolution",
+          "description": "IRIS resolution",
           "maxLength": 10,
           "type": "string"
         },
         "skill1": {
           "x-ms-summary": "Skill #1",
+          "description": "Skill #1",
           "maxLength": 10,
           "type": "string"
         },
         "skill2": {
           "x-ms-summary": "Skill #2",
+          "description": "Skill #2",
           "maxLength": 10,
           "type": "string"
         },
         "skill3": {
           "x-ms-summary": "Skill #3",
+          "description": "Skill #3",
           "maxLength": 10,
           "type": "string"
         },
         "contractNo": {
           "x-ms-summary": "Contract number",
+          "description": "Contract number",
           "maxLength": 20,
           "type": "string"
         },
         "contractType": {
           "x-ms-summary": "Contract type",
+          "description": "Contract type",
           "maxLength": 30,
           "type": "string"
         },
         "contractDescription": {
           "x-ms-summary": "Contract description",
+          "description": "Contract description",
           "type": "string"
         },
         "contractStartDate": {
           "x-ms-summary": "Contract start date",
+          "description": "Contract start date",
           "format": "date-time",
           "type": "string"
         },
         "contractEndDate": {
           "x-ms-summary": "Contract end date",
+          "description": "Contract end date",
           "format": "date-time",
           "type": "string"
         },
         "partsWarrantyStartDate": {
           "x-ms-summary": "Parts warranty start date",
+          "description": "Parts warranty start date",
           "format": "date-time",
           "type": "string"
         },
         "partsWarrantyEndDate": {
           "x-ms-summary": "Parts warranty end date",
+          "description": "Parts warranty end date",
           "format": "date-time",
           "type": "string"
         },
         "laborWarrantyStartDate": {
           "x-ms-summary": "Labor warranty start date",
+          "description": "Labor warranty start date",
           "format": "date-time",
           "type": "string"
         },
         "laborWarrantyEndDate": {
           "x-ms-summary": "Labor warranty end date",
+          "description": "Labor warranty end date",
           "format": "date-time",
           "type": "string"
         },
         "status": {
           "x-ms-summary": "Status",
+          "description": "Status",
           "maxLength": 20,
           "type": "string"
         },
         "locationDescription": {
           "x-ms-summary": "Location description",
+          "description": "Location description",
           "type": "string"
         },
         "duration": {
           "x-ms-summary": "Duration",
+          "description": "Duration",
           "type": "string"
         },
         "durationInSeconds": {
           "x-ms-summary": "Duration in seconds",
+          "description": "Duration in seconds",
           "format": "int64",
           "type": "integer"
         },
@@ -6698,20 +6791,24 @@
         },
         "taskOpenAsOf": {
           "x-ms-summary": "Open from date",
+          "description": "Open from date",
           "format": "date-time",
           "type": "string"
         },
         "taskOpenTill": {
           "x-ms-summary": "Open until date",
+          "description": "Open until date",
           "format": "date-time",
           "type": "string"
         },
         "requiredTotalDuration": {
           "x-ms-summary": "Required total duration",
+          "description": "Required total duration",
           "type": "string"
         },
         "requiredNoResources": {
           "x-ms-summary": "Required number of resources",
+          "description": "Required number of resources",
           "format": "int32",
           "type": "integer"
         },
@@ -6922,76 +7019,92 @@
         },
         "url1": {
           "x-ms-summary": "URL 1",
+          "description": "Custom URI for this task",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription1": {
           "x-ms-summary": "URL 1 description",
+          "description": "Custom URI for this task",
           "maxLength": 255,
           "type": "string"
         },
         "url2": {
           "x-ms-summary": "URL 2",
+          "description": "Custom URI for this task",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription2": {
           "x-ms-summary": "URL 2 description",
+          "description": "Custom URI for this task",
           "maxLength": 255,
           "type": "string"
         },
         "url3": {
           "x-ms-summary": "URL 3",
+          "description": "Custom URI for this task",
           "maxLength": 1000,
           "type": "string"
         },
         "urlDescription3": {
           "x-ms-summary": "URL 3 description",
+          "description": "Custom URI for this task",
           "maxLength": 255,
           "type": "string"
         },
         "certificateNo": {
           "x-ms-summary": "Certificate no.",
+          "description": "Custom URI for this task",
           "type": "string"
         },
         "doNotCountAppointmentResource": {
           "x-ms-summary": "Do not count appointment resources",
+          "description": "Do not count appointment resources",
           "type": "boolean"
         },
         "isComplete": {
           "x-ms-summary": "Is complete",
+          "description": "Is complete",
           "type": "boolean"
         },
         "planningUOM": {
           "x-ms-summary": "Planning unit of measure",
+          "description": "Planning unit of measure",
           "maxLength": 20,
           "type": "string"
         },
         "planningQty": {
           "x-ms-summary": "Planning quantity",
+          "description": "Planning quantity",
           "format": "double",
           "type": "number"
         },
         "useFixPlanningQty": {
           "x-ms-summary": "Use fixed planning quantity",
+          "description": "Use fixed planning quantity",
           "type": "boolean"
         },
         "roundToUOM": {
           "x-ms-summary": "Round to unit of measure",
+          "description": "Round to unit of measure",
           "type": "boolean"
         },
         "appointmentTemplate": {
           "x-ms-summary": "Appointment template",
+          "description": "Appointment template",
           "maxLength": 100,
           "type": "string"
         },
         "bulkPlanningQty": {
           "x-ms-summary": "Bulk planning quantity",
+          "description": "Bulk planning quantity",
           "format": "double",
           "type": "number"
         },
         "calendarCode": {
-          "x-ms-summary": "Calendar code",
+          "x-ms-summary": "Calendar",
+          "description": "Calendar",
           "maxLength": 255,
           "type": "string",
           "x-ms-dynamic-values": {
@@ -7002,24 +7115,28 @@
         },
         "startDate": {
           "x-ms-summary": "Gantt: Start date",
+          "description": "Gantt: Start date",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "endDate": {
           "x-ms-summary": "Gantt: End date",
+          "description": "Gantt: End date",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "percentDone": {
           "x-ms-summary": "Gantt: Percentage done",
+          "description": "Gantt: Percentage done",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "schedulingMode": {
           "x-ms-summary": "Gantt: Scheduling mode",
+          "description": "Gantt: Scheduling mode",
           "format": "int32",
           "default": 0,
           "x-ms-visibility": "advanced",
@@ -7051,103 +7168,121 @@
         },
         "baseLineStartDate": {
           "x-ms-summary": "Gantt: Baseline start date",
+          "description": "Gantt: Baseline start date",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "baseLineEndDate": {
           "x-ms-summary": "Gantt: Baseline end date",
+          "description": "Gantt: Baseline end date",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "baseLinePercentDone": {
           "x-ms-summary": "Gantt: Baseline percent done",
+          "description": "Gantt: Baseline percent done",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "deadLine": {
           "x-ms-summary": "Gantt: Deadline",
+          "description": "Gantt: Deadline",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "index": {
           "x-ms-summary": "Gantt: Index",
+          "description": "Gantt: Index",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "constraintType": {
           "x-ms-summary": "Gantt: Constraint type",
+          "description": "Gantt: Constraint type",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "constraintDatetime": {
           "x-ms-summary": "Gantt: Constraint datetime",
+          "description": "Gantt: Constraint datetime",
           "format": "date-time",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "parentTaskNo": {
           "x-ms-summary": "Gantt: Parent task no.",
+          "description": "Gantt: Parent task no.",
           "maxLength": 50,
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "predecessorTaskNo": {
           "x-ms-summary": "Gantt: Predecessor task no.",
+          "description": "Gantt: Predecessor task no.",
           "maxLength": 50,
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "predecessorLag": {
           "x-ms-summary": "Gantt: Predecessor lag",
+          "description": "Gantt: Predecessor lag",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "manuallyScheduled": {
           "x-ms-summary": "Gantt: Manually scheduled",
+          "description": "Gantt: Manually scheduled",
           "type": "boolean",
           "x-ms-visibility": "advanced"
         },
         "note": {
           "x-ms-summary": "Gantt: Note",
+          "description": "Gantt: Note",
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "overRuleGanttPlanning": {
           "x-ms-summary": "Gantt: Overrule Gantt planning",
+          "description": "Gantt: Overrule Gantt planning",
           "type": "boolean",
           "x-ms-visibility": "advanced"
         },
         "ignoreCalendars": {
           "x-ms-summary": "Ignore calendars",
+          "description": "Ignore calendars",
           "type": "boolean",
           "x-ms-visibility": "advanced"
         },
         "containerName": {
           "x-ms-summary": "Container name",
+          "description": "Container name",
           "maxLength": 255,
           "type": "string",
           "x-ms-visibility": "advanced"
         },
         "containerIndex": {
           "x-ms-summary": "Container index",
+          "description": "Container index",
           "format": "int32",
           "type": "integer",
           "x-ms-visibility": "advanced"
         },
         "checkAppointments": {
           "x-ms-summary": "Check appointments",
+          "description": "Check appointments",
           "type": "boolean",
           "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
+          "description": "Sent from back-office",
           "type": "boolean",
           "x-ms-visibility": "advanced"
         }
@@ -7408,12 +7543,14 @@
           "type": "string"
         },
         "name": {
-          "x-ms-summary": "name",
+          "x-ms-summary": "Name",
+          "description": "The container name",
           "maxLength": 255,
           "type": "string"
         },
         "index": {
           "x-ms-summary": "Index",
+          "description": "The index of the task in the container.",
           "format": "int32",
           "type": "integer"
         }
@@ -7464,6 +7601,7 @@
         },
         "filterGroup": {
           "x-ms-summary": "Filter group",
+          "description": "The filter group",
           "type": "string",
           "x-ms-dynamic-values": {
             "operationId": "GetFilterGroups",
@@ -7473,6 +7611,7 @@
         },
         "filterValue": {
           "x-ms-summary": "Filter value",
+          "description": "The filter value",
           "type": "string",
           "x-ms-dynamic-values": {
             "operationId": "GetFilterValues",
