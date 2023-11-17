@@ -3783,8 +3783,7 @@
       "type": "object",
       "required": [
         "name",
-        "displayName",
-        "color"
+        "displayName"
       ],
       "properties": {
         "name": {
@@ -4946,6 +4945,9 @@
     },
     "pin": {
       "type": "object",
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "x-ms-summary": "Name",
@@ -7688,8 +7690,7 @@
     "timeMarker": {
       "type": "object",
       "required": [
-        "name",
-        "color"
+        "name"
       ],
       "properties": {
         "name": {
