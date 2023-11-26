@@ -3800,7 +3800,7 @@
         },
         "color": {
           "x-ms-summary": "Color",
-          "default": "The hex color code",
+          "description": "The hex color code",
           "maxLength": 7,
           "type": "string"
         }
@@ -3852,6 +3852,7 @@
       "properties": {
         "name": {
           "x-ms-summary": "Name",
+          "description": "The container's name",
           "maxLength": 100,
           "type": "string"
         },
@@ -3863,6 +3864,7 @@
         },
         "handleLocked": {
           "x-ms-summary": "Handle locked",
+          "description": "True to fix the relative position of the handle bar to the container members.",
           "type": "boolean"
         }
       },
@@ -3886,6 +3888,7 @@
         },
         "name": {
           "x-ms-summary": "Name",
+          "description": "The name that describes the group of filter values.",
           "maxLength": 50,
           "type": "string"
         },
@@ -3950,6 +3953,7 @@
       "properties": {
         "group": {
           "x-ms-summary": "Group",
+          "description": "The name of the filter group. For example: Skill, Region, Language.",
           "maxLength": 50,
           "type": "string",
           "x-ms-dynamic-values": {
@@ -3960,6 +3964,7 @@
         },
         "value": {
           "x-ms-summary": "Value",
+          "description": "The name that describes this filter value. For example: French, English, Spanish.",
           "maxLength": 100,
           "type": "string"
         }
@@ -4674,7 +4679,9 @@
         },
         "checkAppointments": {
           "x-ms-summary": "Check appointments",
-          "type": "boolean"
+          "description": "True to check before removing whether appointments have been planned for this record.",
+          "type": "boolean",
+          "default": true
         },
         "sentFromBackOffice": {
           "x-ms-summary": "Sent from back-office",
@@ -4824,7 +4831,9 @@
         },
         "checkAppointments": {
           "x-ms-summary": "Check appointments",
-          "type": "boolean"
+          "description": "True to check before removing whether appointments have been planned for this record.",
+          "type": "boolean",
+          "default": true
         }
       }
     },
@@ -6131,6 +6140,7 @@
         },
         "calendarCode": {
           "x-ms-summary": "Calendar code",
+          "description": "The resource calendar",
           "maxLength": 255,
           "type": "string",
           "x-ms-dynamic-values": {
@@ -6179,7 +6189,7 @@
         },
         "date": {
           "x-ms-summary": "Date",
-          "description": "The date to set the resource's capacity.",
+          "description": "The date to set the resource's capacity. Use ISO 8601 standard. For example 2023-11-16T10:09:21Z",
           "format": "date-time",
           "type": "string"
         },
@@ -7278,8 +7288,9 @@
         },
         "checkAppointments": {
           "x-ms-summary": "Check appointments",
-          "description": "Check appointments",
+          "description": "True to check before removing whether appointments have been planned for this record.",
           "type": "boolean",
+          "default": true,
           "x-ms-visibility": "advanced"
         },
         "sentFromBackOffice": {
@@ -7506,7 +7517,9 @@
         },
         "checkAppointments": {
           "x-ms-summary": "Check appointments",
-          "type": "boolean"
+          "description": "True to check before removing whether appointments have been planned for this record.",
+          "type": "boolean",
+          "default": true
         }
       }
     },
