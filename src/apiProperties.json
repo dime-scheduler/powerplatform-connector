@@ -20,14 +20,6 @@
               {
                 "text": "Sandbox",
                 "value": "https://sandbox.api.dimescheduler.com"
-              },
-              {
-                "text": "Test",
-                "value": "https://test.api.dimescheduler.com"
-              },
-              {
-                "text": "Dev",
-                "value": "https://dev.api.dimescheduler.com"
               }
             ]
           }
